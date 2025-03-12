@@ -24,6 +24,7 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
+        Me.Btndocback = New System.Windows.Forms.Button()
         Me.Btndgvdelete = New System.Windows.Forms.Button()
         Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
         Me.Btndgvedit = New System.Windows.Forms.Button()
@@ -43,18 +44,18 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Dgvdoc = New System.Windows.Forms.DataGridView()
         Me.TabPgpatient = New System.Windows.Forms.TabPage()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Btnptndelete = New System.Windows.Forms.Button()
+        Me.Btnptnedit = New System.Windows.Forms.Button()
+        Me.Btnptnview = New System.Windows.Forms.Button()
+        Me.Btnptnclr = New System.Windows.Forms.Button()
+        Me.Btnptnregister = New System.Windows.Forms.Button()
+        Me.Txtbxptnmedhstry = New System.Windows.Forms.TextBox()
+        Me.Txtbxptnadrs = New System.Windows.Forms.TextBox()
+        Me.Cmbbxptngnder = New System.Windows.Forms.ComboBox()
+        Me.Datepatientdob = New System.Windows.Forms.DateTimePicker()
+        Me.Txtbxptnname = New System.Windows.Forms.TextBox()
+        Me.Txtbxptnid = New System.Windows.Forms.TextBox()
+        Me.Dgvptntab = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -62,28 +63,29 @@ Partial Class Form3
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPgTreatment = New System.Windows.Forms.TabPage()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Btntrtdelete = New System.Windows.Forms.Button()
+        Me.Dgvtreatment = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Btntrtclr = New System.Windows.Forms.Button()
+        Me.Btntrtreg = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Txtbxtrtid = New System.Windows.Forms.TextBox()
+        Me.Txtbxtrtname = New System.Windows.Forms.TextBox()
+        Me.Txtbxtrtcost = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Btntrtedit = New System.Windows.Forms.Button()
+        Me.Btntrtview = New System.Windows.Forms.Button()
         Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
-        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Btnptnback = New System.Windows.Forms.Button()
+        Me.Btntrtback = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
         CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPgpatient.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvptntab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPgTreatment.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvtreatment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,16 +94,17 @@ Partial Class Form3
         Me.TabControl1.Controls.Add(Me.TabPgDoctor)
         Me.TabControl1.Controls.Add(Me.TabPgpatient)
         Me.TabControl1.Controls.Add(Me.TabPgTreatment)
-        Me.TabControl1.Location = New System.Drawing.Point(22, 26)
+        Me.TabControl1.Location = New System.Drawing.Point(22, 11)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(665, 473)
+        Me.TabControl1.Size = New System.Drawing.Size(665, 488)
         Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.TabControl1.TabIndex = 0
         '
         'TabPgDoctor
         '
+        Me.TabPgDoctor.Controls.Add(Me.Btndocback)
         Me.TabPgDoctor.Controls.Add(Me.Btndgvdelete)
         Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
         Me.TabPgDoctor.Controls.Add(Me.Btndgvedit)
@@ -124,10 +127,19 @@ Partial Class Form3
         Me.TabPgDoctor.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgDoctor.Name = "TabPgDoctor"
         Me.TabPgDoctor.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPgDoctor.Size = New System.Drawing.Size(657, 447)
+        Me.TabPgDoctor.Size = New System.Drawing.Size(657, 462)
         Me.TabPgDoctor.TabIndex = 0
         Me.TabPgDoctor.Text = "Doctor"
         Me.TabPgDoctor.UseVisualStyleBackColor = True
+        '
+        'Btndocback
+        '
+        Me.Btndocback.Location = New System.Drawing.Point(570, 214)
+        Me.Btndocback.Name = "Btndocback"
+        Me.Btndocback.Size = New System.Drawing.Size(75, 27)
+        Me.Btndocback.TabIndex = 3
+        Me.Btndocback.Text = "Back"
+        Me.Btndocback.UseVisualStyleBackColor = True
         '
         'Btndgvdelete
         '
@@ -161,7 +173,7 @@ Partial Class Form3
         '
         'Btnclrdoc
         '
-        Me.Btnclrdoc.Location = New System.Drawing.Point(555, 214)
+        Me.Btnclrdoc.Location = New System.Drawing.Point(492, 214)
         Me.Btnclrdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnclrdoc.Name = "Btnclrdoc"
         Me.Btnclrdoc.Size = New System.Drawing.Size(73, 27)
@@ -171,7 +183,7 @@ Partial Class Form3
         '
         'Btnregdoc
         '
-        Me.Btnregdoc.Location = New System.Drawing.Point(465, 214)
+        Me.Btnregdoc.Location = New System.Drawing.Point(404, 214)
         Me.Btnregdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnregdoc.Name = "Btnregdoc"
         Me.Btnregdoc.Size = New System.Drawing.Size(76, 27)
@@ -309,18 +321,19 @@ Partial Class Form3
         '
         'TabPgpatient
         '
-        Me.TabPgpatient.Controls.Add(Me.Button12)
-        Me.TabPgpatient.Controls.Add(Me.Button11)
-        Me.TabPgpatient.Controls.Add(Me.Button10)
-        Me.TabPgpatient.Controls.Add(Me.Button4)
-        Me.TabPgpatient.Controls.Add(Me.Button3)
-        Me.TabPgpatient.Controls.Add(Me.TextBox8)
-        Me.TabPgpatient.Controls.Add(Me.TextBox7)
-        Me.TabPgpatient.Controls.Add(Me.ComboBox2)
-        Me.TabPgpatient.Controls.Add(Me.DateTimePicker1)
-        Me.TabPgpatient.Controls.Add(Me.TextBox6)
-        Me.TabPgpatient.Controls.Add(Me.TextBox5)
-        Me.TabPgpatient.Controls.Add(Me.DataGridView2)
+        Me.TabPgpatient.Controls.Add(Me.Btnptnback)
+        Me.TabPgpatient.Controls.Add(Me.Btnptndelete)
+        Me.TabPgpatient.Controls.Add(Me.Btnptnedit)
+        Me.TabPgpatient.Controls.Add(Me.Btnptnview)
+        Me.TabPgpatient.Controls.Add(Me.Btnptnclr)
+        Me.TabPgpatient.Controls.Add(Me.Btnptnregister)
+        Me.TabPgpatient.Controls.Add(Me.Txtbxptnmedhstry)
+        Me.TabPgpatient.Controls.Add(Me.Txtbxptnadrs)
+        Me.TabPgpatient.Controls.Add(Me.Cmbbxptngnder)
+        Me.TabPgpatient.Controls.Add(Me.Datepatientdob)
+        Me.TabPgpatient.Controls.Add(Me.Txtbxptnname)
+        Me.TabPgpatient.Controls.Add(Me.Txtbxptnid)
+        Me.TabPgpatient.Controls.Add(Me.Dgvptntab)
         Me.TabPgpatient.Controls.Add(Me.Label12)
         Me.TabPgpatient.Controls.Add(Me.Label11)
         Me.TabPgpatient.Controls.Add(Me.Label10)
@@ -331,123 +344,123 @@ Partial Class Form3
         Me.TabPgpatient.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgpatient.Name = "TabPgpatient"
         Me.TabPgpatient.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPgpatient.Size = New System.Drawing.Size(657, 447)
+        Me.TabPgpatient.Size = New System.Drawing.Size(657, 462)
         Me.TabPgpatient.TabIndex = 1
         Me.TabPgpatient.Text = "Patients"
         Me.TabPgpatient.UseVisualStyleBackColor = True
         '
-        'Button12
+        'Btnptndelete
         '
-        Me.Button12.Location = New System.Drawing.Point(563, 265)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(64, 19)
-        Me.Button12.TabIndex = 17
-        Me.Button12.Text = "Delete_row"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.Btnptndelete.Location = New System.Drawing.Point(563, 265)
+        Me.Btnptndelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnptndelete.Name = "Btnptndelete"
+        Me.Btnptndelete.Size = New System.Drawing.Size(64, 19)
+        Me.Btnptndelete.TabIndex = 17
+        Me.Btnptndelete.Text = "Delete_row"
+        Me.Btnptndelete.UseVisualStyleBackColor = True
         '
-        'Button11
+        'Btnptnedit
         '
-        Me.Button11.Location = New System.Drawing.Point(488, 265)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(71, 19)
-        Me.Button11.TabIndex = 16
-        Me.Button11.Text = "Edit_row"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.Btnptnedit.Location = New System.Drawing.Point(488, 265)
+        Me.Btnptnedit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnptnedit.Name = "Btnptnedit"
+        Me.Btnptnedit.Size = New System.Drawing.Size(71, 19)
+        Me.Btnptnedit.TabIndex = 16
+        Me.Btnptnedit.Text = "Edit_row"
+        Me.Btnptnedit.UseVisualStyleBackColor = True
         '
-        'Button10
+        'Btnptnview
         '
-        Me.Button10.Location = New System.Drawing.Point(427, 265)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(56, 19)
-        Me.Button10.TabIndex = 15
-        Me.Button10.Text = "View"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Btnptnview.Location = New System.Drawing.Point(427, 265)
+        Me.Btnptnview.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnptnview.Name = "Btnptnview"
+        Me.Btnptnview.Size = New System.Drawing.Size(56, 19)
+        Me.Btnptnview.TabIndex = 15
+        Me.Btnptnview.Text = "View"
+        Me.Btnptnview.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Btnptnclr
         '
-        Me.Button4.Location = New System.Drawing.Point(545, 202)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(82, 28)
-        Me.Button4.TabIndex = 14
-        Me.Button4.Text = "Clear"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Btnptnclr.Location = New System.Drawing.Point(469, 212)
+        Me.Btnptnclr.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnptnclr.Name = "Btnptnclr"
+        Me.Btnptnclr.Size = New System.Drawing.Size(82, 28)
+        Me.Btnptnclr.TabIndex = 14
+        Me.Btnptnclr.Text = "Clear"
+        Me.Btnptnclr.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Btnptnregister
         '
-        Me.Button3.Location = New System.Drawing.Point(450, 202)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(87, 28)
-        Me.Button3.TabIndex = 13
-        Me.Button3.Text = "Register"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Btnptnregister.Location = New System.Drawing.Point(378, 212)
+        Me.Btnptnregister.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnptnregister.Name = "Btnptnregister"
+        Me.Btnptnregister.Size = New System.Drawing.Size(87, 28)
+        Me.Btnptnregister.TabIndex = 13
+        Me.Btnptnregister.Text = "Register"
+        Me.Btnptnregister.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'Txtbxptnmedhstry
         '
-        Me.TextBox8.Location = New System.Drawing.Point(459, 124)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(170, 54)
-        Me.TextBox8.TabIndex = 12
+        Me.Txtbxptnmedhstry.Location = New System.Drawing.Point(459, 124)
+        Me.Txtbxptnmedhstry.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxptnmedhstry.Multiline = True
+        Me.Txtbxptnmedhstry.Name = "Txtbxptnmedhstry"
+        Me.Txtbxptnmedhstry.Size = New System.Drawing.Size(170, 54)
+        Me.Txtbxptnmedhstry.TabIndex = 12
         '
-        'TextBox7
+        'Txtbxptnadrs
         '
-        Me.TextBox7.Location = New System.Drawing.Point(459, 24)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(170, 57)
-        Me.TextBox7.TabIndex = 11
+        Me.Txtbxptnadrs.Location = New System.Drawing.Point(459, 24)
+        Me.Txtbxptnadrs.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxptnadrs.Multiline = True
+        Me.Txtbxptnadrs.Name = "Txtbxptnadrs"
+        Me.Txtbxptnadrs.Size = New System.Drawing.Size(170, 57)
+        Me.Txtbxptnadrs.TabIndex = 11
         '
-        'ComboBox2
+        'Cmbbxptngnder
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Male", "Female", "Other"})
-        Me.ComboBox2.Location = New System.Drawing.Point(142, 158)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox2.TabIndex = 10
+        Me.Cmbbxptngnder.FormattingEnabled = True
+        Me.Cmbbxptngnder.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        Me.Cmbbxptngnder.Location = New System.Drawing.Point(142, 158)
+        Me.Cmbbxptngnder.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmbbxptngnder.Name = "Cmbbxptngnder"
+        Me.Cmbbxptngnder.Size = New System.Drawing.Size(92, 21)
+        Me.Cmbbxptngnder.TabIndex = 10
         '
-        'DateTimePicker1
+        'Datepatientdob
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(142, 104)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(151, 20)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.Datepatientdob.Location = New System.Drawing.Point(142, 104)
+        Me.Datepatientdob.Margin = New System.Windows.Forms.Padding(2)
+        Me.Datepatientdob.Name = "Datepatientdob"
+        Me.Datepatientdob.Size = New System.Drawing.Size(151, 20)
+        Me.Datepatientdob.TabIndex = 9
         '
-        'TextBox6
+        'Txtbxptnname
         '
-        Me.TextBox6.Location = New System.Drawing.Point(142, 67)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox6.TabIndex = 8
+        Me.Txtbxptnname.Location = New System.Drawing.Point(142, 67)
+        Me.Txtbxptnname.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxptnname.Name = "Txtbxptnname"
+        Me.Txtbxptnname.Size = New System.Drawing.Size(76, 20)
+        Me.Txtbxptnname.TabIndex = 8
         '
-        'TextBox5
+        'Txtbxptnid
         '
-        Me.TextBox5.Location = New System.Drawing.Point(142, 30)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox5.TabIndex = 7
+        Me.Txtbxptnid.Location = New System.Drawing.Point(142, 30)
+        Me.Txtbxptnid.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxptnid.Name = "Txtbxptnid"
+        Me.Txtbxptnid.Size = New System.Drawing.Size(76, 20)
+        Me.Txtbxptnid.TabIndex = 7
         '
-        'DataGridView2
+        'Dgvptntab
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(32, 288)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(596, 102)
-        Me.DataGridView2.TabIndex = 6
+        Me.Dgvptntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvptntab.Location = New System.Drawing.Point(32, 288)
+        Me.Dgvptntab.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dgvptntab.Name = "Dgvptntab"
+        Me.Dgvptntab.RowHeadersWidth = 51
+        Me.Dgvptntab.RowTemplate.Height = 24
+        Me.Dgvptntab.Size = New System.Drawing.Size(596, 102)
+        Me.Dgvptntab.TabIndex = 6
         '
         'Label12
         '
@@ -475,9 +488,9 @@ Partial Class Form3
         Me.Label10.Location = New System.Drawing.Point(46, 35)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(58, 13)
+        Me.Label10.Size = New System.Drawing.Size(57, 13)
         Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Patient_no"
+        Me.Label10.Text = "Patient_ID"
         '
         'Label9
         '
@@ -511,50 +524,51 @@ Partial Class Form3
         '
         'TabPgTreatment
         '
-        Me.TabPgTreatment.Controls.Add(Me.Button9)
-        Me.TabPgTreatment.Controls.Add(Me.DataGridView3)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtdelete)
+        Me.TabPgTreatment.Controls.Add(Me.Dgvtreatment)
         Me.TabPgTreatment.Controls.Add(Me.Panel1)
-        Me.TabPgTreatment.Controls.Add(Me.Button8)
-        Me.TabPgTreatment.Controls.Add(Me.Button7)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtedit)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtview)
         Me.TabPgTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPgTreatment.Location = New System.Drawing.Point(4, 22)
         Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgTreatment.Name = "TabPgTreatment"
-        Me.TabPgTreatment.Size = New System.Drawing.Size(657, 447)
+        Me.TabPgTreatment.Size = New System.Drawing.Size(657, 462)
         Me.TabPgTreatment.TabIndex = 2
         Me.TabPgTreatment.Text = "Treatments"
         Me.TabPgTreatment.UseVisualStyleBackColor = True
         '
-        'Button9
+        'Btntrtdelete
         '
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(568, 267)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 19)
-        Me.Button9.TabIndex = 10
-        Me.Button9.Text = "Delete_Row"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.Btntrtdelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtdelete.Location = New System.Drawing.Point(568, 267)
+        Me.Btntrtdelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtdelete.Name = "Btntrtdelete"
+        Me.Btntrtdelete.Size = New System.Drawing.Size(75, 19)
+        Me.Btntrtdelete.TabIndex = 10
+        Me.Btntrtdelete.Text = "Delete_Row"
+        Me.Btntrtdelete.UseVisualStyleBackColor = True
         '
-        'DataGridView3
+        'Dgvtreatment
         '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(14, 291)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowHeadersWidth = 51
-        Me.DataGridView3.RowTemplate.Height = 24
-        Me.DataGridView3.Size = New System.Drawing.Size(617, 124)
-        Me.DataGridView3.TabIndex = 7
+        Me.Dgvtreatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvtreatment.Location = New System.Drawing.Point(14, 291)
+        Me.Dgvtreatment.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dgvtreatment.Name = "Dgvtreatment"
+        Me.Dgvtreatment.RowHeadersWidth = 51
+        Me.Dgvtreatment.RowTemplate.Height = 24
+        Me.Dgvtreatment.Size = New System.Drawing.Size(629, 124)
+        Me.Dgvtreatment.TabIndex = 7
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.Btntrtback)
+        Me.Panel1.Controls.Add(Me.Btntrtclr)
+        Me.Panel1.Controls.Add(Me.Btntrtreg)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.TextBox9)
-        Me.Panel1.Controls.Add(Me.TextBox10)
-        Me.Panel1.Controls.Add(Me.TextBox11)
+        Me.Panel1.Controls.Add(Me.Txtbxtrtid)
+        Me.Panel1.Controls.Add(Me.Txtbxtrtname)
+        Me.Panel1.Controls.Add(Me.Txtbxtrtcost)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Location = New System.Drawing.Point(2, 10)
@@ -563,27 +577,27 @@ Partial Class Form3
         Me.Panel1.Size = New System.Drawing.Size(628, 219)
         Me.Panel1.TabIndex = 6
         '
-        'Button5
+        'Btntrtclr
         '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(535, 180)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(73, 27)
-        Me.Button5.TabIndex = 16
-        Me.Button5.Text = "Clear"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Btntrtclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtclr.Location = New System.Drawing.Point(450, 180)
+        Me.Btntrtclr.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtclr.Name = "Btntrtclr"
+        Me.Btntrtclr.Size = New System.Drawing.Size(73, 27)
+        Me.Btntrtclr.TabIndex = 16
+        Me.Btntrtclr.Text = "Clear"
+        Me.Btntrtclr.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Btntrtreg
         '
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(446, 180)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(76, 27)
-        Me.Button6.TabIndex = 15
-        Me.Button6.Text = "Register"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Btntrtreg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtreg.Location = New System.Drawing.Point(370, 180)
+        Me.Btntrtreg.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtreg.Name = "Btntrtreg"
+        Me.Btntrtreg.Size = New System.Drawing.Size(76, 27)
+        Me.Btntrtreg.TabIndex = 15
+        Me.Btntrtreg.Text = "Register"
+        Me.Btntrtreg.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -596,29 +610,29 @@ Partial Class Form3
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Treatment_ID"
         '
-        'TextBox9
+        'Txtbxtrtid
         '
-        Me.TextBox9.Location = New System.Drawing.Point(111, 26)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox9.TabIndex = 3
+        Me.Txtbxtrtid.Location = New System.Drawing.Point(111, 26)
+        Me.Txtbxtrtid.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxtrtid.Name = "Txtbxtrtid"
+        Me.Txtbxtrtid.Size = New System.Drawing.Size(141, 26)
+        Me.Txtbxtrtid.TabIndex = 3
         '
-        'TextBox10
+        'Txtbxtrtname
         '
-        Me.TextBox10.Location = New System.Drawing.Point(111, 80)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox10.TabIndex = 4
+        Me.Txtbxtrtname.Location = New System.Drawing.Point(111, 80)
+        Me.Txtbxtrtname.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxtrtname.Name = "Txtbxtrtname"
+        Me.Txtbxtrtname.Size = New System.Drawing.Size(141, 26)
+        Me.Txtbxtrtname.TabIndex = 4
         '
-        'TextBox11
+        'Txtbxtrtcost
         '
-        Me.TextBox11.Location = New System.Drawing.Point(111, 134)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox11.TabIndex = 5
+        Me.Txtbxtrtcost.Location = New System.Drawing.Point(111, 134)
+        Me.Txtbxtrtcost.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtbxtrtcost.Name = "Txtbxtrtcost"
+        Me.Txtbxtrtcost.Size = New System.Drawing.Size(141, 26)
+        Me.Txtbxtrtcost.TabIndex = 5
         '
         'Label14
         '
@@ -642,27 +656,27 @@ Partial Class Form3
         Me.Label15.TabIndex = 2
         Me.Label15.Text = "Treatment Cost"
         '
-        'Button8
+        'Btntrtedit
         '
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(496, 267)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(67, 19)
-        Me.Button8.TabIndex = 9
-        Me.Button8.Text = "Edit_Row"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Btntrtedit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtedit.Location = New System.Drawing.Point(496, 267)
+        Me.Btntrtedit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtedit.Name = "Btntrtedit"
+        Me.Btntrtedit.Size = New System.Drawing.Size(67, 19)
+        Me.Btntrtedit.TabIndex = 9
+        Me.Btntrtedit.Text = "Edit_Row"
+        Me.Btntrtedit.UseVisualStyleBackColor = True
         '
-        'Button7
+        'Btntrtview
         '
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(436, 267)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(56, 19)
-        Me.Button7.TabIndex = 8
-        Me.Button7.Text = "View "
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Btntrtview.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtview.Location = New System.Drawing.Point(436, 267)
+        Me.Btntrtview.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtview.Name = "Btntrtview"
+        Me.Btntrtview.Size = New System.Drawing.Size(56, 19)
+        Me.Btntrtview.TabIndex = 8
+        Me.Btntrtview.Text = "View "
+        Me.Btntrtview.UseVisualStyleBackColor = True
         '
         'VScrollBar2
         '
@@ -672,21 +686,30 @@ Partial Class Form3
         Me.VScrollBar2.Size = New System.Drawing.Size(21, 506)
         Me.VScrollBar2.TabIndex = 2
         '
-        'Button14
+        'Btnptnback
         '
-        Me.Button14.Location = New System.Drawing.Point(612, 12)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(75, 23)
-        Me.Button14.TabIndex = 3
-        Me.Button14.Text = "Back"
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.Btnptnback.Location = New System.Drawing.Point(552, 212)
+        Me.Btnptnback.Name = "Btnptnback"
+        Me.Btnptnback.Size = New System.Drawing.Size(87, 28)
+        Me.Btnptnback.TabIndex = 18
+        Me.Btnptnback.Text = "Back"
+        Me.Btnptnback.UseVisualStyleBackColor = True
+        '
+        'Btntrtback
+        '
+        Me.Btntrtback.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtback.Location = New System.Drawing.Point(528, 180)
+        Me.Btntrtback.Name = "Btntrtback"
+        Me.Btntrtback.Size = New System.Drawing.Size(75, 27)
+        Me.Btntrtback.TabIndex = 17
+        Me.Btntrtback.Text = "Back"
+        Me.Btntrtback.UseVisualStyleBackColor = True
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(737, 506)
-        Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.VScrollBar2)
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -698,9 +721,9 @@ Partial Class Form3
         CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPgpatient.ResumeLayout(False)
         Me.TabPgpatient.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvptntab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPgTreatment.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvtreatment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -731,35 +754,37 @@ Partial Class Form3
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Dgvptntab As DataGridView
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Txtbxptnname As TextBox
+    Friend WithEvents Txtbxptnid As TextBox
+    Friend WithEvents Btnptnclr As Button
+    Friend WithEvents Btnptnregister As Button
+    Friend WithEvents Txtbxptnmedhstry As TextBox
+    Friend WithEvents Txtbxptnadrs As TextBox
+    Friend WithEvents Cmbbxptngnder As ComboBox
+    Friend WithEvents Datepatientdob As DateTimePicker
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Txtbxtrtcost As TextBox
+    Friend WithEvents Txtbxtrtname As TextBox
+    Friend WithEvents Txtbxtrtid As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents Dgvtreatment As DataGridView
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents Btntrtclr As Button
+    Friend WithEvents Btntrtreg As Button
+    Friend WithEvents Btnptndelete As Button
+    Friend WithEvents Btnptnedit As Button
+    Friend WithEvents Btnptnview As Button
+    Friend WithEvents Btntrtdelete As Button
+    Friend WithEvents Btntrtedit As Button
+    Friend WithEvents Btntrtview As Button
     Friend WithEvents Btndgvdelete As Button
     Friend WithEvents Btndgvedit As Button
     Friend WithEvents Btndgvview As Button
     Friend WithEvents VScrollBar2 As VScrollBar
-    Friend WithEvents Button14 As Button
+    Friend WithEvents Btndocback As Button
+    Friend WithEvents Btnptnback As Button
+    Friend WithEvents Btntrtback As Button
 End Class

@@ -25,8 +25,16 @@ Public Class Form3
 
     End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Btndocback.Click
         Form2.Show()
         Me.Close()
+    End Sub
+
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles Txtbxptnadrs.TextChanged
+
+    End Sub
+
+    Private Sub Btnptnclr_Click(sender As Object, e As EventArgs) Handles Btnptnclr.Click
+
     End Sub
 End Class
