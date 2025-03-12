@@ -32,7 +32,7 @@ Partial Class Form3
         Me.Button17 = New System.Windows.Forms.Button()
         Me.Txtboxdocspeci = New System.Windows.Forms.TextBox()
         Me.Txtboxdocname = New System.Windows.Forms.TextBox()
-        Me.Txtboxregid = New System.Windows.Forms.TextBox()
+        Me.Txtboxdocid = New System.Windows.Forms.TextBox()
         Me.Cboboxhour = New System.Windows.Forms.ComboBox()
         Me.Clstbox = New System.Windows.Forms.CheckedListBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -76,6 +76,7 @@ Partial Class Form3
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +93,7 @@ Partial Class Form3
         Me.TabControl1.Controls.Add(Me.TabPgpatient)
         Me.TabControl1.Controls.Add(Me.TabPgTreatment)
         Me.TabControl1.Location = New System.Drawing.Point(22, 26)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(665, 473)
@@ -109,7 +110,7 @@ Partial Class Form3
         Me.TabPgDoctor.Controls.Add(Me.Button17)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocspeci)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocname)
-        Me.TabPgDoctor.Controls.Add(Me.Txtboxregid)
+        Me.TabPgDoctor.Controls.Add(Me.Txtboxdocid)
         Me.TabPgDoctor.Controls.Add(Me.Cboboxhour)
         Me.TabPgDoctor.Controls.Add(Me.Clstbox)
         Me.TabPgDoctor.Controls.Add(Me.Label6)
@@ -120,9 +121,9 @@ Partial Class Form3
         Me.TabPgDoctor.Controls.Add(Me.Label1)
         Me.TabPgDoctor.Controls.Add(Me.DataGridView1)
         Me.TabPgDoctor.Location = New System.Drawing.Point(4, 22)
-        Me.TabPgDoctor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPgDoctor.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgDoctor.Name = "TabPgDoctor"
-        Me.TabPgDoctor.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPgDoctor.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPgDoctor.Size = New System.Drawing.Size(657, 447)
         Me.TabPgDoctor.TabIndex = 0
         Me.TabPgDoctor.Text = "Doctor"
@@ -132,7 +133,7 @@ Partial Class Form3
         '
         Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.Location = New System.Drawing.Point(562, 262)
-        Me.Button13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(2)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(75, 19)
         Me.Button13.TabIndex = 10
@@ -142,7 +143,7 @@ Partial Class Form3
         'Txtbox_phoneno
         '
         Me.Txtbox_phoneno.Location = New System.Drawing.Point(158, 192)
-        Me.Txtbox_phoneno.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txtbox_phoneno.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbox_phoneno.Name = "Txtbox_phoneno"
         Me.Txtbox_phoneno.Size = New System.Drawing.Size(128, 20)
         Me.Txtbox_phoneno.TabIndex = 15
@@ -151,7 +152,7 @@ Partial Class Form3
         '
         Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.Location = New System.Drawing.Point(492, 262)
-        Me.Button15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button15.Margin = New System.Windows.Forms.Padding(2)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(67, 19)
         Me.Button15.TabIndex = 9
@@ -161,7 +162,7 @@ Partial Class Form3
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(555, 214)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(73, 27)
         Me.Button2.TabIndex = 14
@@ -171,7 +172,7 @@ Partial Class Form3
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(465, 214)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(76, 27)
         Me.Button1.TabIndex = 13
@@ -182,7 +183,7 @@ Partial Class Form3
         '
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.Location = New System.Drawing.Point(424, 262)
-        Me.Button17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button17.Margin = New System.Windows.Forms.Padding(2)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(56, 19)
         Me.Button17.TabIndex = 8
@@ -192,7 +193,7 @@ Partial Class Form3
         'Txtboxdocspeci
         '
         Me.Txtboxdocspeci.Location = New System.Drawing.Point(158, 132)
-        Me.Txtboxdocspeci.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txtboxdocspeci.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtboxdocspeci.Multiline = True
         Me.Txtboxdocspeci.Name = "Txtboxdocspeci"
         Me.Txtboxdocspeci.Size = New System.Drawing.Size(128, 41)
@@ -201,25 +202,25 @@ Partial Class Form3
         'Txtboxdocname
         '
         Me.Txtboxdocname.Location = New System.Drawing.Point(158, 92)
-        Me.Txtboxdocname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txtboxdocname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtboxdocname.Name = "Txtboxdocname"
         Me.Txtboxdocname.Size = New System.Drawing.Size(128, 20)
         Me.Txtboxdocname.TabIndex = 10
         '
-        'Txtboxregid
+        'Txtboxdocid
         '
-        Me.Txtboxregid.Location = New System.Drawing.Point(158, 37)
-        Me.Txtboxregid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Txtboxregid.Name = "Txtboxregid"
-        Me.Txtboxregid.Size = New System.Drawing.Size(128, 20)
-        Me.Txtboxregid.TabIndex = 9
+        Me.Txtboxdocid.Location = New System.Drawing.Point(158, 34)
+        Me.Txtboxdocid.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtboxdocid.Name = "Txtboxdocid"
+        Me.Txtboxdocid.Size = New System.Drawing.Size(128, 20)
+        Me.Txtboxdocid.TabIndex = 9
         '
         'Cboboxhour
         '
         Me.Cboboxhour.FormattingEnabled = True
         Me.Cboboxhour.Items.AddRange(New Object() {"Fore noon", "After noon", "Evening"})
         Me.Cboboxhour.Location = New System.Drawing.Point(477, 159)
-        Me.Cboboxhour.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cboboxhour.Margin = New System.Windows.Forms.Padding(2)
         Me.Cboboxhour.Name = "Cboboxhour"
         Me.Cboboxhour.Size = New System.Drawing.Size(134, 21)
         Me.Cboboxhour.TabIndex = 8
@@ -230,7 +231,7 @@ Partial Class Form3
         Me.Clstbox.FormattingEnabled = True
         Me.Clstbox.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"})
         Me.Clstbox.Location = New System.Drawing.Point(477, 37)
-        Me.Clstbox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Clstbox.Margin = New System.Windows.Forms.Padding(2)
         Me.Clstbox.Name = "Clstbox"
         Me.Clstbox.Size = New System.Drawing.Size(94, 94)
         Me.Clstbox.TabIndex = 7
@@ -299,7 +300,7 @@ Partial Class Form3
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(21, 285)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -327,9 +328,9 @@ Partial Class Form3
         Me.TabPgpatient.Controls.Add(Me.Label8)
         Me.TabPgpatient.Controls.Add(Me.Label7)
         Me.TabPgpatient.Location = New System.Drawing.Point(4, 22)
-        Me.TabPgpatient.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPgpatient.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgpatient.Name = "TabPgpatient"
-        Me.TabPgpatient.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPgpatient.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPgpatient.Size = New System.Drawing.Size(657, 447)
         Me.TabPgpatient.TabIndex = 1
         Me.TabPgpatient.Text = "Patients"
@@ -338,7 +339,7 @@ Partial Class Form3
         'Button12
         '
         Me.Button12.Location = New System.Drawing.Point(563, 265)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(2)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(64, 19)
         Me.Button12.TabIndex = 17
@@ -348,7 +349,7 @@ Partial Class Form3
         'Button11
         '
         Me.Button11.Location = New System.Drawing.Point(488, 265)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(2)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(71, 19)
         Me.Button11.TabIndex = 16
@@ -358,7 +359,7 @@ Partial Class Form3
         'Button10
         '
         Me.Button10.Location = New System.Drawing.Point(427, 265)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(2)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(56, 19)
         Me.Button10.TabIndex = 15
@@ -368,7 +369,7 @@ Partial Class Form3
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(545, 202)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(82, 28)
         Me.Button4.TabIndex = 14
@@ -378,7 +379,7 @@ Partial Class Form3
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(450, 202)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(87, 28)
         Me.Button3.TabIndex = 13
@@ -388,7 +389,7 @@ Partial Class Form3
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(459, 124)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(170, 54)
@@ -397,7 +398,7 @@ Partial Class Form3
         'TextBox7
         '
         Me.TextBox7.Location = New System.Drawing.Point(459, 24)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(170, 57)
@@ -408,7 +409,7 @@ Partial Class Form3
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Male", "Female", "Other"})
         Me.ComboBox2.Location = New System.Drawing.Point(142, 158)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox2.TabIndex = 10
@@ -416,7 +417,7 @@ Partial Class Form3
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(142, 104)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(151, 20)
         Me.DateTimePicker1.TabIndex = 9
@@ -424,7 +425,7 @@ Partial Class Form3
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(142, 67)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(76, 20)
         Me.TextBox6.TabIndex = 8
@@ -432,7 +433,7 @@ Partial Class Form3
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(142, 30)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(76, 20)
         Me.TextBox5.TabIndex = 7
@@ -441,7 +442,7 @@ Partial Class Form3
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(32, 288)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
@@ -517,7 +518,7 @@ Partial Class Form3
         Me.TabPgTreatment.Controls.Add(Me.Button7)
         Me.TabPgTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPgTreatment.Location = New System.Drawing.Point(4, 22)
-        Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgTreatment.Name = "TabPgTreatment"
         Me.TabPgTreatment.Size = New System.Drawing.Size(657, 447)
         Me.TabPgTreatment.TabIndex = 2
@@ -528,7 +529,7 @@ Partial Class Form3
         '
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.Location = New System.Drawing.Point(568, 267)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(2)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(75, 19)
         Me.Button9.TabIndex = 10
@@ -539,7 +540,7 @@ Partial Class Form3
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Location = New System.Drawing.Point(14, 291)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 51
         Me.DataGridView3.RowTemplate.Height = 24
@@ -557,7 +558,7 @@ Partial Class Form3
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Location = New System.Drawing.Point(2, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(628, 219)
         Me.Panel1.TabIndex = 6
@@ -566,7 +567,7 @@ Partial Class Form3
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(535, 180)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(73, 27)
         Me.Button5.TabIndex = 16
@@ -577,7 +578,7 @@ Partial Class Form3
         '
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(446, 180)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(76, 27)
         Me.Button6.TabIndex = 15
@@ -598,7 +599,7 @@ Partial Class Form3
         'TextBox9
         '
         Me.TextBox9.Location = New System.Drawing.Point(111, 26)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(141, 26)
         Me.TextBox9.TabIndex = 3
@@ -606,7 +607,7 @@ Partial Class Form3
         'TextBox10
         '
         Me.TextBox10.Location = New System.Drawing.Point(111, 80)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(141, 26)
         Me.TextBox10.TabIndex = 4
@@ -614,7 +615,7 @@ Partial Class Form3
         'TextBox11
         '
         Me.TextBox11.Location = New System.Drawing.Point(111, 134)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(141, 26)
         Me.TextBox11.TabIndex = 5
@@ -645,7 +646,7 @@ Partial Class Form3
         '
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.Location = New System.Drawing.Point(496, 267)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(67, 19)
         Me.Button8.TabIndex = 9
@@ -656,7 +657,7 @@ Partial Class Form3
         '
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Location = New System.Drawing.Point(436, 267)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(56, 19)
         Me.Button7.TabIndex = 8
@@ -671,14 +672,24 @@ Partial Class Form3
         Me.VScrollBar2.Size = New System.Drawing.Size(21, 506)
         Me.VScrollBar2.TabIndex = 2
         '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(612, 12)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.TabIndex = 3
+        Me.Button14.Text = "Back"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(737, 506)
+        Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.VScrollBar2)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form3"
         Me.Text = "Registration_Page"
         Me.TabControl1.ResumeLayout(False)
@@ -710,7 +721,7 @@ Partial Class Form3
     Friend WithEvents Clstbox As CheckedListBox
     Friend WithEvents Txtboxdocspeci As TextBox
     Friend WithEvents Txtboxdocname As TextBox
-    Friend WithEvents Txtboxregid As TextBox
+    Friend WithEvents Txtboxdocid As TextBox
     Friend WithEvents Cboboxhour As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
@@ -750,4 +761,5 @@ Partial Class Form3
     Friend WithEvents Button15 As Button
     Friend WithEvents Button17 As Button
     Friend WithEvents VScrollBar2 As VScrollBar
+    Friend WithEvents Button14 As Button
 End Class
