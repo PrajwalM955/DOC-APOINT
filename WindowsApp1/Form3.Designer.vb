@@ -24,12 +24,12 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
-        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Btndgvdelete = New System.Windows.Forms.Button()
         Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Btndgvedit = New System.Windows.Forms.Button()
+        Me.Btnclrdoc = New System.Windows.Forms.Button()
+        Me.Btnregdoc = New System.Windows.Forms.Button()
+        Me.Btndgvview = New System.Windows.Forms.Button()
         Me.Txtboxdocspeci = New System.Windows.Forms.TextBox()
         Me.Txtboxdocname = New System.Windows.Forms.TextBox()
         Me.Txtboxdocid = New System.Windows.Forms.TextBox()
@@ -41,7 +41,7 @@ Partial Class Form3
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Dgvdoc = New System.Windows.Forms.DataGridView()
         Me.TabPgpatient = New System.Windows.Forms.TabPage()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -79,7 +79,7 @@ Partial Class Form3
         Me.Button14 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPgpatient.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPgTreatment.SuspendLayout()
@@ -102,12 +102,12 @@ Partial Class Form3
         '
         'TabPgDoctor
         '
-        Me.TabPgDoctor.Controls.Add(Me.Button13)
+        Me.TabPgDoctor.Controls.Add(Me.Btndgvdelete)
         Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
-        Me.TabPgDoctor.Controls.Add(Me.Button15)
-        Me.TabPgDoctor.Controls.Add(Me.Button2)
-        Me.TabPgDoctor.Controls.Add(Me.Button1)
-        Me.TabPgDoctor.Controls.Add(Me.Button17)
+        Me.TabPgDoctor.Controls.Add(Me.Btndgvedit)
+        Me.TabPgDoctor.Controls.Add(Me.Btnclrdoc)
+        Me.TabPgDoctor.Controls.Add(Me.Btnregdoc)
+        Me.TabPgDoctor.Controls.Add(Me.Btndgvview)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocspeci)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocname)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocid)
@@ -119,7 +119,7 @@ Partial Class Form3
         Me.TabPgDoctor.Controls.Add(Me.Label3)
         Me.TabPgDoctor.Controls.Add(Me.Label2)
         Me.TabPgDoctor.Controls.Add(Me.Label1)
-        Me.TabPgDoctor.Controls.Add(Me.DataGridView1)
+        Me.TabPgDoctor.Controls.Add(Me.Dgvdoc)
         Me.TabPgDoctor.Location = New System.Drawing.Point(4, 22)
         Me.TabPgDoctor.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgDoctor.Name = "TabPgDoctor"
@@ -129,16 +129,16 @@ Partial Class Form3
         Me.TabPgDoctor.Text = "Doctor"
         Me.TabPgDoctor.UseVisualStyleBackColor = True
         '
-        'Button13
+        'Btndgvdelete
         '
-        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(562, 262)
-        Me.Button13.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 19)
-        Me.Button13.TabIndex = 10
-        Me.Button13.Text = "Delete_Row"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.Btndgvdelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndgvdelete.Location = New System.Drawing.Point(562, 262)
+        Me.Btndgvdelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btndgvdelete.Name = "Btndgvdelete"
+        Me.Btndgvdelete.Size = New System.Drawing.Size(75, 19)
+        Me.Btndgvdelete.TabIndex = 10
+        Me.Btndgvdelete.Text = "Delete_Row"
+        Me.Btndgvdelete.UseVisualStyleBackColor = True
         '
         'Txtbox_phoneno
         '
@@ -148,47 +148,47 @@ Partial Class Form3
         Me.Txtbox_phoneno.Size = New System.Drawing.Size(128, 20)
         Me.Txtbox_phoneno.TabIndex = 15
         '
-        'Button15
+        'Btndgvedit
         '
-        Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.Location = New System.Drawing.Point(492, 262)
-        Me.Button15.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(67, 19)
-        Me.Button15.TabIndex = 9
-        Me.Button15.Text = "Edit_Row"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.Btndgvedit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndgvedit.Location = New System.Drawing.Point(492, 262)
+        Me.Btndgvedit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btndgvedit.Name = "Btndgvedit"
+        Me.Btndgvedit.Size = New System.Drawing.Size(67, 19)
+        Me.Btndgvedit.TabIndex = 9
+        Me.Btndgvedit.Text = "Edit_Row"
+        Me.Btndgvedit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btnclrdoc
         '
-        Me.Button2.Location = New System.Drawing.Point(555, 214)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(73, 27)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btnclrdoc.Location = New System.Drawing.Point(555, 214)
+        Me.Btnclrdoc.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnclrdoc.Name = "Btnclrdoc"
+        Me.Btnclrdoc.Size = New System.Drawing.Size(73, 27)
+        Me.Btnclrdoc.TabIndex = 14
+        Me.Btnclrdoc.Text = "Clear"
+        Me.Btnclrdoc.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Btnregdoc
         '
-        Me.Button1.Location = New System.Drawing.Point(465, 214)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 27)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Register"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btnregdoc.Location = New System.Drawing.Point(465, 214)
+        Me.Btnregdoc.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnregdoc.Name = "Btnregdoc"
+        Me.Btnregdoc.Size = New System.Drawing.Size(76, 27)
+        Me.Btnregdoc.TabIndex = 13
+        Me.Btnregdoc.Text = "Register"
+        Me.Btnregdoc.UseVisualStyleBackColor = True
         '
-        'Button17
+        'Btndgvview
         '
-        Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(424, 262)
-        Me.Button17.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(56, 19)
-        Me.Button17.TabIndex = 8
-        Me.Button17.Text = "View "
-        Me.Button17.UseVisualStyleBackColor = True
+        Me.Btndgvview.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndgvview.Location = New System.Drawing.Point(424, 262)
+        Me.Btndgvview.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btndgvview.Name = "Btndgvview"
+        Me.Btndgvview.Size = New System.Drawing.Size(56, 19)
+        Me.Btndgvview.TabIndex = 8
+        Me.Btndgvview.Text = "View "
+        Me.Btndgvview.UseVisualStyleBackColor = True
         '
         'Txtboxdocspeci
         '
@@ -296,16 +296,16 @@ Partial Class Form3
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Doctor_id"
         '
-        'DataGridView1
+        'Dgvdoc
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(21, 285)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(616, 134)
-        Me.DataGridView1.TabIndex = 0
+        Me.Dgvdoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvdoc.Location = New System.Drawing.Point(21, 285)
+        Me.Dgvdoc.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dgvdoc.Name = "Dgvdoc"
+        Me.Dgvdoc.RowHeadersWidth = 51
+        Me.Dgvdoc.RowTemplate.Height = 24
+        Me.Dgvdoc.Size = New System.Drawing.Size(616, 134)
+        Me.Dgvdoc.TabIndex = 0
         '
         'TabPgpatient
         '
@@ -695,7 +695,7 @@ Partial Class Form3
         Me.TabControl1.ResumeLayout(False)
         Me.TabPgDoctor.ResumeLayout(False)
         Me.TabPgDoctor.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPgpatient.ResumeLayout(False)
         Me.TabPgpatient.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -711,7 +711,7 @@ Partial Class Form3
     Friend WithEvents TabPgDoctor As TabPage
     Friend WithEvents TabPgpatient As TabPage
     Friend WithEvents TabPgTreatment As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Dgvdoc As DataGridView
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -723,8 +723,8 @@ Partial Class Form3
     Friend WithEvents Txtboxdocname As TextBox
     Friend WithEvents Txtboxdocid As TextBox
     Friend WithEvents Cboboxhour As ComboBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btnclrdoc As Button
+    Friend WithEvents Btnregdoc As Button
     Friend WithEvents Txtbox_phoneno As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -757,9 +757,9 @@ Partial Class Form3
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button17 As Button
+    Friend WithEvents Btndgvdelete As Button
+    Friend WithEvents Btndgvedit As Button
+    Friend WithEvents Btndgvview As Button
     Friend WithEvents VScrollBar2 As VScrollBar
     Friend WithEvents Button14 As Button
 End Class

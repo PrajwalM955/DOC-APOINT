@@ -17,7 +17,7 @@ Public Class Form3
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnregdoc.Click
         If Txtboxdocid.Text = "" Or Txtboxdocname.Text = "" Or Txtboxdocspeci.Text = "" Or Txtbox_phoneno.Text = "" Or Clstbox.SelectedValueChanged = Then
     End Sub
 
