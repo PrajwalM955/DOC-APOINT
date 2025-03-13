@@ -31,8 +31,6 @@ Partial Class Form4
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CmbxapintId = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Cmbxapoitdocname = New System.Windows.Forms.ComboBox()
         Me.Cmbxapointptnname = New System.Windows.Forms.ComboBox()
         Me.Cmbxapoitdocid = New System.Windows.Forms.ComboBox()
@@ -45,8 +43,6 @@ Partial Class Form4
         Me.Dateapointdate = New System.Windows.Forms.DateTimePicker()
         Me.Dgvappoint = New System.Windows.Forms.DataGridView()
         Me.Btnapointview = New System.Windows.Forms.Button()
-        Me.Btnapointedit = New System.Windows.Forms.Button()
-        Me.Btnapointdelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.Dgvappoint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,7 +50,7 @@ Partial Class Form4
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 77)
+        Me.Label1.Location = New System.Drawing.Point(25, 31)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 13)
@@ -64,7 +60,7 @@ Partial Class Form4
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(23, 128)
+        Me.Label2.Location = New System.Drawing.Point(24, 82)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 13)
@@ -74,7 +70,7 @@ Partial Class Form4
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(24, 171)
+        Me.Label3.Location = New System.Drawing.Point(25, 125)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
@@ -84,7 +80,7 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 217)
+        Me.Label4.Location = New System.Drawing.Point(24, 171)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(73, 13)
@@ -94,7 +90,7 @@ Partial Class Form4
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(307, 30)
+        Me.Label5.Location = New System.Drawing.Point(329, 31)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(93, 13)
@@ -104,7 +100,7 @@ Partial Class Form4
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(307, 77)
+        Me.Label6.Location = New System.Drawing.Point(329, 78)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(30, 13)
@@ -114,7 +110,7 @@ Partial Class Form4
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(307, 140)
+        Me.Label7.Location = New System.Drawing.Point(329, 141)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(37, 13)
@@ -124,7 +120,7 @@ Partial Class Form4
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(307, 179)
+        Me.Label8.Location = New System.Drawing.Point(329, 180)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 13)
@@ -133,8 +129,6 @@ Partial Class Form4
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.CmbxapintId)
-        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Cmbxapoitdocname)
         Me.Panel1.Controls.Add(Me.Cmbxapointptnname)
         Me.Panel1.Controls.Add(Me.Cmbxapoitdocid)
@@ -159,27 +153,10 @@ Partial Class Form4
         Me.Panel1.Size = New System.Drawing.Size(701, 274)
         Me.Panel1.TabIndex = 8
         '
-        'CmbxapintId
-        '
-        Me.CmbxapintId.FormattingEnabled = True
-        Me.CmbxapintId.Location = New System.Drawing.Point(123, 31)
-        Me.CmbxapintId.Name = "CmbxapintId"
-        Me.CmbxapintId.Size = New System.Drawing.Size(121, 21)
-        Me.CmbxapintId.TabIndex = 24
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(24, 30)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 13)
-        Me.Label9.TabIndex = 23
-        Me.Label9.Text = "Appointment ID"
-        '
         'Cmbxapoitdocname
         '
         Me.Cmbxapoitdocname.FormattingEnabled = True
-        Me.Cmbxapoitdocname.Location = New System.Drawing.Point(123, 217)
+        Me.Cmbxapoitdocname.Location = New System.Drawing.Point(124, 171)
         Me.Cmbxapoitdocname.Name = "Cmbxapoitdocname"
         Me.Cmbxapoitdocname.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapoitdocname.TabIndex = 22
@@ -187,7 +164,7 @@ Partial Class Form4
         'Cmbxapointptnname
         '
         Me.Cmbxapointptnname.FormattingEnabled = True
-        Me.Cmbxapointptnname.Location = New System.Drawing.Point(123, 128)
+        Me.Cmbxapointptnname.Location = New System.Drawing.Point(124, 82)
         Me.Cmbxapointptnname.Name = "Cmbxapointptnname"
         Me.Cmbxapointptnname.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapointptnname.TabIndex = 21
@@ -195,7 +172,7 @@ Partial Class Form4
         'Cmbxapoitdocid
         '
         Me.Cmbxapoitdocid.FormattingEnabled = True
-        Me.Cmbxapoitdocid.Location = New System.Drawing.Point(123, 171)
+        Me.Cmbxapoitdocid.Location = New System.Drawing.Point(124, 125)
         Me.Cmbxapoitdocid.Name = "Cmbxapoitdocid"
         Me.Cmbxapoitdocid.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapoitdocid.TabIndex = 20
@@ -203,7 +180,7 @@ Partial Class Form4
         'Cmbxapointptnid
         '
         Me.Cmbxapointptnid.FormattingEnabled = True
-        Me.Cmbxapointptnid.Location = New System.Drawing.Point(123, 77)
+        Me.Cmbxapointptnid.Location = New System.Drawing.Point(124, 31)
         Me.Cmbxapointptnid.Name = "Cmbxapointptnid"
         Me.Cmbxapointptnid.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapointptnid.TabIndex = 19
@@ -280,7 +257,7 @@ Partial Class Form4
         '
         'Btnapointview
         '
-        Me.Btnapointview.Location = New System.Drawing.Point(487, 298)
+        Me.Btnapointview.Location = New System.Drawing.Point(643, 299)
         Me.Btnapointview.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnapointview.Name = "Btnapointview"
         Me.Btnapointview.Size = New System.Drawing.Size(67, 19)
@@ -288,33 +265,11 @@ Partial Class Form4
         Me.Btnapointview.Text = "View"
         Me.Btnapointview.UseVisualStyleBackColor = True
         '
-        'Btnapointedit
-        '
-        Me.Btnapointedit.Location = New System.Drawing.Point(558, 298)
-        Me.Btnapointedit.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnapointedit.Name = "Btnapointedit"
-        Me.Btnapointedit.Size = New System.Drawing.Size(65, 19)
-        Me.Btnapointedit.TabIndex = 11
-        Me.Btnapointedit.Text = "Edit_row"
-        Me.Btnapointedit.UseVisualStyleBackColor = True
-        '
-        'Btnapointdelete
-        '
-        Me.Btnapointdelete.Location = New System.Drawing.Point(628, 298)
-        Me.Btnapointdelete.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnapointdelete.Name = "Btnapointdelete"
-        Me.Btnapointdelete.Size = New System.Drawing.Size(71, 19)
-        Me.Btnapointdelete.TabIndex = 12
-        Me.Btnapointdelete.Text = "Delete_row"
-        Me.Btnapointdelete.UseVisualStyleBackColor = True
-        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 466)
-        Me.Controls.Add(Me.Btnapointdelete)
-        Me.Controls.Add(Me.Btnapointedit)
         Me.Controls.Add(Me.Btnapointview)
         Me.Controls.Add(Me.Dgvappoint)
         Me.Controls.Add(Me.Panel1)
@@ -344,13 +299,9 @@ Partial Class Form4
     Friend WithEvents Btnappoint As Button
     Friend WithEvents Dgvappoint As DataGridView
     Friend WithEvents Btnapointview As Button
-    Friend WithEvents Btnapointedit As Button
-    Friend WithEvents Btnapointdelete As Button
     Friend WithEvents Cmbxapointreason As ComboBox
     Friend WithEvents Cmbxapoitdocname As ComboBox
     Friend WithEvents Cmbxapointptnname As ComboBox
     Friend WithEvents Cmbxapoitdocid As ComboBox
     Friend WithEvents Cmbxapointptnid As ComboBox
-    Friend WithEvents CmbxapintId As ComboBox
-    Friend WithEvents Label9 As Label
 End Class
