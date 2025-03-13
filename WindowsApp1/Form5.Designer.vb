@@ -23,40 +23,40 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panel_assigtab = New System.Windows.Forms.Panel()
-        Me.combox_assign_status = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker_assigtab = New System.Windows.Forms.DateTimePicker()
+        Me.combox_trtassign_status = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker_trtassig = New System.Windows.Forms.DateTimePicker()
         Me.btn_assign_clear = New System.Windows.Forms.Button()
-        Me.btn_assignserv = New System.Windows.Forms.Button()
-        Me.combox_assign_mechid = New System.Windows.Forms.ComboBox()
-        Me.combox_assign_servid = New System.Windows.Forms.ComboBox()
-        Me.combox_assign_regno = New System.Windows.Forms.ComboBox()
-        Me.txtbox_servassignid = New System.Windows.Forms.TextBox()
+        Me.btn_assigntreatmnt = New System.Windows.Forms.Button()
+        Me.combox_trtassign_docid = New System.Windows.Forms.ComboBox()
+        Me.combox_trtassign_trtmnt_id = New System.Windows.Forms.ComboBox()
+        Me.combox_trtassign_ptnid = New System.Windows.Forms.ComboBox()
+        Me.txtbox_trtassignid = New System.Windows.Forms.TextBox()
         Me.lbl_servstatus = New System.Windows.Forms.Label()
         Me.lbl_servdate = New System.Windows.Forms.Label()
         Me.lbl_assign_mechanicid = New System.Windows.Forms.Label()
         Me.lbl_assign_serviceid = New System.Windows.Forms.Label()
         Me.lbl_assign_regno = New System.Windows.Forms.Label()
         Me.lbl_servassignid = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Dgv_trtassing = New System.Windows.Forms.DataGridView()
+        Me.Btn_assigntreatmnt_dgv_view = New System.Windows.Forms.Button()
+        Me.Btn_assigntreatmnt_edit = New System.Windows.Forms.Button()
+        Me.Btn_assigntreatmnt_dgv_delete = New System.Windows.Forms.Button()
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.panel_assigtab.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_trtassing, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel_assigtab
         '
         Me.panel_assigtab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_status)
-        Me.panel_assigtab.Controls.Add(Me.DateTimePicker_assigtab)
+        Me.panel_assigtab.Controls.Add(Me.combox_trtassign_status)
+        Me.panel_assigtab.Controls.Add(Me.DateTimePicker_trtassig)
         Me.panel_assigtab.Controls.Add(Me.btn_assign_clear)
-        Me.panel_assigtab.Controls.Add(Me.btn_assignserv)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_mechid)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_servid)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_regno)
-        Me.panel_assigtab.Controls.Add(Me.txtbox_servassignid)
+        Me.panel_assigtab.Controls.Add(Me.btn_assigntreatmnt)
+        Me.panel_assigtab.Controls.Add(Me.combox_trtassign_docid)
+        Me.panel_assigtab.Controls.Add(Me.combox_trtassign_trtmnt_id)
+        Me.panel_assigtab.Controls.Add(Me.combox_trtassign_ptnid)
+        Me.panel_assigtab.Controls.Add(Me.txtbox_trtassignid)
         Me.panel_assigtab.Controls.Add(Me.lbl_servstatus)
         Me.panel_assigtab.Controls.Add(Me.lbl_servdate)
         Me.panel_assigtab.Controls.Add(Me.lbl_assign_mechanicid)
@@ -64,87 +64,87 @@ Partial Class Form5
         Me.panel_assigtab.Controls.Add(Me.lbl_assign_regno)
         Me.panel_assigtab.Controls.Add(Me.lbl_servassignid)
         Me.panel_assigtab.Location = New System.Drawing.Point(26, 26)
-        Me.panel_assigtab.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panel_assigtab.Margin = New System.Windows.Forms.Padding(2)
         Me.panel_assigtab.Name = "panel_assigtab"
         Me.panel_assigtab.Size = New System.Drawing.Size(887, 278)
         Me.panel_assigtab.TabIndex = 1
         '
-        'combox_assign_status
+        'combox_trtassign_status
         '
-        Me.combox_assign_status.FormattingEnabled = True
-        Me.combox_assign_status.Items.AddRange(New Object() {"ASSIGNED", "ONGOING", "PENDING", "COMPLETED"})
-        Me.combox_assign_status.Location = New System.Drawing.Point(587, 163)
-        Me.combox_assign_status.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.combox_assign_status.Name = "combox_assign_status"
-        Me.combox_assign_status.Size = New System.Drawing.Size(168, 21)
-        Me.combox_assign_status.TabIndex = 16
+        Me.combox_trtassign_status.FormattingEnabled = True
+        Me.combox_trtassign_status.Items.AddRange(New Object() {"ASSIGNED", "ONGOING", "PENDING", "COMPLETED"})
+        Me.combox_trtassign_status.Location = New System.Drawing.Point(587, 163)
+        Me.combox_trtassign_status.Margin = New System.Windows.Forms.Padding(2)
+        Me.combox_trtassign_status.Name = "combox_trtassign_status"
+        Me.combox_trtassign_status.Size = New System.Drawing.Size(168, 21)
+        Me.combox_trtassign_status.TabIndex = 16
         '
-        'DateTimePicker_assigtab
+        'DateTimePicker_trtassig
         '
-        Me.DateTimePicker_assigtab.Checked = False
-        Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(587, 72)
-        Me.DateTimePicker_assigtab.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker_assigtab.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker_assigtab.Name = "DateTimePicker_assigtab"
-        Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(168, 20)
-        Me.DateTimePicker_assigtab.TabIndex = 1
-        Me.DateTimePicker_assigtab.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker_trtassig.Checked = False
+        Me.DateTimePicker_trtassig.Location = New System.Drawing.Point(587, 72)
+        Me.DateTimePicker_trtassig.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateTimePicker_trtassig.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker_trtassig.Name = "DateTimePicker_trtassig"
+        Me.DateTimePicker_trtassig.Size = New System.Drawing.Size(168, 20)
+        Me.DateTimePicker_trtassig.TabIndex = 1
+        Me.DateTimePicker_trtassig.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         '
         'btn_assign_clear
         '
         Me.btn_assign_clear.Location = New System.Drawing.Point(759, 226)
-        Me.btn_assign_clear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_assign_clear.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_assign_clear.Name = "btn_assign_clear"
         Me.btn_assign_clear.Size = New System.Drawing.Size(111, 32)
         Me.btn_assign_clear.TabIndex = 15
         Me.btn_assign_clear.Text = "Clear"
         Me.btn_assign_clear.UseVisualStyleBackColor = True
         '
-        'btn_assignserv
+        'btn_assigntreatmnt
         '
-        Me.btn_assignserv.Location = New System.Drawing.Point(634, 226)
-        Me.btn_assignserv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btn_assignserv.Name = "btn_assignserv"
-        Me.btn_assignserv.Size = New System.Drawing.Size(111, 32)
-        Me.btn_assignserv.TabIndex = 14
-        Me.btn_assignserv.Text = "Assign Treatment"
-        Me.btn_assignserv.UseVisualStyleBackColor = True
+        Me.btn_assigntreatmnt.Location = New System.Drawing.Point(634, 226)
+        Me.btn_assigntreatmnt.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_assigntreatmnt.Name = "btn_assigntreatmnt"
+        Me.btn_assigntreatmnt.Size = New System.Drawing.Size(111, 32)
+        Me.btn_assigntreatmnt.TabIndex = 14
+        Me.btn_assigntreatmnt.Text = "Assign Treatment"
+        Me.btn_assigntreatmnt.UseVisualStyleBackColor = True
         '
-        'combox_assign_mechid
+        'combox_trtassign_docid
         '
-        Me.combox_assign_mechid.FormattingEnabled = True
-        Me.combox_assign_mechid.Location = New System.Drawing.Point(148, 175)
-        Me.combox_assign_mechid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.combox_assign_mechid.Name = "combox_assign_mechid"
-        Me.combox_assign_mechid.Size = New System.Drawing.Size(168, 21)
-        Me.combox_assign_mechid.TabIndex = 10
+        Me.combox_trtassign_docid.FormattingEnabled = True
+        Me.combox_trtassign_docid.Location = New System.Drawing.Point(148, 175)
+        Me.combox_trtassign_docid.Margin = New System.Windows.Forms.Padding(2)
+        Me.combox_trtassign_docid.Name = "combox_trtassign_docid"
+        Me.combox_trtassign_docid.Size = New System.Drawing.Size(168, 21)
+        Me.combox_trtassign_docid.TabIndex = 10
         '
-        'combox_assign_servid
+        'combox_trtassign_trtmnt_id
         '
-        Me.combox_assign_servid.FormattingEnabled = True
-        Me.combox_assign_servid.Location = New System.Drawing.Point(148, 126)
-        Me.combox_assign_servid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.combox_assign_servid.Name = "combox_assign_servid"
-        Me.combox_assign_servid.Size = New System.Drawing.Size(168, 21)
-        Me.combox_assign_servid.TabIndex = 9
+        Me.combox_trtassign_trtmnt_id.FormattingEnabled = True
+        Me.combox_trtassign_trtmnt_id.Location = New System.Drawing.Point(148, 126)
+        Me.combox_trtassign_trtmnt_id.Margin = New System.Windows.Forms.Padding(2)
+        Me.combox_trtassign_trtmnt_id.Name = "combox_trtassign_trtmnt_id"
+        Me.combox_trtassign_trtmnt_id.Size = New System.Drawing.Size(168, 21)
+        Me.combox_trtassign_trtmnt_id.TabIndex = 9
         '
-        'combox_assign_regno
+        'combox_trtassign_ptnid
         '
-        Me.combox_assign_regno.FormattingEnabled = True
-        Me.combox_assign_regno.Location = New System.Drawing.Point(148, 74)
-        Me.combox_assign_regno.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.combox_assign_regno.Name = "combox_assign_regno"
-        Me.combox_assign_regno.Size = New System.Drawing.Size(168, 21)
-        Me.combox_assign_regno.TabIndex = 8
+        Me.combox_trtassign_ptnid.FormattingEnabled = True
+        Me.combox_trtassign_ptnid.Location = New System.Drawing.Point(148, 74)
+        Me.combox_trtassign_ptnid.Margin = New System.Windows.Forms.Padding(2)
+        Me.combox_trtassign_ptnid.Name = "combox_trtassign_ptnid"
+        Me.combox_trtassign_ptnid.Size = New System.Drawing.Size(168, 21)
+        Me.combox_trtassign_ptnid.TabIndex = 8
         '
-        'txtbox_servassignid
+        'txtbox_trtassignid
         '
-        Me.txtbox_servassignid.Location = New System.Drawing.Point(148, 26)
-        Me.txtbox_servassignid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtbox_servassignid.Name = "txtbox_servassignid"
-        Me.txtbox_servassignid.ReadOnly = True
-        Me.txtbox_servassignid.Size = New System.Drawing.Size(168, 20)
-        Me.txtbox_servassignid.TabIndex = 7
+        Me.txtbox_trtassignid.Location = New System.Drawing.Point(148, 26)
+        Me.txtbox_trtassignid.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtbox_trtassignid.Name = "txtbox_trtassignid"
+        Me.txtbox_trtassignid.ReadOnly = True
+        Me.txtbox_trtassignid.Size = New System.Drawing.Size(168, 20)
+        Me.txtbox_trtassignid.TabIndex = 7
         '
         'lbl_servstatus
         '
@@ -206,46 +206,46 @@ Partial Class Form5
         Me.lbl_servassignid.TabIndex = 0
         Me.lbl_servassignid.Text = "Treatment_Assignment ID:"
         '
-        'DataGridView1
+        'Dgv_trtassing
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 344)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(886, 184)
-        Me.DataGridView1.TabIndex = 2
+        Me.Dgv_trtassing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_trtassing.Location = New System.Drawing.Point(26, 344)
+        Me.Dgv_trtassing.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dgv_trtassing.Name = "Dgv_trtassing"
+        Me.Dgv_trtassing.RowHeadersWidth = 51
+        Me.Dgv_trtassing.RowTemplate.Height = 24
+        Me.Dgv_trtassing.Size = New System.Drawing.Size(886, 184)
+        Me.Dgv_trtassing.TabIndex = 2
         '
-        'Button1
+        'Btn_assigntreatmnt_dgv_view
         '
-        Me.Button1.Location = New System.Drawing.Point(672, 316)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 19)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "View"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_assigntreatmnt_dgv_view.Location = New System.Drawing.Point(672, 316)
+        Me.Btn_assigntreatmnt_dgv_view.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_assigntreatmnt_dgv_view.Name = "Btn_assigntreatmnt_dgv_view"
+        Me.Btn_assigntreatmnt_dgv_view.Size = New System.Drawing.Size(75, 19)
+        Me.Btn_assigntreatmnt_dgv_view.TabIndex = 3
+        Me.Btn_assigntreatmnt_dgv_view.Text = "View"
+        Me.Btn_assigntreatmnt_dgv_view.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btn_assigntreatmnt_edit
         '
-        Me.Button2.Location = New System.Drawing.Point(752, 316)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(70, 19)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Edit_row"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_assigntreatmnt_edit.Location = New System.Drawing.Point(752, 316)
+        Me.Btn_assigntreatmnt_edit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_assigntreatmnt_edit.Name = "Btn_assigntreatmnt_edit"
+        Me.Btn_assigntreatmnt_edit.Size = New System.Drawing.Size(70, 19)
+        Me.Btn_assigntreatmnt_edit.TabIndex = 4
+        Me.Btn_assigntreatmnt_edit.Text = "Edit_row"
+        Me.Btn_assigntreatmnt_edit.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Btn_assigntreatmnt_dgv_delete
         '
-        Me.Button3.Location = New System.Drawing.Point(826, 316)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(78, 19)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Delete_row"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Btn_assigntreatmnt_dgv_delete.Location = New System.Drawing.Point(826, 316)
+        Me.Btn_assigntreatmnt_dgv_delete.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_assigntreatmnt_dgv_delete.Name = "Btn_assigntreatmnt_dgv_delete"
+        Me.Btn_assigntreatmnt_dgv_delete.Size = New System.Drawing.Size(78, 19)
+        Me.Btn_assigntreatmnt_dgv_delete.TabIndex = 5
+        Me.Btn_assigntreatmnt_dgv_delete.Text = "Delete_row"
+        Me.Btn_assigntreatmnt_dgv_delete.UseVisualStyleBackColor = True
         '
         'VScrollBar1
         '
@@ -261,39 +261,39 @@ Partial Class Form5
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(940, 569)
         Me.Controls.Add(Me.VScrollBar1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Btn_assigntreatmnt_dgv_delete)
+        Me.Controls.Add(Me.Btn_assigntreatmnt_edit)
+        Me.Controls.Add(Me.Btn_assigntreatmnt_dgv_view)
+        Me.Controls.Add(Me.Dgv_trtassing)
         Me.Controls.Add(Me.panel_assigtab)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form5"
         Me.Text = "Treatment_assign_Form"
         Me.panel_assigtab.ResumeLayout(False)
         Me.panel_assigtab.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_trtassing, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents panel_assigtab As Panel
-    Friend WithEvents combox_assign_status As ComboBox
-    Friend WithEvents DateTimePicker_assigtab As DateTimePicker
+    Friend WithEvents combox_trtassign_status As ComboBox
+    Friend WithEvents DateTimePicker_trtassig As DateTimePicker
     Friend WithEvents btn_assign_clear As Button
-    Friend WithEvents btn_assignserv As Button
-    Friend WithEvents combox_assign_mechid As ComboBox
-    Friend WithEvents combox_assign_servid As ComboBox
-    Friend WithEvents combox_assign_regno As ComboBox
-    Friend WithEvents txtbox_servassignid As TextBox
+    Friend WithEvents btn_assigntreatmnt As Button
+    Friend WithEvents combox_trtassign_docid As ComboBox
+    Friend WithEvents combox_trtassign_trtmnt_id As ComboBox
+    Friend WithEvents combox_trtassign_ptnid As ComboBox
+    Friend WithEvents txtbox_trtassignid As TextBox
     Friend WithEvents lbl_servstatus As Label
     Friend WithEvents lbl_servdate As Label
     Friend WithEvents lbl_assign_mechanicid As Label
     Friend WithEvents lbl_assign_serviceid As Label
     Friend WithEvents lbl_assign_regno As Label
     Friend WithEvents lbl_servassignid As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Dgv_trtassing As DataGridView
+    Friend WithEvents Btn_assigntreatmnt_dgv_view As Button
+    Friend WithEvents Btn_assigntreatmnt_edit As Button
+    Friend WithEvents Btn_assigntreatmnt_dgv_delete As Button
     Friend WithEvents VScrollBar1 As VScrollBar
 End Class

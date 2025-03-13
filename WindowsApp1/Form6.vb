@@ -34,4 +34,14 @@
     Private Sub Form6_FormClosing(sender As Object, e As EventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
+
+    Private Sub combox_paymode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combox_paymode.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub combox_bills_status_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combox_bills_status.SelectedIndexChanged
+
+    End Sub
+
+
 End Class

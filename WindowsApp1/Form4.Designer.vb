@@ -31,28 +31,30 @@ Partial Class Form4
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.CmbxapintId = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Cmbxapoitdocname = New System.Windows.Forms.ComboBox()
+        Me.Cmbxapointptnname = New System.Windows.Forms.ComboBox()
+        Me.Cmbxapoitdocid = New System.Windows.Forms.ComboBox()
+        Me.Cmbxapointptnid = New System.Windows.Forms.ComboBox()
+        Me.Cmbxapointreason = New System.Windows.Forms.ComboBox()
+        Me.Btnapointclr = New System.Windows.Forms.Button()
+        Me.Btnappoint = New System.Windows.Forms.Button()
+        Me.Cmbxapoitstatus = New System.Windows.Forms.ComboBox()
+        Me.Cmbxapointtime = New System.Windows.Forms.ComboBox()
+        Me.Dateapointdate = New System.Windows.Forms.DateTimePicker()
+        Me.Dgvappoint = New System.Windows.Forms.DataGridView()
+        Me.Btnapointview = New System.Windows.Forms.Button()
+        Me.Btnapointedit = New System.Windows.Forms.Button()
+        Me.Btnapointdelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvappoint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 30)
+        Me.Label1.Location = New System.Drawing.Point(24, 77)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 13)
@@ -62,7 +64,7 @@ Partial Class Form4
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(23, 77)
+        Me.Label2.Location = New System.Drawing.Point(23, 128)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 13)
@@ -72,7 +74,7 @@ Partial Class Form4
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(23, 131)
+        Me.Label3.Location = New System.Drawing.Point(24, 171)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
@@ -82,7 +84,7 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 179)
+        Me.Label4.Location = New System.Drawing.Point(23, 217)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(73, 13)
@@ -131,16 +133,18 @@ Partial Class Form4
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ComboBox7)
-        Me.Panel1.Controls.Add(Me.ComboBox6)
-        Me.Panel1.Controls.Add(Me.ComboBox5)
-        Me.Panel1.Controls.Add(Me.ComboBox4)
-        Me.Panel1.Controls.Add(Me.ComboBox3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.ComboBox2)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
+        Me.Panel1.Controls.Add(Me.CmbxapintId)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Cmbxapoitdocname)
+        Me.Panel1.Controls.Add(Me.Cmbxapointptnname)
+        Me.Panel1.Controls.Add(Me.Cmbxapoitdocid)
+        Me.Panel1.Controls.Add(Me.Cmbxapointptnid)
+        Me.Panel1.Controls.Add(Me.Cmbxapointreason)
+        Me.Panel1.Controls.Add(Me.Btnapointclr)
+        Me.Panel1.Controls.Add(Me.Btnappoint)
+        Me.Panel1.Controls.Add(Me.Cmbxapoitstatus)
+        Me.Panel1.Controls.Add(Me.Cmbxapointtime)
+        Me.Panel1.Controls.Add(Me.Dateapointdate)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -150,159 +154,176 @@ Partial Class Form4
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(701, 274)
         Me.Panel1.TabIndex = 8
         '
-        'ComboBox3
+        'CmbxapintId
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"General Consultancy", "Follow-up Consultancy", "Specialized Consultancy", "Diagnostic Tests"})
-        Me.ComboBox3.Location = New System.Drawing.Point(444, 179)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(126, 21)
-        Me.ComboBox3.TabIndex = 18
+        Me.CmbxapintId.FormattingEnabled = True
+        Me.CmbxapintId.Location = New System.Drawing.Point(123, 31)
+        Me.CmbxapintId.Name = "CmbxapintId"
+        Me.CmbxapintId.Size = New System.Drawing.Size(121, 21)
+        Me.CmbxapintId.TabIndex = 24
         '
-        'Button2
+        'Label9
         '
-        Me.Button2.Location = New System.Drawing.Point(604, 231)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 24)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(24, 30)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(80, 13)
+        Me.Label9.TabIndex = 23
+        Me.Label9.Text = "Appointment ID"
         '
-        'Button1
+        'Cmbxapoitdocname
         '
-        Me.Button1.Location = New System.Drawing.Point(520, 231)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(80, 26)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Appoint"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Cmbxapoitdocname.FormattingEnabled = True
+        Me.Cmbxapoitdocname.Location = New System.Drawing.Point(123, 217)
+        Me.Cmbxapoitdocname.Name = "Cmbxapoitdocname"
+        Me.Cmbxapoitdocname.Size = New System.Drawing.Size(121, 21)
+        Me.Cmbxapoitdocname.TabIndex = 22
         '
-        'ComboBox2
+        'Cmbxapointptnname
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Booked", "Canceled", "Finished"})
-        Me.ComboBox2.Location = New System.Drawing.Point(444, 132)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(126, 21)
-        Me.ComboBox2.TabIndex = 15
+        Me.Cmbxapointptnname.FormattingEnabled = True
+        Me.Cmbxapointptnname.Location = New System.Drawing.Point(123, 128)
+        Me.Cmbxapointptnname.Name = "Cmbxapointptnname"
+        Me.Cmbxapointptnname.Size = New System.Drawing.Size(121, 21)
+        Me.Cmbxapointptnname.TabIndex = 21
         '
-        'ComboBox1
+        'Cmbxapoitdocid
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"8:00-8:30 am", "8:30-9:00 am", "9:00-9:30 am", "9:30-10:00 am", "10:00-10:30 am", "10:30- 11:00 am", "11:00-11:30 am", "11:30-12:00 am", "12:00-12:30 pm", "12:30-1:00 pm", "1:00-1:30 pm", "1:30 -2:00 pm", "2:00-2:30 pm", "2:30-3:00 pm", "3:00-3:30 pm", "3:30-4:00 pm", "4:00-4:30 pm", "4:30-5:00 pm", "5:00-5:30 pm", "5:30-6:00 pm", "6:00-6:30 pm", "6:30-7:00 pm", "7:00-7:30 pm", "7:30-8:00 pm", "8:00-8:30 pm", "8:30-9:00 pm", "9:00-9:30 pm", "9:30-10:00 pm", "10:00-10:30 pm", "10:30-11:00 pm", "11:00-11:30 pm", "", ""})
-        Me.ComboBox1.Location = New System.Drawing.Point(444, 70)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(126, 21)
-        Me.ComboBox1.TabIndex = 14
+        Me.Cmbxapoitdocid.FormattingEnabled = True
+        Me.Cmbxapoitdocid.Location = New System.Drawing.Point(123, 171)
+        Me.Cmbxapoitdocid.Name = "Cmbxapoitdocid"
+        Me.Cmbxapoitdocid.Size = New System.Drawing.Size(121, 21)
+        Me.Cmbxapoitdocid.TabIndex = 20
         '
-        'DateTimePicker1
+        'Cmbxapointptnid
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(444, 24)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker1.MinDate = New Date(2025, 2, 23, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(151, 20)
-        Me.DateTimePicker1.TabIndex = 13
+        Me.Cmbxapointptnid.FormattingEnabled = True
+        Me.Cmbxapointptnid.Location = New System.Drawing.Point(123, 77)
+        Me.Cmbxapointptnid.Name = "Cmbxapointptnid"
+        Me.Cmbxapointptnid.Size = New System.Drawing.Size(121, 21)
+        Me.Cmbxapointptnid.TabIndex = 19
         '
-        'DataGridView1
+        'Cmbxapointreason
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 322)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(710, 122)
-        Me.DataGridView1.TabIndex = 9
+        Me.Cmbxapointreason.FormattingEnabled = True
+        Me.Cmbxapointreason.Items.AddRange(New Object() {"General Consultancy", "Follow-up Consultancy", "Specialized Consultancy", "Diagnostic Tests"})
+        Me.Cmbxapointreason.Location = New System.Drawing.Point(444, 179)
+        Me.Cmbxapointreason.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmbxapointreason.Name = "Cmbxapointreason"
+        Me.Cmbxapointreason.Size = New System.Drawing.Size(126, 21)
+        Me.Cmbxapointreason.TabIndex = 18
         '
-        'Button3
+        'Btnapointclr
         '
-        Me.Button3.Location = New System.Drawing.Point(487, 298)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(67, 19)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "View"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Btnapointclr.Location = New System.Drawing.Point(604, 231)
+        Me.Btnapointclr.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnapointclr.Name = "Btnapointclr"
+        Me.Btnapointclr.Size = New System.Drawing.Size(84, 24)
+        Me.Btnapointclr.TabIndex = 17
+        Me.Btnapointclr.Text = "Clear"
+        Me.Btnapointclr.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Btnappoint
         '
-        Me.Button4.Location = New System.Drawing.Point(558, 298)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(65, 19)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Edit_row"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Btnappoint.Location = New System.Drawing.Point(520, 231)
+        Me.Btnappoint.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnappoint.Name = "Btnappoint"
+        Me.Btnappoint.Size = New System.Drawing.Size(80, 26)
+        Me.Btnappoint.TabIndex = 16
+        Me.Btnappoint.Text = "Appoint"
+        Me.Btnappoint.UseVisualStyleBackColor = True
         '
-        'Button5
+        'Cmbxapoitstatus
         '
-        Me.Button5.Location = New System.Drawing.Point(628, 298)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(71, 19)
-        Me.Button5.TabIndex = 12
-        Me.Button5.Text = "Delete_row"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Cmbxapoitstatus.FormattingEnabled = True
+        Me.Cmbxapoitstatus.Items.AddRange(New Object() {"Booked", "Canceled", "Finished"})
+        Me.Cmbxapoitstatus.Location = New System.Drawing.Point(444, 132)
+        Me.Cmbxapoitstatus.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmbxapoitstatus.Name = "Cmbxapoitstatus"
+        Me.Cmbxapoitstatus.Size = New System.Drawing.Size(126, 21)
+        Me.Cmbxapoitstatus.TabIndex = 15
         '
-        'ComboBox4
+        'Cmbxapointtime
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(123, 30)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 19
+        Me.Cmbxapointtime.FormattingEnabled = True
+        Me.Cmbxapointtime.Items.AddRange(New Object() {"8:00-8:30 am", "8:30-9:00 am", "9:00-9:30 am", "9:30-10:00 am", "10:00-10:30 am", "10:30- 11:00 am", "11:00-11:30 am", "11:30-12:00 am", "12:00-12:30 pm", "12:30-1:00 pm", "1:00-1:30 pm", "1:30 -2:00 pm", "2:00-2:30 pm", "2:30-3:00 pm", "3:00-3:30 pm", "3:30-4:00 pm", "4:00-4:30 pm", "4:30-5:00 pm", "5:00-5:30 pm", "5:30-6:00 pm", "6:00-6:30 pm", "6:30-7:00 pm", "7:00-7:30 pm", "7:30-8:00 pm", "8:00-8:30 pm", "8:30-9:00 pm", "9:00-9:30 pm", "9:30-10:00 pm", "10:00-10:30 pm", "10:30-11:00 pm", "11:00-11:30 pm", "", ""})
+        Me.Cmbxapointtime.Location = New System.Drawing.Point(444, 77)
+        Me.Cmbxapointtime.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmbxapointtime.Name = "Cmbxapointtime"
+        Me.Cmbxapointtime.Size = New System.Drawing.Size(126, 21)
+        Me.Cmbxapointtime.TabIndex = 14
         '
-        'ComboBox5
+        'Dateapointdate
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(123, 132)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox5.TabIndex = 20
+        Me.Dateapointdate.Location = New System.Drawing.Point(444, 24)
+        Me.Dateapointdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dateapointdate.MinDate = New Date(2025, 2, 23, 0, 0, 0, 0)
+        Me.Dateapointdate.Name = "Dateapointdate"
+        Me.Dateapointdate.Size = New System.Drawing.Size(151, 20)
+        Me.Dateapointdate.TabIndex = 13
         '
-        'ComboBox6
+        'Dgvappoint
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(123, 77)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox6.TabIndex = 21
+        Me.Dgvappoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvappoint.Location = New System.Drawing.Point(9, 322)
+        Me.Dgvappoint.Margin = New System.Windows.Forms.Padding(2)
+        Me.Dgvappoint.Name = "Dgvappoint"
+        Me.Dgvappoint.RowHeadersWidth = 51
+        Me.Dgvappoint.RowTemplate.Height = 24
+        Me.Dgvappoint.Size = New System.Drawing.Size(710, 133)
+        Me.Dgvappoint.TabIndex = 9
         '
-        'ComboBox7
+        'Btnapointview
         '
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(123, 179)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox7.TabIndex = 22
+        Me.Btnapointview.Location = New System.Drawing.Point(487, 298)
+        Me.Btnapointview.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnapointview.Name = "Btnapointview"
+        Me.Btnapointview.Size = New System.Drawing.Size(67, 19)
+        Me.Btnapointview.TabIndex = 10
+        Me.Btnapointview.Text = "View"
+        Me.Btnapointview.UseVisualStyleBackColor = True
+        '
+        'Btnapointedit
+        '
+        Me.Btnapointedit.Location = New System.Drawing.Point(558, 298)
+        Me.Btnapointedit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnapointedit.Name = "Btnapointedit"
+        Me.Btnapointedit.Size = New System.Drawing.Size(65, 19)
+        Me.Btnapointedit.TabIndex = 11
+        Me.Btnapointedit.Text = "Edit_row"
+        Me.Btnapointedit.UseVisualStyleBackColor = True
+        '
+        'Btnapointdelete
+        '
+        Me.Btnapointdelete.Location = New System.Drawing.Point(628, 298)
+        Me.Btnapointdelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnapointdelete.Name = "Btnapointdelete"
+        Me.Btnapointdelete.Size = New System.Drawing.Size(71, 19)
+        Me.Btnapointdelete.TabIndex = 12
+        Me.Btnapointdelete.Text = "Delete_row"
+        Me.Btnapointdelete.UseVisualStyleBackColor = True
         '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 466)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Btnapointdelete)
+        Me.Controls.Add(Me.Btnapointedit)
+        Me.Controls.Add(Me.Btnapointview)
+        Me.Controls.Add(Me.Dgvappoint)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form4"
         Me.Text = "Appointment_Form"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvappoint, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -316,18 +337,20 @@ Partial Class Form4
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox7 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Cmbxapoitstatus As ComboBox
+    Friend WithEvents Cmbxapointtime As ComboBox
+    Friend WithEvents Dateapointdate As DateTimePicker
+    Friend WithEvents Btnapointclr As Button
+    Friend WithEvents Btnappoint As Button
+    Friend WithEvents Dgvappoint As DataGridView
+    Friend WithEvents Btnapointview As Button
+    Friend WithEvents Btnapointedit As Button
+    Friend WithEvents Btnapointdelete As Button
+    Friend WithEvents Cmbxapointreason As ComboBox
+    Friend WithEvents Cmbxapoitdocname As ComboBox
+    Friend WithEvents Cmbxapointptnname As ComboBox
+    Friend WithEvents Cmbxapoitdocid As ComboBox
+    Friend WithEvents Cmbxapointptnid As ComboBox
+    Friend WithEvents CmbxapintId As ComboBox
+    Friend WithEvents Label9 As Label
 End Class

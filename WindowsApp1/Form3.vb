@@ -18,7 +18,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnregdoc.Click
-        If Txtboxdocid.Text = "" Or Txtboxdocname.Text = "" Or Txtboxdocspeci.Text = "" Or Txtbox_phoneno.Text = "" Or Clstbox.SelectedValueChanged = Then
+        If Txtboxdocid.Text = "" Or Txtboxdocname.Text = "" Or Txtboxdocspeci.Text = "" Or Txtbox_phoneno.Text = "" Or Clstbox.SelectedValueChanged = True Or  Then
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
