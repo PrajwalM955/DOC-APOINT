@@ -28,7 +28,6 @@ Partial Class Form3
         Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
         Me.Btnclrdoc = New System.Windows.Forms.Button()
         Me.Btnregdoc = New System.Windows.Forms.Button()
-        Me.Btndgvview = New System.Windows.Forms.Button()
         Me.Txtboxdocspeci = New System.Windows.Forms.TextBox()
         Me.Txtboxdocname = New System.Windows.Forms.TextBox()
         Me.Cboboxhour = New System.Windows.Forms.ComboBox()
@@ -43,7 +42,6 @@ Partial Class Form3
         Me.TxtBxptncontact = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Btnptnback = New System.Windows.Forms.Button()
-        Me.Btnptnview = New System.Windows.Forms.Button()
         Me.Btnptnclr = New System.Windows.Forms.Button()
         Me.Btnptnregister = New System.Windows.Forms.Button()
         Me.Txtbxptnmedhstry = New System.Windows.Forms.TextBox()
@@ -67,7 +65,6 @@ Partial Class Form3
         Me.Txtbxtrtcost = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Btntrtview = New System.Windows.Forms.Button()
         Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
@@ -98,7 +95,6 @@ Partial Class Form3
         Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
         Me.TabPgDoctor.Controls.Add(Me.Btnclrdoc)
         Me.TabPgDoctor.Controls.Add(Me.Btnregdoc)
-        Me.TabPgDoctor.Controls.Add(Me.Btndgvview)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocspeci)
         Me.TabPgDoctor.Controls.Add(Me.Txtboxdocname)
         Me.TabPgDoctor.Controls.Add(Me.Cboboxhour)
@@ -154,17 +150,6 @@ Partial Class Form3
         Me.Btnregdoc.TabIndex = 13
         Me.Btnregdoc.Text = "Register"
         Me.Btnregdoc.UseVisualStyleBackColor = True
-        '
-        'Btndgvview
-        '
-        Me.Btndgvview.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btndgvview.Location = New System.Drawing.Point(570, 262)
-        Me.Btndgvview.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btndgvview.Name = "Btndgvview"
-        Me.Btndgvview.Size = New System.Drawing.Size(56, 19)
-        Me.Btndgvview.TabIndex = 8
-        Me.Btndgvview.Text = "View "
-        Me.Btndgvview.UseVisualStyleBackColor = True
         '
         'Txtboxdocspeci
         '
@@ -270,7 +255,6 @@ Partial Class Form3
         Me.TabPgpatient.Controls.Add(Me.TxtBxptncontact)
         Me.TabPgpatient.Controls.Add(Me.Label1)
         Me.TabPgpatient.Controls.Add(Me.Btnptnback)
-        Me.TabPgpatient.Controls.Add(Me.Btnptnview)
         Me.TabPgpatient.Controls.Add(Me.Btnptnclr)
         Me.TabPgpatient.Controls.Add(Me.Btnptnregister)
         Me.TabPgpatient.Controls.Add(Me.Txtbxptnmedhstry)
@@ -317,16 +301,6 @@ Partial Class Form3
         Me.Btnptnback.TabIndex = 18
         Me.Btnptnback.Text = "Back"
         Me.Btnptnback.UseVisualStyleBackColor = True
-        '
-        'Btnptnview
-        '
-        Me.Btnptnview.Location = New System.Drawing.Point(583, 265)
-        Me.Btnptnview.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnptnview.Name = "Btnptnview"
-        Me.Btnptnview.Size = New System.Drawing.Size(56, 19)
-        Me.Btnptnview.TabIndex = 15
-        Me.Btnptnview.Text = "View"
-        Me.Btnptnview.UseVisualStyleBackColor = True
         '
         'Btnptnclr
         '
@@ -457,7 +431,6 @@ Partial Class Form3
         '
         Me.TabPgTreatment.Controls.Add(Me.Dgvtreatment)
         Me.TabPgTreatment.Controls.Add(Me.Panel1)
-        Me.TabPgTreatment.Controls.Add(Me.Btntrtview)
         Me.TabPgTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPgTreatment.Location = New System.Drawing.Point(4, 22)
         Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2)
@@ -470,12 +443,12 @@ Partial Class Form3
         'Dgvtreatment
         '
         Me.Dgvtreatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvtreatment.Location = New System.Drawing.Point(2, 268)
+        Me.Dgvtreatment.Location = New System.Drawing.Point(15, 252)
         Me.Dgvtreatment.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvtreatment.Name = "Dgvtreatment"
         Me.Dgvtreatment.RowHeadersWidth = 51
         Me.Dgvtreatment.RowTemplate.Height = 24
-        Me.Dgvtreatment.Size = New System.Drawing.Size(629, 124)
+        Me.Dgvtreatment.Size = New System.Drawing.Size(616, 189)
         Me.Dgvtreatment.TabIndex = 7
         '
         'Panel1
@@ -563,17 +536,6 @@ Partial Class Form3
         Me.Label15.TabIndex = 2
         Me.Label15.Text = "Treatment Cost"
         '
-        'Btntrtview
-        '
-        Me.Btntrtview.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtview.Location = New System.Drawing.Point(574, 245)
-        Me.Btntrtview.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btntrtview.Name = "Btntrtview"
-        Me.Btntrtview.Size = New System.Drawing.Size(56, 19)
-        Me.Btntrtview.TabIndex = 8
-        Me.Btntrtview.Text = "View "
-        Me.Btntrtview.UseVisualStyleBackColor = True
-        '
         'VScrollBar2
         '
         Me.VScrollBar2.Dock = System.Windows.Forms.DockStyle.Right
@@ -645,9 +607,6 @@ Partial Class Form3
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Btntrtclr As Button
     Friend WithEvents Btntrtreg As Button
-    Friend WithEvents Btnptnview As Button
-    Friend WithEvents Btntrtview As Button
-    Friend WithEvents Btndgvview As Button
     Friend WithEvents VScrollBar2 As VScrollBar
     Friend WithEvents Btndocback As Button
     Friend WithEvents Btnptnback As Button

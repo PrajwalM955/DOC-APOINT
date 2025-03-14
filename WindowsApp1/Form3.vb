@@ -1,30 +1,32 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Runtime.Remoting.Messaging
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form3
-    ' Dim connectionString As String = " Data Source = LAPTOP - JRNIQUNP \ SQLEXPRESS;Initial Catalog=Clinic;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
     Dim connectionString As String = "Data Source=LAPTOP-JRNIQUNP\SQLEXPRESS;Initial Catalog=Clinic;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
 
     Private Sub Load_RegTab_Data()
-
+        ' This method is empty; consider removing it if not needed
     End Sub
+
     Private Sub Form3_FormClosing(sender As Object, e As EventArgs) Handles Me.FormClosing
         Form2.Show()
     End Sub
-    'Code for back Buttons in tabcontrol
+
+    ' Code for back Buttons in tabcontrol
     Private Sub Btnptnback_Click(sender As Object, e As EventArgs) Handles Btnptnback.Click
         Form2.Show()
         Me.Close()
     End Sub
+
     Private Sub Btntrtback_Click(sender As Object, e As EventArgs) Handles Btntrtback.Click
         Form2.Show()
         Me.Close()
     End Sub
+
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Btndocback.Click
         Form2.Show()
         Me.Close()
     End Sub
+
     Private Sub Form3_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
@@ -32,47 +34,47 @@ Public Class Form3
         End If
     End Sub
 
-    'Code for submit button in doctor tab page
-
+    ' Code for submit button in doctor tab page
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnregdoc.Click
         If String.IsNullOrWhiteSpace(Txtboxdocname.Text) OrElse
-                  String.IsNullOrWhiteSpace(Txtboxdocspeci.Text) OrElse
-                  String.IsNullOrWhiteSpace(Txtbox_phoneno.Text) OrElse
-                 Clstbox.CheckedItems.Count = 0 OrElse
-                 Cboboxhour.SelectedIndex = -1 Then
+           String.IsNullOrWhiteSpace(Txtboxdocspeci.Text) OrElse
+           String.IsNullOrWhiteSpace(Txtbox_phoneno.Text) OrElse
+           Clstbox.CheckedItems.Count = 0 OrElse
+           Cboboxhour.SelectedIndex = -1 Then
 
             MessageBox.Show("Please fill all the fields and select Week and Hour Availability")
-
-            'Txtboxdocname.Text = " " Or Txtboxdocspeci.Text = " " Or Txtbox_phoneno.Text.Length < 10 Or Clstbox.CheckedItems.Count = 0 Or Cboboxhour.SelectedValue = -1 Then
-            '         MessageBox.Show("enter all the values!")
             Return
-        Else Using con As New SqlConnection
+        Else
+            Using con As New SqlConnection(connectionString)
                 Try
                     con.Open()
                     Dim cmd As New SqlCommand()
                     cmd.Connection = con
+
                     Dim weekAvailability As String = String.Join(",", Clstbox.CheckedItems.Cast(Of String)())
 
-                    cmd.CommandText = "insert into doctor(name,specialization,contact,week_availability,hour_availability) values (@name,@specialization,@contact,@week_availability,@hour_availability)"
+                    cmd.CommandText = "INSERT INTO doctor(name, specialization, contact, week_availability, hour_availability) VALUES (@name, @specialization, @contact, @week_availability, @hour_availability)"
                     cmd.Parameters.AddWithValue("@name", Txtboxdocname.Text)
                     cmd.Parameters.AddWithValue("@specialization", Txtboxdocspeci.Text)
                     cmd.Parameters.AddWithValue("@contact", Txtbox_phoneno.Text)
-                    cmd.Parameters.AddWithValue("@Week_Availability", weekAvailability)
-                    cmd.Parameters.AddWithValue("@Hour_Availability", Cboboxhour.SelectedItem.ToString())
+                    cmd.Parameters.AddWithValue("@week_availability", weekAvailability)
+                    cmd.Parameters.AddWithValue("@hour_availability", Cboboxhour.SelectedItem.ToString())
 
-                    '  cmd.Parameters.AddWithValue("@week_availability", Clstbox.SelectedItem)
-                    ' cmd.Parameters.AddWithValue("@hour_availability", Cboboxhour.SelectedItem)
                     Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
-                    MessageBox.Show("Doctor registered successfully!")
-
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("Doctor registered successfully!")
+                        DgvdocLoad() ' Reload DataGridView after insertion
+                    Else
+                        MessageBox.Show("Failed to register doctor.")
+                    End If
                 Catch ex As Exception
-                    MessageBox.Show("Error:" & ex.Message)
+                    MessageBox.Show("Error: " & ex.Message)
                 End Try
-                con.Close()
             End Using
         End If
     End Sub
-    'Code for loading the datagridview in doctor tab page
+
+    ' Code for loading the datagridview in doctor tab page
     Private Sub DgvdocLoad()
         Using con As New SqlConnection(connectionString)
             Try
@@ -80,29 +82,39 @@ Public Class Form3
                 Dim cmd As New SqlCommand()
                 cmd.Connection = con
 
-                cmd.CommandText = "select * from doctor"
+                cmd.CommandText = "SELECT * FROM doctor"
                 Dim dr1 As SqlDataReader = cmd.ExecuteReader
                 Dim datatable As New DataTable()
                 datatable.Load(dr1)
                 Dgvdoc.DataSource = datatable
                 dr1.Close()
             Catch ex As Exception
-                MessageBox.Show("Error:", ex.Message)
+                MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DgvdocLoad()
-        Dgvtreatmentload()
-
+        DgvtreatmentLoad()
     End Sub
 
-    'code for clear function in doctor tab page
+    ' Code for clear function in doctor tab page
     Private Sub Btnclrdoc_Click(sender As Object, e As EventArgs) Handles Btnclrdoc.Click
+        Txtboxdocname.Clear()
+        Txtboxdocspeci.Clear()
+        Txtbox_phoneno.Clear()
 
+        ' Uncheck all items in Clstbox
+        For i As Integer = Clstbox.Items.Count - 1 To 0 Step -1
+            Clstbox.SetItemChecked(i, False)
+        Next
+
+        Cboboxhour.SelectedIndex = -1
     End Sub
-    'code for clear function in patient tab page
+
+
+    ' Code for clear function in patient tab page
     Private Sub Btnptnclr_Click(sender As Object, e As EventArgs) Handles Btnptnclr.Click
         Txtbxptnname.Clear()
         Cmbbxptngnder.SelectedIndex = -1
@@ -112,78 +124,40 @@ Public Class Form3
         Datepatientdob.Value = Date.Now ' Resetting the DateTimePicker
     End Sub
 
-    'Code for Patient tab page Submit Button
-
-    '  Private Sub Btnptnregister_Click(sender As Object, e As EventArgs) Handles Btnptnregister.Click
-    ' If Txtbxptnname.Text = "" Or Cmbbxptngnder.Text = " " Or Cmbbxptngnder.SelectedItem = 0 Or Txtbxptnadrs.Text = " " Then
-    ' MessageBox.Show("Please enter all the values!")
-    ' Return
-    '  Else Using con As New SqlConnection
-    'Try
-    ' con.Open()
-    '       Dim cmd As New SqlCommand()
-    ' cmd.Connection = con
-    '
-    '  cmd.CommandText = "insert into patient(name,dob,gender,contact,address,medical_history) values (@name,@dob,@gender,@contact,@address,@medical_history)"
-    '            cmd.Parameters.AddWithValue("@name", Txtbxptnname.Text)
-    ' cmd.Parameters.AddWithValue("@specialization", Cmbbxptngnder.Text)
-    '  cmd.Parameters.AddWithValue("@contact", Cmbbxptngnder.Text)
-    '  cmd.Parameters.AddWithValue("@week_availability", Txtbxptnadrs.Text)
-    '  cmd.Parameters.AddWithValue("@hour_availability", Cboboxhour.SelectedItem)
-    '  cmd.ExecuteNonQuery()
-    '              MessageBox.Show("Details Recorded!")
-    '  DgvdocLoad()
-
-    '  Catch ex As Exception
-
-    ' End Try
-    '    End Using
-    '   End If
-    ' End Sub
+    ' Code for Patient tab page Submit Button
     Private Sub Btnptnregister_Click(sender As Object, e As EventArgs) Handles Btnptnregister.Click
-        ' Validate input fields
         If String.IsNullOrWhiteSpace(Txtbxptnname.Text) OrElse
-       String.IsNullOrWhiteSpace(Cmbbxptngnder.Text) OrElse
-       Cmbbxptngnder.SelectedItem = 0 OrElse
-       String.IsNullOrWhiteSpace(Txtbxptnadrs.Text) Then
+           String.IsNullOrWhiteSpace(Cmbbxptngnder.Text) OrElse
+           Cmbbxptngnder.SelectedIndex = -1 OrElse
+           String.IsNullOrWhiteSpace(Txtbxptnadrs.Text) Then
+
             MessageBox.Show("Please enter all the values!")
             Return
         End If
 
-        ' Insert patient into database
         Using con As New SqlConnection(connectionString)
             Try
                 con.Open()
                 Dim cmd As New SqlCommand()
                 cmd.Connection = con
 
-                cmd.CommandText = "INSERT INTO patient(name, dob, gender, contact, address, medical_history) 
-                               VALUES (@name, @dob, @gender, @contact, @address, @medical_history)"
+                cmd.CommandText = "INSERT INTO patient(name, dob, gender, contact, address, medical_history) VALUES (@name, @dob, @gender, @contact, @address, @medical_history)"
                 cmd.Parameters.AddWithValue("@name", Txtbxptnname.Text)
-                cmd.Parameters.AddWithValue("@dob", Datepatientdob.Value) ' Correctly referencing DateTimePicker
-                cmd.Parameters.AddWithValue("@gender", Cmbbxptngnder.SelectedItem.ToString()) ' Ensure this is a string
-                cmd.Parameters.AddWithValue("@contact", TxtBxptncontact.Text) ' Ensure contact is a string
+                cmd.Parameters.AddWithValue("@dob", Datepatientdob.Value)
+                cmd.Parameters.AddWithValue("@gender", Cmbbxptngnder.SelectedItem.ToString())
+                cmd.Parameters.AddWithValue("@contact", TxtBxptncontact.Text)
                 cmd.Parameters.AddWithValue("@address", Txtbxptnadrs.Text)
                 cmd.Parameters.AddWithValue("@medical_history", Txtbxptnmedhstry.Text)
-
-
-                ' Execute the query
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Details Recorded!")
+                DgvptntabLoad() ' Reload DataGridView after insertion
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
     End Sub
 
-    ' Call the function to load doctor data into the DataGridView
-    Private Sub Btndgvview_Click(sender As Object, e As EventArgs) Handles Btndgvview.Click
-        DgvdocLoad()
-    End Sub
-    ' Call the function to load patient data into the DataGridView
-    Private Sub Btnptnview_Click(sender As Object, e As EventArgs) Handles Btnptnview.Click
-        DgvptntabLoad()
-    End Sub
+
 
     ' Function to load data into DataGridView for the patient table
     Private Sub DgvptntabLoad()
@@ -201,16 +175,18 @@ Public Class Form3
                 Dgvptntab.DataSource = datatable
                 dr1.Close()
             Catch ex As Exception
-                ' Show error message if there is an exception
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
     End Sub
 
+    ' Code for clear function in treatment tab page
     Private Sub Btntrtclr_Click(sender As Object, e As EventArgs) Handles Btntrtclr.Click
-
+        Txtbxtrtname.Clear()
+        Txtbxtrtcost.Clear()
     End Sub
 
+    ' Code for register treatment button
     Private Sub Btntrtreg_Click(sender As Object, e As EventArgs) Handles Btntrtreg.Click
         Dim cost As Decimal
 
@@ -224,8 +200,28 @@ Public Class Form3
             If String.IsNullOrWhiteSpace(Txtbxtrtname.Text) Then Txtbxtrtname.Focus() Else Txtbxtrtcost.Focus()
             Exit Sub
         End If
+
+        ' Insert treatment into database
+        Using con As New SqlConnection(connectionString)
+            Try
+                con.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = con
+
+                cmd.CommandText = "INSERT INTO treatment(name, cost) VALUES (@name, @cost)"
+                cmd.Parameters.AddWithValue("@name", Txtbxtrtname.Text)
+                cmd.Parameters.AddWithValue("@cost", cost)
+
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Treatment added successfully!")
+                DgvtreatmentLoad() ' Reload DataGridView after insertion
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
     End Sub
-    ' Insert treatment into database
+
+    ' Function to load data into DataGridView for the treatment table
     Private Sub DgvtreatmentLoad()
         Try
             Using con As New SqlConnection(connectionString)
@@ -242,8 +238,5 @@ Public Class Form3
             MessageBox.Show("Error: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-    Private Sub Btntrtview_Click(sender As Object, e As EventArgs) Handles Btntrtview.Click
-
-    End Sub
 End Class
+
