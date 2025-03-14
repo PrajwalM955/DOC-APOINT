@@ -24,6 +24,7 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
+        Me.Btn_docdel = New System.Windows.Forms.Button()
         Me.Btndocback = New System.Windows.Forms.Button()
         Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
         Me.Btnclrdoc = New System.Windows.Forms.Button()
@@ -39,6 +40,7 @@ Partial Class Form3
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Dgvdoc = New System.Windows.Forms.DataGridView()
         Me.TabPgpatient = New System.Windows.Forms.TabPage()
+        Me.BtnDeletePatient = New System.Windows.Forms.Button()
         Me.TxtBxptncontact = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Btnptnback = New System.Windows.Forms.Button()
@@ -56,15 +58,16 @@ Partial Class Form3
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPgTreatment = New System.Windows.Forms.TabPage()
-        Me.Dgvtreatment = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnDeleteTreatment = New System.Windows.Forms.Button()
         Me.Btntrtback = New System.Windows.Forms.Button()
+        Me.Dgvtreatment = New System.Windows.Forms.DataGridView()
         Me.Btntrtclr = New System.Windows.Forms.Button()
-        Me.Btntrtreg = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Txtbxtrtname = New System.Windows.Forms.TextBox()
         Me.Txtbxtrtcost = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Btntrtreg = New System.Windows.Forms.Button()
         Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
@@ -91,6 +94,7 @@ Partial Class Form3
         '
         'TabPgDoctor
         '
+        Me.TabPgDoctor.Controls.Add(Me.Btn_docdel)
         Me.TabPgDoctor.Controls.Add(Me.Btndocback)
         Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
         Me.TabPgDoctor.Controls.Add(Me.Btnclrdoc)
@@ -113,6 +117,15 @@ Partial Class Form3
         Me.TabPgDoctor.TabIndex = 0
         Me.TabPgDoctor.Text = "Doctor"
         Me.TabPgDoctor.UseVisualStyleBackColor = True
+        '
+        'Btn_docdel
+        '
+        Me.Btn_docdel.Location = New System.Drawing.Point(551, 257)
+        Me.Btn_docdel.Name = "Btn_docdel"
+        Me.Btn_docdel.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_docdel.TabIndex = 16
+        Me.Btn_docdel.Text = "Delete"
+        Me.Btn_docdel.UseVisualStyleBackColor = True
         '
         'Btndocback
         '
@@ -252,6 +265,7 @@ Partial Class Form3
         '
         'TabPgpatient
         '
+        Me.TabPgpatient.Controls.Add(Me.BtnDeletePatient)
         Me.TabPgpatient.Controls.Add(Me.TxtBxptncontact)
         Me.TabPgpatient.Controls.Add(Me.Label1)
         Me.TabPgpatient.Controls.Add(Me.Btnptnback)
@@ -276,6 +290,15 @@ Partial Class Form3
         Me.TabPgpatient.TabIndex = 1
         Me.TabPgpatient.Text = "Patients"
         Me.TabPgpatient.UseVisualStyleBackColor = True
+        '
+        'BtnDeletePatient
+        '
+        Me.BtnDeletePatient.Location = New System.Drawing.Point(553, 260)
+        Me.BtnDeletePatient.Name = "BtnDeletePatient"
+        Me.BtnDeletePatient.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDeletePatient.TabIndex = 21
+        Me.BtnDeletePatient.Text = "Delete"
+        Me.BtnDeletePatient.UseVisualStyleBackColor = True
         '
         'TxtBxptncontact
         '
@@ -429,8 +452,12 @@ Partial Class Form3
         '
         'TabPgTreatment
         '
+        Me.TabPgTreatment.Controls.Add(Me.BtnDeleteTreatment)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtback)
         Me.TabPgTreatment.Controls.Add(Me.Dgvtreatment)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtclr)
         Me.TabPgTreatment.Controls.Add(Me.Panel1)
+        Me.TabPgTreatment.Controls.Add(Me.Btntrtreg)
         Me.TabPgTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPgTreatment.Location = New System.Drawing.Point(4, 22)
         Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2)
@@ -439,6 +466,26 @@ Partial Class Form3
         Me.TabPgTreatment.TabIndex = 2
         Me.TabPgTreatment.Text = "Treatments"
         Me.TabPgTreatment.UseVisualStyleBackColor = True
+        '
+        'BtnDeleteTreatment
+        '
+        Me.BtnDeleteTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeleteTreatment.Location = New System.Drawing.Point(540, 214)
+        Me.BtnDeleteTreatment.Name = "BtnDeleteTreatment"
+        Me.BtnDeleteTreatment.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDeleteTreatment.TabIndex = 22
+        Me.BtnDeleteTreatment.Text = "Delete"
+        Me.BtnDeleteTreatment.UseVisualStyleBackColor = True
+        '
+        'Btntrtback
+        '
+        Me.Btntrtback.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtback.Location = New System.Drawing.Point(540, 162)
+        Me.Btntrtback.Name = "Btntrtback"
+        Me.Btntrtback.Size = New System.Drawing.Size(75, 27)
+        Me.Btntrtback.TabIndex = 17
+        Me.Btntrtback.Text = "Back"
+        Me.Btntrtback.UseVisualStyleBackColor = True
         '
         'Dgvtreatment
         '
@@ -451,35 +498,10 @@ Partial Class Form3
         Me.Dgvtreatment.Size = New System.Drawing.Size(616, 189)
         Me.Dgvtreatment.TabIndex = 7
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Btntrtback)
-        Me.Panel1.Controls.Add(Me.Btntrtclr)
-        Me.Panel1.Controls.Add(Me.Btntrtreg)
-        Me.Panel1.Controls.Add(Me.Txtbxtrtname)
-        Me.Panel1.Controls.Add(Me.Txtbxtrtcost)
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Location = New System.Drawing.Point(2, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(628, 219)
-        Me.Panel1.TabIndex = 6
-        '
-        'Btntrtback
-        '
-        Me.Btntrtback.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtback.Location = New System.Drawing.Point(528, 180)
-        Me.Btntrtback.Name = "Btntrtback"
-        Me.Btntrtback.Size = New System.Drawing.Size(75, 27)
-        Me.Btntrtback.TabIndex = 17
-        Me.Btntrtback.Text = "Back"
-        Me.Btntrtback.UseVisualStyleBackColor = True
-        '
         'Btntrtclr
         '
         Me.Btntrtclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtclr.Location = New System.Drawing.Point(450, 180)
+        Me.Btntrtclr.Location = New System.Drawing.Point(452, 161)
         Me.Btntrtclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btntrtclr.Name = "Btntrtclr"
         Me.Btntrtclr.Size = New System.Drawing.Size(73, 27)
@@ -487,16 +509,17 @@ Partial Class Form3
         Me.Btntrtclr.Text = "Clear"
         Me.Btntrtclr.UseVisualStyleBackColor = True
         '
-        'Btntrtreg
+        'Panel1
         '
-        Me.Btntrtreg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtreg.Location = New System.Drawing.Point(370, 180)
-        Me.Btntrtreg.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btntrtreg.Name = "Btntrtreg"
-        Me.Btntrtreg.Size = New System.Drawing.Size(76, 27)
-        Me.Btntrtreg.TabIndex = 15
-        Me.Btntrtreg.Text = "Register"
-        Me.Btntrtreg.UseVisualStyleBackColor = True
+        Me.Panel1.Controls.Add(Me.Txtbxtrtname)
+        Me.Panel1.Controls.Add(Me.Txtbxtrtcost)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Location = New System.Drawing.Point(2, 10)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(628, 147)
+        Me.Panel1.TabIndex = 6
         '
         'Txtbxtrtname
         '
@@ -535,6 +558,17 @@ Partial Class Form3
         Me.Label15.Size = New System.Drawing.Size(79, 13)
         Me.Label15.TabIndex = 2
         Me.Label15.Text = "Treatment Cost"
+        '
+        'Btntrtreg
+        '
+        Me.Btntrtreg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btntrtreg.Location = New System.Drawing.Point(360, 162)
+        Me.Btntrtreg.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btntrtreg.Name = "Btntrtreg"
+        Me.Btntrtreg.Size = New System.Drawing.Size(76, 27)
+        Me.Btntrtreg.TabIndex = 15
+        Me.Btntrtreg.Text = "Register"
+        Me.Btntrtreg.UseVisualStyleBackColor = True
         '
         'VScrollBar2
         '
@@ -613,4 +647,7 @@ Partial Class Form3
     Friend WithEvents Btntrtback As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtBxptncontact As TextBox
+    Friend WithEvents Btn_docdel As Button
+    Friend WithEvents BtnDeletePatient As Button
+    Friend WithEvents BtnDeleteTreatment As Button
 End Class
