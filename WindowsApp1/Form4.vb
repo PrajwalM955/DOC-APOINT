@@ -177,4 +177,9 @@ Public Class Form4
             MessageBox.Show("Please select a row to delete!", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
+    Private Sub Btnappntbck_Click(sender As Object, e As EventArgs) Handles Btnappntbck.Click
+        Form2.Show()
+        Me.Close()
+    End Sub
 End Class
