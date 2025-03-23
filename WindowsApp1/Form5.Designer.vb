@@ -256,7 +256,7 @@ Partial Class Treatment_Assign_Form
         Me.BtntrtassignBck.Name = "BtntrtassignBck"
         Me.BtntrtassignBck.Size = New System.Drawing.Size(89, 32)
         Me.BtntrtassignBck.TabIndex = 29
-        Me.BtntrtassignBck.Text = "Clear"
+        Me.BtntrtassignBck.Text = "Back"
         Me.BtntrtassignBck.UseVisualStyleBackColor = True
         '
         'Treatment_Assign_Form

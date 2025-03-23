@@ -10,6 +10,11 @@ Public Class Treatment_Assign_Form
         LoadTreatmentID()
     End Sub
 
+    ' Close the application
+    Private Sub Treatment_Assign_Form_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     ' Helper Function: Load data into ComboBoxes
 
     'Function to Load Patient_ID in ComboBox in Treatment Assignment 
