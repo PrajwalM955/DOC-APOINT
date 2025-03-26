@@ -76,7 +76,7 @@ Partial Class Form6
         '
         'BtnBillbck
         '
-        Me.BtnBillbck.Location = New System.Drawing.Point(486, 251)
+        Me.BtnBillbck.Location = New System.Drawing.Point(457, 250)
         Me.BtnBillbck.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBillbck.Name = "BtnBillbck"
         Me.BtnBillbck.Size = New System.Drawing.Size(76, 32)
@@ -95,15 +95,16 @@ Partial Class Form6
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(47, 16)
         Me.Label1.TabIndex = 25
         Me.Label1.Text = "Bill ID :"
         '
         'BtnGenerateInvoice
         '
-        Me.BtnGenerateInvoice.Location = New System.Drawing.Point(272, 251)
+        Me.BtnGenerateInvoice.Location = New System.Drawing.Point(243, 250)
         Me.BtnGenerateInvoice.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnGenerateInvoice.Name = "BtnGenerateInvoice"
         Me.BtnGenerateInvoice.Size = New System.Drawing.Size(107, 32)
@@ -113,7 +114,7 @@ Partial Class Form6
         '
         'Btn_bills_clear
         '
-        Me.Btn_bills_clear.Location = New System.Drawing.Point(571, 251)
+        Me.Btn_bills_clear.Location = New System.Drawing.Point(542, 250)
         Me.Btn_bills_clear.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_bills_clear.Name = "Btn_bills_clear"
         Me.Btn_bills_clear.Size = New System.Drawing.Size(76, 32)
@@ -123,7 +124,7 @@ Partial Class Form6
         '
         'BtnAddBill
         '
-        Me.BtnAddBill.Location = New System.Drawing.Point(394, 251)
+        Me.BtnAddBill.Location = New System.Drawing.Point(365, 250)
         Me.BtnAddBill.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAddBill.Name = "BtnAddBill"
         Me.BtnAddBill.Size = New System.Drawing.Size(76, 32)
@@ -135,7 +136,7 @@ Partial Class Form6
         '
         Me.Cmb_bills_status.FormattingEnabled = True
         Me.Cmb_bills_status.Items.AddRange(New Object() {"PAID", "PENDING", "EXEMPTED"})
-        Me.Cmb_bills_status.Location = New System.Drawing.Point(556, 90)
+        Me.Cmb_bills_status.Location = New System.Drawing.Point(577, 94)
         Me.Cmb_bills_status.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_bills_status.Name = "Cmb_bills_status"
         Me.Cmb_bills_status.Size = New System.Drawing.Size(169, 21)
@@ -145,7 +146,7 @@ Partial Class Form6
         '
         Me.CmbPaymentMode.FormattingEnabled = True
         Me.CmbPaymentMode.Items.AddRange(New Object() {"CASH", "CREDIT / DEBIT CARD", "ONLINE PAYMENTS", "INSURANCE"})
-        Me.CmbPaymentMode.Location = New System.Drawing.Point(556, 30)
+        Me.CmbPaymentMode.Location = New System.Drawing.Point(577, 38)
         Me.CmbPaymentMode.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbPaymentMode.Name = "CmbPaymentMode"
         Me.CmbPaymentMode.Size = New System.Drawing.Size(169, 21)
@@ -153,17 +154,17 @@ Partial Class Form6
         '
         'BtnCalculate
         '
-        Me.BtnCalculate.Location = New System.Drawing.Point(456, 170)
+        Me.BtnCalculate.Location = New System.Drawing.Point(447, 176)
         Me.BtnCalculate.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCalculate.Name = "BtnCalculate"
-        Me.BtnCalculate.Size = New System.Drawing.Size(153, 32)
+        Me.BtnCalculate.Size = New System.Drawing.Size(97, 32)
         Me.BtnCalculate.TabIndex = 19
         Me.BtnCalculate.Text = "Calculate"
         Me.BtnCalculate.UseVisualStyleBackColor = True
         '
         'TxtTotalAmount
         '
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(262, 182)
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(261, 183)
         Me.TxtTotalAmount.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
         Me.TxtTotalAmount.ReadOnly = True
@@ -193,27 +194,29 @@ Partial Class Form6
         'lbl_bills_status
         '
         Me.lbl_bills_status.AutoSize = True
+        Me.lbl_bills_status.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_bills_status.Location = New System.Drawing.Point(444, 93)
         Me.lbl_bills_status.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_bills_status.Name = "lbl_bills_status"
-        Me.lbl_bills_status.Size = New System.Drawing.Size(40, 13)
+        Me.lbl_bills_status.Size = New System.Drawing.Size(54, 18)
         Me.lbl_bills_status.TabIndex = 5
         Me.lbl_bills_status.Text = "Status:"
         '
         'lbl_paymode
         '
         Me.lbl_paymode.AutoSize = True
+        Me.lbl_paymode.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_paymode.Location = New System.Drawing.Point(444, 38)
         Me.lbl_paymode.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_paymode.Name = "lbl_paymode"
-        Me.lbl_paymode.Size = New System.Drawing.Size(81, 13)
+        Me.lbl_paymode.Size = New System.Drawing.Size(112, 18)
         Me.lbl_paymode.TabIndex = 4
         Me.lbl_paymode.Text = "Payment Mode:"
         '
         'lbl_totalamt
         '
         Me.lbl_totalamt.AutoSize = True
-        Me.lbl_totalamt.Location = New System.Drawing.Point(208, 162)
+        Me.lbl_totalamt.Location = New System.Drawing.Point(258, 163)
         Me.lbl_totalamt.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_totalamt.Name = "lbl_totalamt"
         Me.lbl_totalamt.Size = New System.Drawing.Size(73, 13)
@@ -223,26 +226,28 @@ Partial Class Form6
         'lbl_billdate
         '
         Me.lbl_billdate.AutoSize = True
+        Me.lbl_billdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_billdate.Location = New System.Drawing.Point(17, 116)
         Me.lbl_billdate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_billdate.Name = "lbl_billdate"
-        Me.lbl_billdate.Size = New System.Drawing.Size(49, 13)
+        Me.lbl_billdate.Size = New System.Drawing.Size(60, 16)
         Me.lbl_billdate.TabIndex = 2
         Me.lbl_billdate.Text = "Bill Date:"
         '
         'lbl_bills_regno
         '
         Me.lbl_bills_regno.AutoSize = True
+        Me.lbl_bills_regno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_bills_regno.Location = New System.Drawing.Point(17, 64)
         Me.lbl_bills_regno.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_bills_regno.Name = "lbl_bills_regno"
-        Me.lbl_bills_regno.Size = New System.Drawing.Size(57, 13)
+        Me.lbl_bills_regno.Size = New System.Drawing.Size(67, 16)
         Me.lbl_bills_regno.TabIndex = 1
         Me.lbl_bills_regno.Text = "Patient ID:"
         '
         'DgvBillingData
         '
-        Me.DgvBillingData.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DgvBillingData.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvBillingData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvBillingData.Location = New System.Drawing.Point(9, 333)
         Me.DgvBillingData.Margin = New System.Windows.Forms.Padding(2)

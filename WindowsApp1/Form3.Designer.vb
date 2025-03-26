@@ -24,21 +24,22 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
-        Me.Btndocview = New System.Windows.Forms.Button()
-        Me.Btn_docdel = New System.Windows.Forms.Button()
-        Me.Btndocback = New System.Windows.Forms.Button()
-        Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
-        Me.Btnclrdoc = New System.Windows.Forms.Button()
-        Me.Btnregdoc = New System.Windows.Forms.Button()
-        Me.Txtboxdocspeci = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Txtboxdocname = New System.Windows.Forms.TextBox()
-        Me.Cboboxhour = New System.Windows.Forms.ComboBox()
-        Me.Clstbox = New System.Windows.Forms.CheckedListBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Btndocback = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Btnclrdoc = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Btnregdoc = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Txtboxdocspeci = New System.Windows.Forms.TextBox()
+        Me.Clstbox = New System.Windows.Forms.CheckedListBox()
+        Me.Cboboxhour = New System.Windows.Forms.ComboBox()
+        Me.Btn_docdel = New System.Windows.Forms.Button()
+        Me.Btndocview = New System.Windows.Forms.Button()
         Me.Dgvdoc = New System.Windows.Forms.DataGridView()
         Me.TabPgpatient = New System.Windows.Forms.TabPage()
         Me.BtnPtnview = New System.Windows.Forms.Button()
@@ -71,9 +72,9 @@ Partial Class Form3
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Btntrtreg = New System.Windows.Forms.Button()
-        Me.VScrollBar2 = New System.Windows.Forms.VScrollBar()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPgpatient.SuspendLayout()
         CType(Me.Dgvptntab, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,79 +88,116 @@ Partial Class Form3
         Me.TabControl1.Controls.Add(Me.TabPgDoctor)
         Me.TabControl1.Controls.Add(Me.TabPgpatient)
         Me.TabControl1.Controls.Add(Me.TabPgTreatment)
+        Me.TabControl1.ItemSize = New System.Drawing.Size(90, 60)
         Me.TabControl1.Location = New System.Drawing.Point(22, 11)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(665, 488)
+        Me.TabControl1.Size = New System.Drawing.Size(726, 488)
         Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.TabControl1.TabIndex = 0
         '
         'TabPgDoctor
         '
-        Me.TabPgDoctor.Controls.Add(Me.Btndocview)
+        Me.TabPgDoctor.Controls.Add(Me.Panel2)
         Me.TabPgDoctor.Controls.Add(Me.Btn_docdel)
-        Me.TabPgDoctor.Controls.Add(Me.Btndocback)
-        Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
-        Me.TabPgDoctor.Controls.Add(Me.Btnclrdoc)
-        Me.TabPgDoctor.Controls.Add(Me.Btnregdoc)
-        Me.TabPgDoctor.Controls.Add(Me.Txtboxdocspeci)
-        Me.TabPgDoctor.Controls.Add(Me.Txtboxdocname)
-        Me.TabPgDoctor.Controls.Add(Me.Cboboxhour)
-        Me.TabPgDoctor.Controls.Add(Me.Clstbox)
-        Me.TabPgDoctor.Controls.Add(Me.Label6)
-        Me.TabPgDoctor.Controls.Add(Me.Label5)
-        Me.TabPgDoctor.Controls.Add(Me.Label4)
-        Me.TabPgDoctor.Controls.Add(Me.Label3)
-        Me.TabPgDoctor.Controls.Add(Me.Label2)
+        Me.TabPgDoctor.Controls.Add(Me.Btndocview)
         Me.TabPgDoctor.Controls.Add(Me.Dgvdoc)
-        Me.TabPgDoctor.Location = New System.Drawing.Point(4, 22)
+        Me.TabPgDoctor.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPgDoctor.Location = New System.Drawing.Point(4, 64)
         Me.TabPgDoctor.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgDoctor.Name = "TabPgDoctor"
         Me.TabPgDoctor.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPgDoctor.Size = New System.Drawing.Size(657, 462)
+        Me.TabPgDoctor.Size = New System.Drawing.Size(718, 420)
         Me.TabPgDoctor.TabIndex = 0
         Me.TabPgDoctor.Text = "Doctor"
         Me.TabPgDoctor.UseVisualStyleBackColor = True
         '
-        'Btndocview
+        'Panel2
         '
-        Me.Btndocview.Location = New System.Drawing.Point(477, 257)
-        Me.Btndocview.Name = "Btndocview"
-        Me.Btndocview.Size = New System.Drawing.Size(84, 23)
-        Me.Btndocview.TabIndex = 17
-        Me.Btndocview.Text = "View Details"
-        Me.Btndocview.UseVisualStyleBackColor = True
+        Me.Panel2.Controls.Add(Me.Txtboxdocname)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Btndocback)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Txtbox_phoneno)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Btnclrdoc)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Btnregdoc)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Txtboxdocspeci)
+        Me.Panel2.Controls.Add(Me.Clstbox)
+        Me.Panel2.Controls.Add(Me.Cboboxhour)
+        Me.Panel2.Location = New System.Drawing.Point(5, 5)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(708, 243)
+        Me.Panel2.TabIndex = 18
         '
-        'Btn_docdel
+        'Txtboxdocname
         '
-        Me.Btn_docdel.Location = New System.Drawing.Point(570, 257)
-        Me.Btn_docdel.Name = "Btn_docdel"
-        Me.Btn_docdel.Size = New System.Drawing.Size(75, 23)
-        Me.Btn_docdel.TabIndex = 16
-        Me.Btn_docdel.Text = "Delete"
-        Me.Btn_docdel.UseVisualStyleBackColor = True
+        Me.Txtboxdocname.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtboxdocname.Location = New System.Drawing.Point(165, 33)
+        Me.Txtboxdocname.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txtboxdocname.Name = "Txtboxdocname"
+        Me.Txtboxdocname.Size = New System.Drawing.Size(146, 22)
+        Me.Txtboxdocname.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(46, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 20)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Name"
         '
         'Btndocback
         '
-        Me.Btndocback.Location = New System.Drawing.Point(570, 214)
+        Me.Btndocback.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndocback.Location = New System.Drawing.Point(621, 204)
         Me.Btndocback.Name = "Btndocback"
         Me.Btndocback.Size = New System.Drawing.Size(75, 27)
         Me.Btndocback.TabIndex = 3
         Me.Btndocback.Text = "Back"
         Me.Btndocback.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(46, 82)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(107, 20)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Specialization"
+        '
         'Txtbox_phoneno
         '
-        Me.Txtbox_phoneno.Location = New System.Drawing.Point(158, 160)
+        Me.Txtbox_phoneno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtbox_phoneno.Location = New System.Drawing.Point(165, 156)
         Me.Txtbox_phoneno.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbox_phoneno.Name = "Txtbox_phoneno"
-        Me.Txtbox_phoneno.Size = New System.Drawing.Size(128, 20)
+        Me.Txtbox_phoneno.Size = New System.Drawing.Size(146, 22)
         Me.Txtbox_phoneno.TabIndex = 15
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(46, 155)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 20)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Contact"
         '
         'Btnclrdoc
         '
-        Me.Btnclrdoc.Location = New System.Drawing.Point(492, 214)
+        Me.Btnclrdoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnclrdoc.Location = New System.Drawing.Point(543, 204)
         Me.Btnclrdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnclrdoc.Name = "Btnclrdoc"
         Me.Btnclrdoc.Size = New System.Drawing.Size(73, 27)
@@ -167,9 +205,21 @@ Partial Class Form3
         Me.Btnclrdoc.Text = "Clear"
         Me.Btnclrdoc.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(400, 26)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(115, 16)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Week_Availability"
+        '
         'Btnregdoc
         '
-        Me.Btnregdoc.Location = New System.Drawing.Point(404, 214)
+        Me.Btnregdoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnregdoc.Location = New System.Drawing.Point(455, 204)
         Me.Btnregdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnregdoc.Name = "Btnregdoc"
         Me.Btnregdoc.Size = New System.Drawing.Size(76, 27)
@@ -177,103 +227,80 @@ Partial Class Form3
         Me.Btnregdoc.Text = "Register"
         Me.Btnregdoc.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(407, 144)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(108, 16)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Hour_Availability"
+        '
         'Txtboxdocspeci
         '
-        Me.Txtboxdocspeci.Location = New System.Drawing.Point(158, 86)
+        Me.Txtboxdocspeci.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtboxdocspeci.Location = New System.Drawing.Point(165, 82)
         Me.Txtboxdocspeci.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtboxdocspeci.Multiline = True
         Me.Txtboxdocspeci.Name = "Txtboxdocspeci"
-        Me.Txtboxdocspeci.Size = New System.Drawing.Size(128, 41)
+        Me.Txtboxdocspeci.Size = New System.Drawing.Size(146, 26)
         Me.Txtboxdocspeci.TabIndex = 11
-        '
-        'Txtboxdocname
-        '
-        Me.Txtboxdocname.Location = New System.Drawing.Point(158, 37)
-        Me.Txtboxdocname.Margin = New System.Windows.Forms.Padding(2)
-        Me.Txtboxdocname.Name = "Txtboxdocname"
-        Me.Txtboxdocname.Size = New System.Drawing.Size(128, 20)
-        Me.Txtboxdocname.TabIndex = 10
-        '
-        'Cboboxhour
-        '
-        Me.Cboboxhour.FormattingEnabled = True
-        Me.Cboboxhour.Items.AddRange(New Object() {"Fore noon", "After noon", "Evening"})
-        Me.Cboboxhour.Location = New System.Drawing.Point(477, 159)
-        Me.Cboboxhour.Margin = New System.Windows.Forms.Padding(2)
-        Me.Cboboxhour.Name = "Cboboxhour"
-        Me.Cboboxhour.Size = New System.Drawing.Size(134, 21)
-        Me.Cboboxhour.TabIndex = 8
         '
         'Clstbox
         '
         Me.Clstbox.BackColor = System.Drawing.SystemColors.Window
+        Me.Clstbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Clstbox.FormattingEnabled = True
         Me.Clstbox.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"})
-        Me.Clstbox.Location = New System.Drawing.Point(477, 37)
+        Me.Clstbox.Location = New System.Drawing.Point(537, 7)
         Me.Clstbox.Margin = New System.Windows.Forms.Padding(2)
         Me.Clstbox.Name = "Clstbox"
-        Me.Clstbox.Size = New System.Drawing.Size(94, 94)
+        Me.Clstbox.Size = New System.Drawing.Size(94, 116)
         Me.Clstbox.TabIndex = 7
         '
-        'Label6
+        'Cboboxhour
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(345, 167)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(85, 13)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Hour_Availability"
+        Me.Cboboxhour.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cboboxhour.FormattingEnabled = True
+        Me.Cboboxhour.Items.AddRange(New Object() {"Fore noon", "After noon", "Evening"})
+        Me.Cboboxhour.Location = New System.Drawing.Point(543, 144)
+        Me.Cboboxhour.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cboboxhour.Name = "Cboboxhour"
+        Me.Cboboxhour.Size = New System.Drawing.Size(134, 24)
+        Me.Cboboxhour.TabIndex = 8
         '
-        'Label5
+        'Btn_docdel
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(345, 37)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Week_Availability"
+        Me.Btn_docdel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_docdel.Location = New System.Drawing.Point(626, 254)
+        Me.Btn_docdel.Name = "Btn_docdel"
+        Me.Btn_docdel.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_docdel.TabIndex = 16
+        Me.Btn_docdel.Text = "Delete"
+        Me.Btn_docdel.UseVisualStyleBackColor = True
         '
-        'Label4
+        'Btndocview
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(39, 159)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Contact"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(39, 86)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Specialization"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(39, 37)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Name"
+        Me.Btndocview.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndocview.Location = New System.Drawing.Point(537, 254)
+        Me.Btndocview.Name = "Btndocview"
+        Me.Btndocview.Size = New System.Drawing.Size(84, 23)
+        Me.Btndocview.TabIndex = 17
+        Me.Btndocview.Text = "View Details"
+        Me.Btndocview.UseVisualStyleBackColor = True
         '
         'Dgvdoc
         '
+        Me.Dgvdoc.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.Dgvdoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvdoc.Location = New System.Drawing.Point(21, 285)
+        Me.Dgvdoc.Location = New System.Drawing.Point(20, 282)
         Me.Dgvdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvdoc.Name = "Dgvdoc"
         Me.Dgvdoc.RowHeadersWidth = 51
         Me.Dgvdoc.RowTemplate.Height = 24
-        Me.Dgvdoc.Size = New System.Drawing.Size(616, 134)
+        Me.Dgvdoc.Size = New System.Drawing.Size(694, 134)
         Me.Dgvdoc.TabIndex = 0
         '
         'TabPgpatient
@@ -296,18 +323,20 @@ Partial Class Form3
         Me.TabPgpatient.Controls.Add(Me.Label9)
         Me.TabPgpatient.Controls.Add(Me.Label8)
         Me.TabPgpatient.Controls.Add(Me.Label7)
-        Me.TabPgpatient.Location = New System.Drawing.Point(4, 22)
+        Me.TabPgpatient.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPgpatient.Location = New System.Drawing.Point(4, 64)
         Me.TabPgpatient.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgpatient.Name = "TabPgpatient"
         Me.TabPgpatient.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPgpatient.Size = New System.Drawing.Size(657, 462)
+        Me.TabPgpatient.Size = New System.Drawing.Size(718, 420)
         Me.TabPgpatient.TabIndex = 1
         Me.TabPgpatient.Text = "Patients"
         Me.TabPgpatient.UseVisualStyleBackColor = True
         '
         'BtnPtnview
         '
-        Me.BtnPtnview.Location = New System.Drawing.Point(463, 260)
+        Me.BtnPtnview.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPtnview.Location = New System.Drawing.Point(525, 254)
         Me.BtnPtnview.Name = "BtnPtnview"
         Me.BtnPtnview.Size = New System.Drawing.Size(84, 23)
         Me.BtnPtnview.TabIndex = 22
@@ -316,7 +345,8 @@ Partial Class Form3
         '
         'BtnDeletePatient
         '
-        Me.BtnDeletePatient.Location = New System.Drawing.Point(553, 260)
+        Me.BtnDeletePatient.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeletePatient.Location = New System.Drawing.Point(615, 254)
         Me.BtnDeletePatient.Name = "BtnDeletePatient"
         Me.BtnDeletePatient.Size = New System.Drawing.Size(75, 23)
         Me.BtnDeletePatient.TabIndex = 21
@@ -325,23 +355,26 @@ Partial Class Form3
         '
         'TxtBxptncontact
         '
+        Me.TxtBxptncontact.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBxptncontact.Location = New System.Drawing.Point(142, 148)
         Me.TxtBxptncontact.Name = "TxtBxptncontact"
-        Me.TxtBxptncontact.Size = New System.Drawing.Size(100, 20)
+        Me.TxtBxptncontact.Size = New System.Drawing.Size(100, 26)
         Me.TxtBxptncontact.TabIndex = 20
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 148)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 145)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 13)
+        Me.Label1.Size = New System.Drawing.Size(89, 20)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Contact No"
         '
         'Btnptnback
         '
-        Me.Btnptnback.Location = New System.Drawing.Point(552, 212)
+        Me.Btnptnback.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnptnback.Location = New System.Drawing.Point(614, 206)
         Me.Btnptnback.Name = "Btnptnback"
         Me.Btnptnback.Size = New System.Drawing.Size(87, 28)
         Me.Btnptnback.TabIndex = 18
@@ -350,7 +383,8 @@ Partial Class Form3
         '
         'Btnptnclr
         '
-        Me.Btnptnclr.Location = New System.Drawing.Point(469, 212)
+        Me.Btnptnclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnptnclr.Location = New System.Drawing.Point(531, 206)
         Me.Btnptnclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnptnclr.Name = "Btnptnclr"
         Me.Btnptnclr.Size = New System.Drawing.Size(82, 28)
@@ -360,7 +394,8 @@ Partial Class Form3
         '
         'Btnptnregister
         '
-        Me.Btnptnregister.Location = New System.Drawing.Point(378, 212)
+        Me.Btnptnregister.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnptnregister.Location = New System.Drawing.Point(440, 206)
         Me.Btnptnregister.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnptnregister.Name = "Btnptnregister"
         Me.Btnptnregister.Size = New System.Drawing.Size(87, 28)
@@ -370,7 +405,8 @@ Partial Class Form3
         '
         'Txtbxptnmedhstry
         '
-        Me.Txtbxptnmedhstry.Location = New System.Drawing.Point(459, 124)
+        Me.Txtbxptnmedhstry.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtbxptnmedhstry.Location = New System.Drawing.Point(501, 124)
         Me.Txtbxptnmedhstry.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxptnmedhstry.Multiline = True
         Me.Txtbxptnmedhstry.Name = "Txtbxptnmedhstry"
@@ -379,7 +415,8 @@ Partial Class Form3
         '
         'Txtbxptnadrs
         '
-        Me.Txtbxptnadrs.Location = New System.Drawing.Point(459, 24)
+        Me.Txtbxptnadrs.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtbxptnadrs.Location = New System.Drawing.Point(501, 24)
         Me.Txtbxptnadrs.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxptnadrs.Multiline = True
         Me.Txtbxptnadrs.Name = "Txtbxptnadrs"
@@ -388,28 +425,31 @@ Partial Class Form3
         '
         'Cmbbxptngnder
         '
+        Me.Cmbbxptngnder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmbbxptngnder.FormattingEnabled = True
         Me.Cmbbxptngnder.Items.AddRange(New Object() {"Male", "Female", "Other"})
         Me.Cmbbxptngnder.Location = New System.Drawing.Point(142, 113)
         Me.Cmbbxptngnder.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmbbxptngnder.Name = "Cmbbxptngnder"
-        Me.Cmbbxptngnder.Size = New System.Drawing.Size(92, 21)
+        Me.Cmbbxptngnder.Size = New System.Drawing.Size(92, 28)
         Me.Cmbbxptngnder.TabIndex = 10
         '
         'Datepatientdob
         '
+        Me.Datepatientdob.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Datepatientdob.Location = New System.Drawing.Point(142, 68)
         Me.Datepatientdob.Margin = New System.Windows.Forms.Padding(2)
         Me.Datepatientdob.Name = "Datepatientdob"
-        Me.Datepatientdob.Size = New System.Drawing.Size(151, 20)
+        Me.Datepatientdob.Size = New System.Drawing.Size(151, 26)
         Me.Datepatientdob.TabIndex = 9
         '
         'Txtbxptnname
         '
+        Me.Txtbxptnname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtbxptnname.Location = New System.Drawing.Point(142, 30)
         Me.Txtbxptnname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxptnname.Name = "Txtbxptnname"
-        Me.Txtbxptnname.Size = New System.Drawing.Size(76, 20)
+        Me.Txtbxptnname.Size = New System.Drawing.Size(76, 26)
         Me.Txtbxptnname.TabIndex = 8
         '
         'Dgvptntab
@@ -420,56 +460,61 @@ Partial Class Form3
         Me.Dgvptntab.Name = "Dgvptntab"
         Me.Dgvptntab.RowHeadersWidth = 51
         Me.Dgvptntab.RowTemplate.Height = 24
-        Me.Dgvptntab.Size = New System.Drawing.Size(620, 158)
+        Me.Dgvptntab.Size = New System.Drawing.Size(682, 128)
         Me.Dgvptntab.TabIndex = 6
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(360, 124)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(358, 124)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(82, 13)
+        Me.Label12.Size = New System.Drawing.Size(121, 20)
         Me.Label12.TabIndex = 5
         Me.Label12.Text = "Medical_History"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(360, 30)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(397, 30)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.Size = New System.Drawing.Size(68, 20)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Address"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(46, 113)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(15, 110)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(42, 13)
+        Me.Label9.Size = New System.Drawing.Size(63, 20)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Gender"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(46, 68)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(15, 65)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 13)
+        Me.Label8.Size = New System.Drawing.Size(86, 20)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Birth_Date"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(46, 30)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(15, 27)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(71, 13)
+        Me.Label7.Size = New System.Drawing.Size(105, 20)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Patient Name"
         '
@@ -477,16 +522,13 @@ Partial Class Form3
         '
         Me.TabPgTreatment.Controls.Add(Me.BtnTrtview)
         Me.TabPgTreatment.Controls.Add(Me.BtnDeleteTreatment)
-        Me.TabPgTreatment.Controls.Add(Me.Btntrtback)
         Me.TabPgTreatment.Controls.Add(Me.Dgvtreatment)
-        Me.TabPgTreatment.Controls.Add(Me.Btntrtclr)
         Me.TabPgTreatment.Controls.Add(Me.Panel1)
-        Me.TabPgTreatment.Controls.Add(Me.Btntrtreg)
         Me.TabPgTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPgTreatment.Location = New System.Drawing.Point(4, 22)
+        Me.TabPgTreatment.Location = New System.Drawing.Point(4, 64)
         Me.TabPgTreatment.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPgTreatment.Name = "TabPgTreatment"
-        Me.TabPgTreatment.Size = New System.Drawing.Size(657, 462)
+        Me.TabPgTreatment.Size = New System.Drawing.Size(718, 420)
         Me.TabPgTreatment.TabIndex = 2
         Me.TabPgTreatment.Text = "Treatments"
         Me.TabPgTreatment.UseVisualStyleBackColor = True
@@ -494,7 +536,7 @@ Partial Class Form3
         'BtnTrtview
         '
         Me.BtnTrtview.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTrtview.Location = New System.Drawing.Point(441, 214)
+        Me.BtnTrtview.Location = New System.Drawing.Point(525, 214)
         Me.BtnTrtview.Name = "BtnTrtview"
         Me.BtnTrtview.Size = New System.Drawing.Size(84, 23)
         Me.BtnTrtview.TabIndex = 23
@@ -504,7 +546,7 @@ Partial Class Form3
         'BtnDeleteTreatment
         '
         Me.BtnDeleteTreatment.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDeleteTreatment.Location = New System.Drawing.Point(540, 214)
+        Me.BtnDeleteTreatment.Location = New System.Drawing.Point(624, 214)
         Me.BtnDeleteTreatment.Name = "BtnDeleteTreatment"
         Me.BtnDeleteTreatment.Size = New System.Drawing.Size(75, 23)
         Me.BtnDeleteTreatment.TabIndex = 22
@@ -514,7 +556,7 @@ Partial Class Form3
         'Btntrtback
         '
         Me.Btntrtback.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtback.Location = New System.Drawing.Point(540, 162)
+        Me.Btntrtback.Location = New System.Drawing.Point(608, 146)
         Me.Btntrtback.Name = "Btntrtback"
         Me.Btntrtback.Size = New System.Drawing.Size(75, 27)
         Me.Btntrtback.TabIndex = 17
@@ -530,13 +572,13 @@ Partial Class Form3
         Me.Dgvtreatment.Name = "Dgvtreatment"
         Me.Dgvtreatment.RowHeadersWidth = 51
         Me.Dgvtreatment.RowTemplate.Height = 24
-        Me.Dgvtreatment.Size = New System.Drawing.Size(615, 143)
+        Me.Dgvtreatment.Size = New System.Drawing.Size(684, 143)
         Me.Dgvtreatment.TabIndex = 7
         '
         'Btntrtclr
         '
         Me.Btntrtclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtclr.Location = New System.Drawing.Point(452, 161)
+        Me.Btntrtclr.Location = New System.Drawing.Point(520, 145)
         Me.Btntrtclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btntrtclr.Name = "Btntrtclr"
         Me.Btntrtclr.Size = New System.Drawing.Size(73, 27)
@@ -548,16 +590,20 @@ Partial Class Form3
         '
         Me.Panel1.Controls.Add(Me.Txtbxtrtname)
         Me.Panel1.Controls.Add(Me.Txtbxtrtcost)
+        Me.Panel1.Controls.Add(Me.Btntrtback)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Btntrtclr)
+        Me.Panel1.Controls.Add(Me.Btntrtreg)
         Me.Panel1.Location = New System.Drawing.Point(2, 10)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(628, 147)
+        Me.Panel1.Size = New System.Drawing.Size(697, 185)
         Me.Panel1.TabIndex = 6
         '
         'Txtbxtrtname
         '
+        Me.Txtbxtrtname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtbxtrtname.Location = New System.Drawing.Point(139, 33)
         Me.Txtbxtrtname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxtrtname.Name = "Txtbxtrtname"
@@ -566,6 +612,7 @@ Partial Class Form3
         '
         'Txtbxtrtcost
         '
+        Me.Txtbxtrtcost.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtbxtrtcost.Location = New System.Drawing.Point(139, 89)
         Me.Txtbxtrtcost.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxtrtcost.Name = "Txtbxtrtcost"
@@ -597,7 +644,7 @@ Partial Class Form3
         'Btntrtreg
         '
         Me.Btntrtreg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btntrtreg.Location = New System.Drawing.Point(360, 162)
+        Me.Btntrtreg.Location = New System.Drawing.Point(428, 146)
         Me.Btntrtreg.Margin = New System.Windows.Forms.Padding(2)
         Me.Btntrtreg.Name = "Btntrtreg"
         Me.Btntrtreg.Size = New System.Drawing.Size(76, 27)
@@ -605,27 +652,19 @@ Partial Class Form3
         Me.Btntrtreg.Text = "Register"
         Me.Btntrtreg.UseVisualStyleBackColor = True
         '
-        'VScrollBar2
-        '
-        Me.VScrollBar2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.VScrollBar2.Location = New System.Drawing.Point(716, 0)
-        Me.VScrollBar2.Name = "VScrollBar2"
-        Me.VScrollBar2.Size = New System.Drawing.Size(21, 506)
-        Me.VScrollBar2.TabIndex = 2
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(737, 506)
-        Me.Controls.Add(Me.VScrollBar2)
+        Me.ClientSize = New System.Drawing.Size(768, 506)
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form3"
         Me.Text = "Registration_Page"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPgDoctor.ResumeLayout(False)
-        Me.TabPgDoctor.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.Dgvdoc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPgpatient.ResumeLayout(False)
         Me.TabPgpatient.PerformLayout()
@@ -676,7 +715,6 @@ Partial Class Form3
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Btntrtclr As Button
     Friend WithEvents Btntrtreg As Button
-    Friend WithEvents VScrollBar2 As VScrollBar
     Friend WithEvents Btndocback As Button
     Friend WithEvents Btnptnback As Button
     Friend WithEvents Btntrtback As Button
@@ -688,4 +726,5 @@ Partial Class Form3
     Friend WithEvents Btndocview As Button
     Friend WithEvents BtnPtnview As Button
     Friend WithEvents BtnTrtview As Button
+    Friend WithEvents Panel2 As Panel
 End Class

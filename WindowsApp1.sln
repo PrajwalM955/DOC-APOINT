@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApp1", "WindowsApp1\WindowsApp1.vbproj", "{42FBF0E1-6574-48AC-B342-9ADDA5AF9213}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Doctor_Apooinment_Management_System", "WindowsApp1\Doctor_Apooinment_Management_System.vbproj", "{42FBF0E1-6574-48AC-B342-9ADDA5AF9213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89FA376F-5BF5-414A-A86D-A76B59962FA6}
 	EndGlobalSection
 EndGlobal

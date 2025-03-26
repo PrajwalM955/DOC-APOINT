@@ -22,8 +22,6 @@ Partial Class Invoiceform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Invoiceform))
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Btnclrinvo = New System.Windows.Forms.Button()
@@ -142,7 +140,7 @@ Partial Class Invoiceform
         '
         'TextBoxptncallno
         '
-        Me.TextBoxptncallno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxptncallno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxptncallno.Location = New System.Drawing.Point(371, 84)
         Me.TextBoxptncallno.Name = "TextBoxptncallno"
         Me.TextBoxptncallno.ReadOnly = True
@@ -151,7 +149,7 @@ Partial Class Invoiceform
         '
         'TextBoxptnaddress
         '
-        Me.TextBoxptnaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxptnaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxptnaddress.Location = New System.Drawing.Point(371, 154)
         Me.TextBoxptnaddress.Multiline = True
         Me.TextBoxptnaddress.Name = "TextBoxptnaddress"
@@ -161,7 +159,7 @@ Partial Class Invoiceform
         '
         'TextBoxptngen
         '
-        Me.TextBoxptngen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxptngen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxptngen.Location = New System.Drawing.Point(149, 186)
         Me.TextBoxptngen.Name = "TextBoxptngen"
         Me.TextBoxptngen.ReadOnly = True
@@ -170,7 +168,7 @@ Partial Class Invoiceform
         '
         'TextBoxptdob
         '
-        Me.TextBoxptdob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxptdob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxptdob.Location = New System.Drawing.Point(150, 139)
         Me.TextBoxptdob.Name = "TextBoxptdob"
         Me.TextBoxptdob.ReadOnly = True
@@ -179,7 +177,7 @@ Partial Class Invoiceform
         '
         'TextBoxptname
         '
-        Me.TextBoxptname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxptname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxptname.Location = New System.Drawing.Point(150, 94)
         Me.TextBoxptname.Name = "TextBoxptname"
         Me.TextBoxptname.ReadOnly = True
@@ -282,7 +280,7 @@ Partial Class Invoiceform
         '
         'TextBoxstatus
         '
-        Me.TextBoxstatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxstatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxstatus.Location = New System.Drawing.Point(372, 159)
         Me.TextBoxstatus.Name = "TextBoxstatus"
         Me.TextBoxstatus.ReadOnly = True
@@ -291,7 +289,7 @@ Partial Class Invoiceform
         '
         'TextBoxpaymod
         '
-        Me.TextBoxpaymod.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxpaymod.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxpaymod.Location = New System.Drawing.Point(372, 87)
         Me.TextBoxpaymod.Name = "TextBoxpaymod"
         Me.TextBoxpaymod.ReadOnly = True
@@ -300,7 +298,7 @@ Partial Class Invoiceform
         '
         'TextBoxamtinvo
         '
-        Me.TextBoxamtinvo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxamtinvo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxamtinvo.Location = New System.Drawing.Point(147, 159)
         Me.TextBoxamtinvo.Name = "TextBoxamtinvo"
         Me.TextBoxamtinvo.ReadOnly = True
@@ -364,7 +362,7 @@ Partial Class Invoiceform
         '
         'Cmbbillid
         '
-        Me.Cmbbillid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cmbbillid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmbbillid.FormattingEnabled = True
         Me.Cmbbillid.Location = New System.Drawing.Point(150, 57)
         Me.Cmbbillid.Name = "Cmbbillid"
@@ -388,23 +386,7 @@ Partial Class Invoiceform
         '
         Me.Dgvinvo.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.Dgvinvo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Dgvinvo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.Dgvinvo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Dgvinvo.DefaultCellStyle = DataGridViewCellStyle8
         Me.Dgvinvo.Location = New System.Drawing.Point(21, 40)
         Me.Dgvinvo.Name = "Dgvinvo"
         Me.Dgvinvo.ReadOnly = True

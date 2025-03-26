@@ -31,14 +31,14 @@ Partial Class Form4
         Me.Panel_apoint = New System.Windows.Forms.Panel()
         Me.Btnappntbck = New System.Windows.Forms.Button()
         Me.Cmbxapoitdocid = New System.Windows.Forms.ComboBox()
-        Me.BtnIssueTicket = New System.Windows.Forms.Button()
         Me.Cmbxapointptnid = New System.Windows.Forms.ComboBox()
-        Me.Btnapointclr = New System.Windows.Forms.Button()
-        Me.Btnappoint = New System.Windows.Forms.Button()
         Me.Cmbxapointreason = New System.Windows.Forms.ComboBox()
+        Me.BtnIssueTicket = New System.Windows.Forms.Button()
         Me.Cmbxapoitstatus = New System.Windows.Forms.ComboBox()
+        Me.Btnapointclr = New System.Windows.Forms.Button()
         Me.Cmbxapointtime = New System.Windows.Forms.ComboBox()
         Me.Dateapointdate = New System.Windows.Forms.DateTimePicker()
+        Me.Btnappoint = New System.Windows.Forms.Button()
         Me.Dgvappoint = New System.Windows.Forms.DataGridView()
         Me.Btnapointview = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
@@ -134,7 +134,8 @@ Partial Class Form4
         '
         'Btnappntbck
         '
-        Me.Btnappntbck.Location = New System.Drawing.Point(480, 233)
+        Me.Btnappntbck.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnappntbck.Location = New System.Drawing.Point(459, 232)
         Me.Btnappntbck.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnappntbck.Name = "Btnappntbck"
         Me.Btnappntbck.Size = New System.Drawing.Size(64, 26)
@@ -150,15 +151,6 @@ Partial Class Form4
         Me.Cmbxapoitdocid.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapoitdocid.TabIndex = 20
         '
-        'BtnIssueTicket
-        '
-        Me.BtnIssueTicket.Location = New System.Drawing.Point(194, 233)
-        Me.BtnIssueTicket.Name = "BtnIssueTicket"
-        Me.BtnIssueTicket.Size = New System.Drawing.Size(75, 26)
-        Me.BtnIssueTicket.TabIndex = 23
-        Me.BtnIssueTicket.Text = "Print Appointment"
-        Me.BtnIssueTicket.UseVisualStyleBackColor = True
-        '
         'Cmbxapointptnid
         '
         Me.Cmbxapointptnid.FormattingEnabled = True
@@ -166,26 +158,6 @@ Partial Class Form4
         Me.Cmbxapointptnid.Name = "Cmbxapointptnid"
         Me.Cmbxapointptnid.Size = New System.Drawing.Size(121, 21)
         Me.Cmbxapointptnid.TabIndex = 19
-        '
-        'Btnapointclr
-        '
-        Me.Btnapointclr.Location = New System.Drawing.Point(382, 233)
-        Me.Btnapointclr.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnapointclr.Name = "Btnapointclr"
-        Me.Btnapointclr.Size = New System.Drawing.Size(84, 26)
-        Me.Btnapointclr.TabIndex = 17
-        Me.Btnapointclr.Text = "Clear"
-        Me.Btnapointclr.UseVisualStyleBackColor = True
-        '
-        'Btnappoint
-        '
-        Me.Btnappoint.Location = New System.Drawing.Point(289, 233)
-        Me.Btnappoint.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnappoint.Name = "Btnappoint"
-        Me.Btnappoint.Size = New System.Drawing.Size(80, 26)
-        Me.Btnappoint.TabIndex = 16
-        Me.Btnappoint.Text = "Appoint"
-        Me.Btnappoint.UseVisualStyleBackColor = True
         '
         'Cmbxapointreason
         '
@@ -197,6 +169,16 @@ Partial Class Form4
         Me.Cmbxapointreason.Size = New System.Drawing.Size(126, 21)
         Me.Cmbxapointreason.TabIndex = 18
         '
+        'BtnIssueTicket
+        '
+        Me.BtnIssueTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIssueTicket.Location = New System.Drawing.Point(173, 232)
+        Me.BtnIssueTicket.Name = "BtnIssueTicket"
+        Me.BtnIssueTicket.Size = New System.Drawing.Size(75, 26)
+        Me.BtnIssueTicket.TabIndex = 23
+        Me.BtnIssueTicket.Text = "Print Appointment"
+        Me.BtnIssueTicket.UseVisualStyleBackColor = True
+        '
         'Cmbxapoitstatus
         '
         Me.Cmbxapoitstatus.FormattingEnabled = True
@@ -206,6 +188,17 @@ Partial Class Form4
         Me.Cmbxapoitstatus.Name = "Cmbxapoitstatus"
         Me.Cmbxapoitstatus.Size = New System.Drawing.Size(126, 21)
         Me.Cmbxapoitstatus.TabIndex = 15
+        '
+        'Btnapointclr
+        '
+        Me.Btnapointclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnapointclr.Location = New System.Drawing.Point(361, 232)
+        Me.Btnapointclr.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnapointclr.Name = "Btnapointclr"
+        Me.Btnapointclr.Size = New System.Drawing.Size(84, 26)
+        Me.Btnapointclr.TabIndex = 17
+        Me.Btnapointclr.Text = "Clear"
+        Me.Btnapointclr.UseVisualStyleBackColor = True
         '
         'Cmbxapointtime
         '
@@ -225,6 +218,17 @@ Partial Class Form4
         Me.Dateapointdate.Name = "Dateapointdate"
         Me.Dateapointdate.Size = New System.Drawing.Size(151, 20)
         Me.Dateapointdate.TabIndex = 13
+        '
+        'Btnappoint
+        '
+        Me.Btnappoint.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnappoint.Location = New System.Drawing.Point(268, 232)
+        Me.Btnappoint.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnappoint.Name = "Btnappoint"
+        Me.Btnappoint.Size = New System.Drawing.Size(80, 26)
+        Me.Btnappoint.TabIndex = 16
+        Me.Btnappoint.Text = "Appoint"
+        Me.Btnappoint.UseVisualStyleBackColor = True
         '
         'Dgvappoint
         '

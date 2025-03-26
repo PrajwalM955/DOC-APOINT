@@ -51,18 +51,19 @@ Partial Class Treatment_Assign_Form
         '
         'DgvAssignments
         '
+        Me.DgvAssignments.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvAssignments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAssignments.Location = New System.Drawing.Point(26, 305)
+        Me.DgvAssignments.Location = New System.Drawing.Point(26, 325)
         Me.DgvAssignments.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvAssignments.Name = "DgvAssignments"
         Me.DgvAssignments.RowHeadersWidth = 51
         Me.DgvAssignments.RowTemplate.Height = 24
-        Me.DgvAssignments.Size = New System.Drawing.Size(895, 184)
+        Me.DgvAssignments.Size = New System.Drawing.Size(895, 164)
         Me.DgvAssignments.TabIndex = 2
         '
         'BtnView
         '
-        Me.BtnView.Location = New System.Drawing.Point(644, 277)
+        Me.BtnView.Location = New System.Drawing.Point(644, 297)
         Me.BtnView.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnView.Name = "BtnView"
         Me.BtnView.Size = New System.Drawing.Size(75, 24)
@@ -72,7 +73,7 @@ Partial Class Treatment_Assign_Form
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(738, 277)
+        Me.BtnEdit.Location = New System.Drawing.Point(738, 297)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(70, 24)
@@ -90,7 +91,7 @@ Partial Class Treatment_Assign_Form
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(835, 277)
+        Me.BtnDelete.Location = New System.Drawing.Point(835, 297)
         Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(78, 24)
@@ -101,7 +102,7 @@ Partial Class Treatment_Assign_Form
         'lbl_assign_serviceid
         '
         Me.lbl_assign_serviceid.AutoSize = True
-        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(401, 80)
+        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(480, 77)
         Me.lbl_assign_serviceid.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_assign_serviceid.Name = "lbl_assign_serviceid"
         Me.lbl_assign_serviceid.Size = New System.Drawing.Size(75, 13)
@@ -138,7 +139,8 @@ Partial Class Treatment_Assign_Form
         '
         'BtnSubmit
         '
-        Me.BtnSubmit.Location = New System.Drawing.Point(595, 195)
+        Me.BtnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSubmit.Location = New System.Drawing.Point(283, 222)
         Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnSubmit.Name = "BtnSubmit"
         Me.BtnSubmit.Size = New System.Drawing.Size(85, 32)
@@ -148,7 +150,8 @@ Partial Class Treatment_Assign_Form
         '
         'BtnClear
         '
-        Me.BtnClear.Location = New System.Drawing.Point(684, 195)
+        Me.BtnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.Location = New System.Drawing.Point(388, 222)
         Me.BtnClear.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(89, 32)
@@ -188,7 +191,7 @@ Partial Class Treatment_Assign_Form
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(401, 33)
+        Me.Label3.Location = New System.Drawing.Point(480, 30)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(43, 13)
         Me.Label3.TabIndex = 23
@@ -198,7 +201,7 @@ Partial Class Treatment_Assign_Form
         '
         Me.Cmbstatus.FormattingEnabled = True
         Me.Cmbstatus.Items.AddRange(New Object() {"Ongoing ", "completed", "Assigned"})
-        Me.Cmbstatus.Location = New System.Drawing.Point(538, 33)
+        Me.Cmbstatus.Location = New System.Drawing.Point(617, 30)
         Me.Cmbstatus.Name = "Cmbstatus"
         Me.Cmbstatus.Size = New System.Drawing.Size(137, 21)
         Me.Cmbstatus.TabIndex = 24
@@ -206,21 +209,21 @@ Partial Class Treatment_Assign_Form
         'CmbTreatmentID
         '
         Me.CmbTreatmentID.FormattingEnabled = True
-        Me.CmbTreatmentID.Location = New System.Drawing.Point(538, 72)
+        Me.CmbTreatmentID.Location = New System.Drawing.Point(617, 69)
         Me.CmbTreatmentID.Name = "CmbTreatmentID"
         Me.CmbTreatmentID.Size = New System.Drawing.Size(168, 21)
         Me.CmbTreatmentID.TabIndex = 25
         '
         'TxtTreatmentCost
         '
-        Me.TxtTreatmentCost.Location = New System.Drawing.Point(606, 136)
+        Me.TxtTreatmentCost.Location = New System.Drawing.Point(685, 133)
         Me.TxtTreatmentCost.Name = "TxtTreatmentCost"
         Me.TxtTreatmentCost.Size = New System.Drawing.Size(175, 20)
         Me.TxtTreatmentCost.TabIndex = 27
         '
         'BtnCalculatetrtcost
         '
-        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(404, 133)
+        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(483, 130)
         Me.BtnCalculatetrtcost.Name = "BtnCalculatetrtcost"
         Me.BtnCalculatetrtcost.Size = New System.Drawing.Size(168, 23)
         Me.BtnCalculatetrtcost.TabIndex = 28
@@ -250,7 +253,7 @@ Partial Class Treatment_Assign_Form
         Me.panel_assigtab.Location = New System.Drawing.Point(26, 26)
         Me.panel_assigtab.Margin = New System.Windows.Forms.Padding(2)
         Me.panel_assigtab.Name = "panel_assigtab"
-        Me.panel_assigtab.Size = New System.Drawing.Size(887, 247)
+        Me.panel_assigtab.Size = New System.Drawing.Size(887, 267)
         Me.panel_assigtab.TabIndex = 1
         '
         'TxtBxtrtagnid
@@ -272,7 +275,8 @@ Partial Class Treatment_Assign_Form
         '
         'BtntrtassignBck
         '
-        Me.BtntrtassignBck.Location = New System.Drawing.Point(777, 195)
+        Me.BtntrtassignBck.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtntrtassignBck.Location = New System.Drawing.Point(495, 222)
         Me.BtntrtassignBck.Margin = New System.Windows.Forms.Padding(2)
         Me.BtntrtassignBck.Name = "BtntrtassignBck"
         Me.BtntrtassignBck.Size = New System.Drawing.Size(89, 32)
