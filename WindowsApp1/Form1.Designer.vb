@@ -42,7 +42,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(56, 57)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(182, 239)
         Me.Panel1.TabIndex = 0
@@ -50,9 +50,9 @@ Partial Class Form1
         'Btnclr
         '
         Me.Btnclr.Location = New System.Drawing.Point(106, 185)
-        Me.Btnclr.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btnclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnclr.Name = "Btnclr"
-        Me.Btnclr.Size = New System.Drawing.Size(56, 19)
+        Me.Btnclr.Size = New System.Drawing.Size(56, 26)
         Me.Btnclr.TabIndex = 7
         Me.Btnclr.Text = "Clear"
         Me.Btnclr.UseVisualStyleBackColor = True
@@ -60,9 +60,9 @@ Partial Class Form1
         'Btnlog
         '
         Me.Btnlog.Location = New System.Drawing.Point(20, 185)
-        Me.Btnlog.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btnlog.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnlog.Name = "Btnlog"
-        Me.Btnlog.Size = New System.Drawing.Size(56, 19)
+        Me.Btnlog.Size = New System.Drawing.Size(56, 26)
         Me.Btnlog.TabIndex = 6
         Me.Btnlog.Text = "Login"
         Me.Btnlog.UseVisualStyleBackColor = True
@@ -70,7 +70,7 @@ Partial Class Form1
         'Txtpword
         '
         Me.Txtpword.Location = New System.Drawing.Point(20, 119)
-        Me.Txtpword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txtpword.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtpword.Name = "Txtpword"
         Me.Txtpword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Txtpword.Size = New System.Drawing.Size(136, 20)
@@ -79,7 +79,7 @@ Partial Class Form1
         'Txtuname
         '
         Me.Txtuname.Location = New System.Drawing.Point(20, 58)
-        Me.Txtuname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txtuname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtuname.Name = "Txtuname"
         Me.Txtuname.Size = New System.Drawing.Size(136, 20)
         Me.Txtuname.TabIndex = 4
@@ -123,7 +123,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(318, 358)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.Text = "login_Page"
         Me.Panel1.ResumeLayout(False)

@@ -213,11 +213,13 @@ Public Class Treatment_Assign_Form
         End Using
     End Sub
     Private Sub DgvAssignments_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvAssignments.CellClick
+        TxtBxtrtagnid.Text = DgvAssignments.SelectedRows(0).Cells(0).Value
         CmbPatientID.Text = DgvAssignments.SelectedRows(0).Cells(1).Value
         CmbDoctorID.Text = DgvAssignments.SelectedRows(0).Cells(2).Value
         DtpTreatmentDate.Value = DgvAssignments.SelectedRows(0).Cells(3).Value
-        Cmbstatus.Text = DgvAssignments.SelectedRows(0).Cells(4).Value
-        CmbTreatmentID.Text = DgvAssignments.SelectedRows(0).Cells(5).Value
+        CmbTreatmentID.Text = DgvAssignments.SelectedRows(0).Cells(4).Value
+        Cmbstatus.Text = DgvAssignments.SelectedRows(0).Cells(5).Value
+        TxtTreatmentCost.Text = DgvAssignments.SelectedRows(0).Cells(6).Value
     End Sub
 
     ' Button Click: View Treatment Assignments
@@ -227,71 +229,80 @@ Public Class Treatment_Assign_Form
     ' Button Click: Edit Treatment Assignment
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
 
-        ' Validate selection
+        'Check if any row is selected
         If DgvAssignments.SelectedRows.Count = 0 Then
-            MessageBox.Show("Please select a row to edit!", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please select a row to edit!")
             Return
         End If
 
-        ' Validate input
-        If CmbPatientID.Text = "" OrElse CmbDoctorID.Text = "" OrElse CmbTreatmentID.Text = "" OrElse String.IsNullOrEmpty(TxtTreatmentCost.Text) OrElse String.IsNullOrEmpty(Cmbstatus.Text) Then
-            MessageBox.Show("Please enter valid Assignment Details!", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        'Check if all Assignment details are entered
+        If CmbPatientID.Text = "" Or TxtBxtrtagnid.Text = "" Or CmbDoctorID.Text = "" Or Cmbstatus.Text = "" Or TxtTreatmentCost.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
             Return
         End If
 
-        ' Confirm edit
+
         If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
             Return
         End If
-
-        ' Update data in treatmentassign table
-        Using connection As New SqlConnection(ConnectionString), command As New SqlCommand("UPDATE treatmentassign SET patient_id = @patient_id, doctor_id = @doctor_id, treatment_date = @treatment_date, treatment_id = @treatment_id, status = @status, treatment_cost = @treatment_cost " &
-                                      "WHERE treatmentassign_id = @treatmentassign_id", connection)
-            With command.Parameters
-                .AddWithValue("@treatmentassign_id", DgvAssignments.SelectedRows(0).Cells("treatmentassign_id").Value)
-                .AddWithValue("@patient_id", CmbPatientID.SelectedValue)
-                .AddWithValue("@doctor_id", CmbDoctorID.SelectedValue)
-                .AddWithValue("@treatment_date", DtpTreatmentDate.Value)
-                .AddWithValue("@treatment_id", CmbTreatmentID.SelectedValue)
-                .AddWithValue("@status", Cmbstatus.Text)
-                .AddWithValue("@treatment_cost", TxtTreatmentCost.Text)
-            End With
+        Using conn As New SqlConnection(ConnectionString)
             Try
-                connection.Open()
-                Dim rowsAffected As Integer = command.ExecuteNonQuery()
-                MessageBox.Show($"Rows updated: {rowsAffected}", "Update Status", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "UPDATE treatmentassign SET patient_id = @patient_id, doctor_id = @doctor_id, treatment_date = @treatment_date, treatment_id = @treatment_id, status = @status, treatment_cost = @treatment_cost WHERE treatmentassign_id = @treatmentassign_id"
+                cmd.Parameters.AddWithValue("@treatmentassign_id", TxtBxtrtagnid.Text)
+                cmd.Parameters.AddWithValue("@patient_id", CmbPatientID.Text)
+                cmd.Parameters.AddWithValue("@doctor_id", CmbDoctorID.Text)
+                cmd.Parameters.AddWithValue("@treatment_date", DtpTreatmentDate.Value)
+                cmd.Parameters.AddWithValue("@treatment_id", CmbTreatmentID.Text)
+                cmd.Parameters.AddWithValue("@status", Cmbstatus.Text)
+                cmd.Parameters.AddWithValue("@treatment_cost", TxtTreatmentCost.Text)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
                 LoadTreatmentAssign() ' Refresh DataGridView
+
             Catch ex As Exception
-                MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error) ' Show error message
+                MessageBox.Show("Error:" & ex.Message)
             End Try
         End Using
     End Sub
 
     ' Button Click: Delete Treatment Assignment
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        ' Validate selection
-        If dgvAssignments.SelectedRows.Count = 0 Then
-            MessageBox.Show("Please select a row to delete!", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+
+        'Check if any row is selected
+        If DgvAssignments.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
             Return
         End If
-
-        ' Confirm deletion
+        'ask confirmation
         If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
             Return
         End If
 
-        ' Delete data from treatmentassign table
-        Using connection As New SqlConnection(ConnectionString), command As New SqlCommand("DELETE FROM treatmentassign WHERE treatmentassign_id = @treatmentassign_id", connection)
-            command.Parameters.AddWithValue("@treatmentassign_id", dgvAssignments.SelectedRows(0).Cells("treatmentassign_id").Value)
+        Using conn As New SqlConnection(ConnectionString)
             Try
-                connection.Open()
-                Dim rowsAffected As Integer = command.ExecuteNonQuery()
-                MessageBox.Show($"Rows deleted: {rowsAffected}", "Deletion Status", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoadTreatmentAssign() ' Refresh DataGridView
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from treatment Assign table
+                cmd.CommandText = "DELETE FROM treatmentassign WHERE treatmentassign_id = @treatmentassign_id"
+                cmd.Parameters.AddWithValue("@treatmentassign_id", DgvAssignments.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                BtnView.PerformClick() ' Refresh DataGridView after deletion.
+
             Catch ex As Exception
-                MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error) ' Show error message
+                MessageBox.Show("Error:" & ex.Message)
             End Try
         End Using
+
     End Sub
 
     ' Button Click: Clear Form
@@ -302,18 +313,19 @@ Public Class Treatment_Assign_Form
     ' Helper Function: Clear the form
     Private Sub ClearForm()
         With Me
+            .TxtBxtrtagnid.Clear()
             .CmbPatientID.SelectedIndex = -1
             .CmbDoctorID.SelectedIndex = -1
             .CmbTreatmentID.SelectedIndex = -1
             .TxtTreatmentCost.Clear()
             .DtpTreatmentDate.Value = Date.Now
             .Cmbstatus.SelectedIndex = -1
-            .dgvAssignments.DataSource = Nothing ' Clear DataGridView
+            .DgvAssignments.DataSource = Nothing ' Clear DataGridView
         End With
     End Sub
 
     Private Sub BtntrtassignBck_Click(sender As Object, e As EventArgs) Handles BtntrtassignBck.Click
         Form2.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 End Class

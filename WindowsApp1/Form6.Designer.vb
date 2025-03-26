@@ -23,6 +23,7 @@ Partial Class Form6
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panel_billstab = New System.Windows.Forms.Panel()
+        Me.BtnBillbck = New System.Windows.Forms.Button()
         Me.TxtBxbillid = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGenerateInvoice = New System.Windows.Forms.Button()
@@ -50,6 +51,7 @@ Partial Class Form6
         'panel_billstab
         '
         Me.panel_billstab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panel_billstab.Controls.Add(Me.BtnBillbck)
         Me.panel_billstab.Controls.Add(Me.TxtBxbillid)
         Me.panel_billstab.Controls.Add(Me.Label1)
         Me.panel_billstab.Controls.Add(Me.BtnGenerateInvoice)
@@ -72,12 +74,22 @@ Partial Class Form6
         Me.panel_billstab.Size = New System.Drawing.Size(862, 297)
         Me.panel_billstab.TabIndex = 1
         '
+        'BtnBillbck
+        '
+        Me.BtnBillbck.Location = New System.Drawing.Point(486, 251)
+        Me.BtnBillbck.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnBillbck.Name = "BtnBillbck"
+        Me.BtnBillbck.Size = New System.Drawing.Size(76, 32)
+        Me.BtnBillbck.TabIndex = 27
+        Me.BtnBillbck.Text = "Back"
+        Me.BtnBillbck.UseVisualStyleBackColor = True
+        '
         'TxtBxbillid
         '
         Me.TxtBxbillid.Location = New System.Drawing.Point(123, 25)
         Me.TxtBxbillid.Name = "TxtBxbillid"
         Me.TxtBxbillid.ReadOnly = True
-        Me.TxtBxbillid.Size = New System.Drawing.Size(112, 20)
+        Me.TxtBxbillid.Size = New System.Drawing.Size(137, 20)
         Me.TxtBxbillid.TabIndex = 26
         '
         'Label1
@@ -91,30 +103,30 @@ Partial Class Form6
         '
         'BtnGenerateInvoice
         '
-        Me.BtnGenerateInvoice.Location = New System.Drawing.Point(519, 248)
+        Me.BtnGenerateInvoice.Location = New System.Drawing.Point(272, 251)
         Me.BtnGenerateInvoice.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnGenerateInvoice.Name = "BtnGenerateInvoice"
-        Me.BtnGenerateInvoice.Size = New System.Drawing.Size(122, 32)
+        Me.BtnGenerateInvoice.Size = New System.Drawing.Size(107, 32)
         Me.BtnGenerateInvoice.TabIndex = 24
         Me.BtnGenerateInvoice.Text = "Generate Invoice"
         Me.BtnGenerateInvoice.UseVisualStyleBackColor = True
         '
         'Btn_bills_clear
         '
-        Me.Btn_bills_clear.Location = New System.Drawing.Point(750, 248)
+        Me.Btn_bills_clear.Location = New System.Drawing.Point(571, 251)
         Me.Btn_bills_clear.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_bills_clear.Name = "Btn_bills_clear"
-        Me.Btn_bills_clear.Size = New System.Drawing.Size(101, 32)
+        Me.Btn_bills_clear.Size = New System.Drawing.Size(76, 32)
         Me.Btn_bills_clear.TabIndex = 23
         Me.Btn_bills_clear.Text = "Clear"
         Me.Btn_bills_clear.UseVisualStyleBackColor = True
         '
         'BtnAddBill
         '
-        Me.BtnAddBill.Location = New System.Drawing.Point(645, 248)
+        Me.BtnAddBill.Location = New System.Drawing.Point(394, 251)
         Me.BtnAddBill.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAddBill.Name = "BtnAddBill"
-        Me.BtnAddBill.Size = New System.Drawing.Size(101, 32)
+        Me.BtnAddBill.Size = New System.Drawing.Size(76, 32)
         Me.BtnAddBill.TabIndex = 22
         Me.BtnAddBill.Text = "Add Bill"
         Me.BtnAddBill.UseVisualStyleBackColor = True
@@ -123,7 +135,7 @@ Partial Class Form6
         '
         Me.Cmb_bills_status.FormattingEnabled = True
         Me.Cmb_bills_status.Items.AddRange(New Object() {"PAID", "PENDING", "EXEMPTED"})
-        Me.Cmb_bills_status.Location = New System.Drawing.Point(589, 93)
+        Me.Cmb_bills_status.Location = New System.Drawing.Point(556, 90)
         Me.Cmb_bills_status.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_bills_status.Name = "Cmb_bills_status"
         Me.Cmb_bills_status.Size = New System.Drawing.Size(169, 21)
@@ -132,8 +144,8 @@ Partial Class Form6
         'CmbPaymentMode
         '
         Me.CmbPaymentMode.FormattingEnabled = True
-        Me.CmbPaymentMode.Items.AddRange(New Object() {"CASH", "CREDIT CARD"})
-        Me.CmbPaymentMode.Location = New System.Drawing.Point(589, 35)
+        Me.CmbPaymentMode.Items.AddRange(New Object() {"CASH", "CREDIT / DEBIT CARD", "ONLINE PAYMENTS", "INSURANCE"})
+        Me.CmbPaymentMode.Location = New System.Drawing.Point(556, 30)
         Me.CmbPaymentMode.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbPaymentMode.Name = "CmbPaymentMode"
         Me.CmbPaymentMode.Size = New System.Drawing.Size(169, 21)
@@ -141,7 +153,7 @@ Partial Class Form6
         '
         'BtnCalculate
         '
-        Me.BtnCalculate.Location = New System.Drawing.Point(218, 175)
+        Me.BtnCalculate.Location = New System.Drawing.Point(456, 170)
         Me.BtnCalculate.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCalculate.Name = "BtnCalculate"
         Me.BtnCalculate.Size = New System.Drawing.Size(153, 32)
@@ -151,7 +163,7 @@ Partial Class Form6
         '
         'TxtTotalAmount
         '
-        Me.TxtTotalAmount.Location = New System.Drawing.Point(20, 182)
+        Me.TxtTotalAmount.Location = New System.Drawing.Point(262, 182)
         Me.TxtTotalAmount.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtTotalAmount.Name = "TxtTotalAmount"
         Me.TxtTotalAmount.ReadOnly = True
@@ -162,10 +174,12 @@ Partial Class Form6
         '
         Me.DtpBillDate.Location = New System.Drawing.Point(123, 116)
         Me.DtpBillDate.Margin = New System.Windows.Forms.Padding(2)
-        Me.DtpBillDate.MinDate = New Date(2025, 3, 23, 0, 0, 0, 0)
+        Me.DtpBillDate.MaxDate = New Date(2376, 12, 31, 0, 0, 0, 0)
+        Me.DtpBillDate.MinDate = New Date(2025, 3, 25, 0, 0, 0, 0)
         Me.DtpBillDate.Name = "DtpBillDate"
         Me.DtpBillDate.Size = New System.Drawing.Size(169, 20)
         Me.DtpBillDate.TabIndex = 8
+        Me.DtpBillDate.Value = New Date(2025, 3, 25, 0, 0, 0, 0)
         '
         'Combox_bill_ptnid
         '
@@ -179,7 +193,7 @@ Partial Class Form6
         'lbl_bills_status
         '
         Me.lbl_bills_status.AutoSize = True
-        Me.lbl_bills_status.Location = New System.Drawing.Point(430, 90)
+        Me.lbl_bills_status.Location = New System.Drawing.Point(444, 93)
         Me.lbl_bills_status.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_bills_status.Name = "lbl_bills_status"
         Me.lbl_bills_status.Size = New System.Drawing.Size(40, 13)
@@ -189,7 +203,7 @@ Partial Class Form6
         'lbl_paymode
         '
         Me.lbl_paymode.AutoSize = True
-        Me.lbl_paymode.Location = New System.Drawing.Point(430, 38)
+        Me.lbl_paymode.Location = New System.Drawing.Point(444, 38)
         Me.lbl_paymode.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_paymode.Name = "lbl_paymode"
         Me.lbl_paymode.Size = New System.Drawing.Size(81, 13)
@@ -199,7 +213,7 @@ Partial Class Form6
         'lbl_totalamt
         '
         Me.lbl_totalamt.AutoSize = True
-        Me.lbl_totalamt.Location = New System.Drawing.Point(17, 167)
+        Me.lbl_totalamt.Location = New System.Drawing.Point(208, 162)
         Me.lbl_totalamt.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_totalamt.Name = "lbl_totalamt"
         Me.lbl_totalamt.Size = New System.Drawing.Size(73, 13)
@@ -228,6 +242,7 @@ Partial Class Form6
         '
         'DgvBillingData
         '
+        Me.DgvBillingData.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DgvBillingData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvBillingData.Location = New System.Drawing.Point(9, 333)
         Me.DgvBillingData.Margin = New System.Windows.Forms.Padding(2)
@@ -308,4 +323,5 @@ Partial Class Form6
     Friend WithEvents BtnDeleteRow As Button
     Friend WithEvents TxtBxbillid As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents BtnBillbck As Button
 End Class

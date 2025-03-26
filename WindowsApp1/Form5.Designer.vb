@@ -42,6 +42,8 @@ Partial Class Treatment_Assign_Form
         Me.TxtTreatmentCost = New System.Windows.Forms.TextBox()
         Me.BtnCalculatetrtcost = New System.Windows.Forms.Button()
         Me.panel_assigtab = New System.Windows.Forms.Panel()
+        Me.TxtBxtrtagnid = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.BtntrtassignBck = New System.Windows.Forms.Button()
         CType(Me.DgvAssignments, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_assigtab.SuspendLayout()
@@ -109,7 +111,7 @@ Partial Class Treatment_Assign_Form
         'lbl_servdate
         '
         Me.lbl_servdate.AutoSize = True
-        Me.lbl_servdate.Location = New System.Drawing.Point(17, 133)
+        Me.lbl_servdate.Location = New System.Drawing.Point(16, 149)
         Me.lbl_servdate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_servdate.Name = "lbl_servdate"
         Me.lbl_servdate.Size = New System.Drawing.Size(84, 13)
@@ -119,7 +121,7 @@ Partial Class Treatment_Assign_Form
         'CmbPatientID
         '
         Me.CmbPatientID.FormattingEnabled = True
-        Me.CmbPatientID.Location = New System.Drawing.Point(147, 30)
+        Me.CmbPatientID.Location = New System.Drawing.Point(146, 72)
         Me.CmbPatientID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbPatientID.Name = "CmbPatientID"
         Me.CmbPatientID.Size = New System.Drawing.Size(168, 21)
@@ -128,7 +130,7 @@ Partial Class Treatment_Assign_Form
         'CmbDoctorID
         '
         Me.CmbDoctorID.FormattingEnabled = True
-        Me.CmbDoctorID.Location = New System.Drawing.Point(147, 77)
+        Me.CmbDoctorID.Location = New System.Drawing.Point(147, 107)
         Me.CmbDoctorID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbDoctorID.Name = "CmbDoctorID"
         Me.CmbDoctorID.Size = New System.Drawing.Size(168, 21)
@@ -157,7 +159,7 @@ Partial Class Treatment_Assign_Form
         'DtpTreatmentDate
         '
         Me.DtpTreatmentDate.Checked = False
-        Me.DtpTreatmentDate.Location = New System.Drawing.Point(147, 133)
+        Me.DtpTreatmentDate.Location = New System.Drawing.Point(147, 149)
         Me.DtpTreatmentDate.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpTreatmentDate.MinDate = New Date(2025, 3, 20, 0, 0, 0, 0)
         Me.DtpTreatmentDate.Name = "DtpTreatmentDate"
@@ -168,16 +170,16 @@ Partial Class Treatment_Assign_Form
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 33)
+        Me.Label1.Location = New System.Drawing.Point(16, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 13)
+        Me.Label1.Size = New System.Drawing.Size(54, 13)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "Patiet ID"
+        Me.Label1.Text = "Patiet ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 80)
+        Me.Label2.Location = New System.Drawing.Point(17, 110)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 18
@@ -228,6 +230,8 @@ Partial Class Treatment_Assign_Form
         'panel_assigtab
         '
         Me.panel_assigtab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panel_assigtab.Controls.Add(Me.TxtBxtrtagnid)
+        Me.panel_assigtab.Controls.Add(Me.Label4)
         Me.panel_assigtab.Controls.Add(Me.BtntrtassignBck)
         Me.panel_assigtab.Controls.Add(Me.BtnCalculatetrtcost)
         Me.panel_assigtab.Controls.Add(Me.TxtTreatmentCost)
@@ -248,6 +252,23 @@ Partial Class Treatment_Assign_Form
         Me.panel_assigtab.Name = "panel_assigtab"
         Me.panel_assigtab.Size = New System.Drawing.Size(887, 247)
         Me.panel_assigtab.TabIndex = 1
+        '
+        'TxtBxtrtagnid
+        '
+        Me.TxtBxtrtagnid.Location = New System.Drawing.Point(147, 24)
+        Me.TxtBxtrtagnid.Name = "TxtBxtrtagnid"
+        Me.TxtBxtrtagnid.ReadOnly = True
+        Me.TxtBxtrtagnid.Size = New System.Drawing.Size(127, 20)
+        Me.TxtBxtrtagnid.TabIndex = 31
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(111, 13)
+        Me.Label4.TabIndex = 30
+        Me.Label4.Text = "Treatment_assign ID :"
         '
         'BtntrtassignBck
         '
@@ -300,4 +321,6 @@ Partial Class Treatment_Assign_Form
     Friend WithEvents BtnCalculatetrtcost As Button
     Friend WithEvents panel_assigtab As Panel
     Friend WithEvents BtntrtassignBck As Button
+    Friend WithEvents TxtBxtrtagnid As TextBox
+    Friend WithEvents Label4 As Label
 End Class

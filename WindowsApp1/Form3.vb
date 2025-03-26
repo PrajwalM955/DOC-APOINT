@@ -226,7 +226,7 @@ Public Class Form3
         Try
             Using con As New SqlConnection(connectionString)
                 con.Open()
-                Using cmd As New SqlCommand("SELECT name, cost FROM treatment", con)
+                Using cmd As New SqlCommand("SELECT * FROM treatment", con)
                     Using dr As SqlDataReader = cmd.ExecuteReader()
                         Dim dt As New DataTable()
                         dt.Load(dr)
@@ -241,7 +241,35 @@ Public Class Form3
 
 
     Private Sub Btn_docdel_Click(sender As Object, e As EventArgs) Handles Btn_docdel.Click
+        'Check if any row is selected
+        If Dgvdoc.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
+        End If
 
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Billing Table
+                cmd.CommandText = "DELETE FROM doctor WHERE doctor_id = @doctor_id"
+                cmd.Parameters.AddWithValue("@doctor_id", Dgvdoc.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                '  Dgvdoc.PerformClick() ' Refresh DataGridView after deletion.
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
     End Sub
 
     Private Sub LoadDoctorsData()
@@ -263,30 +291,36 @@ Public Class Form3
 
 
     Private Sub BtnDeletePatient_Click(sender As Object, e As EventArgs) Handles BtnDeletePatient.Click
-        ' Check if a row is selected
-        If Dgvptntab.SelectedRows.Count > 0 Then
-            Dim selectedIndex As Integer = Dgvptntab.SelectedRows(0).Index
-            Dim patientID As Integer = Convert.ToInt32(Dgvptntab.Rows(selectedIndex).Cells(0).Value)
-
-            ' Confirm deletion
-            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this patient?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                Using con As New SqlConnection(connectionString)
-                    Try
-                        con.Open()
-                        Dim cmd As New SqlCommand("DELETE FROM patient WHERE patient_id = @patient_id", con)
-                        cmd.Parameters.AddWithValue("@patient_id", patientID)
-                        cmd.ExecuteNonQuery()
-                        LoadPatientsData() ' Reload DataGridView after deletion
-                        MessageBox.Show("Patient deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Catch ex As Exception
-                        MessageBox.Show("Error deleting patient: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-                End Using
-            End If
-        Else
-            MessageBox.Show("Please select a row to delete!", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        'Check if any row is selected
+        If Dgvptntab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
         End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Billing Table
+                cmd.CommandText = "DELETE FROM patient WHERE patient_id = @patient_id"
+                cmd.Parameters.AddWithValue("@patient_id", Dgvptntab.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                '  Dgvptntab.PerformClick() ' Refresh DataGridView after deletion.
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
     End Sub
 
     Private Sub LoadPatientsData()
@@ -307,30 +341,36 @@ Public Class Form3
     End Sub
 
     Private Sub BtnDeleteTreatment_Click(sender As Object, e As EventArgs) Handles BtnDeleteTreatment.Click
-        ' Check if a row is selected
-        If Dgvtreatment.SelectedRows.Count > 0 Then
-            Dim selectedIndex As Integer = Dgvtreatment.SelectedRows(0).Index
-            Dim treatmentID As Integer = Convert.ToInt32(Dgvtreatment.Rows(selectedIndex).Cells(0).Value)
-
-            ' Confirm deletion
-            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this treatment?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                Using con As New SqlConnection(connectionString)
-                    Try
-                        con.Open()
-                        Dim cmd As New SqlCommand("DELETE FROM treatment WHERE treatment_id = @treatment_id", con)
-                        cmd.Parameters.AddWithValue("@treatment_id", treatmentID)
-                        cmd.ExecuteNonQuery()
-                        LoadTreatmentsData() ' Reload DataGridView after deletion
-                        MessageBox.Show("Treatment deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Catch ex As Exception
-                        MessageBox.Show("Error deleting treatment: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-                End Using
-            End If
-        Else
-            MessageBox.Show("Please select a row to delete!", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        'Check if any row is selected
+        If Dgvtreatment.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
         End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Billing Table
+                cmd.CommandText = "DELETE FROM treatment WHERE treatment_id=@treatment_id"
+                cmd.Parameters.AddWithValue("@treatment_id", Dgvtreatment.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                '  Dgvtreatment.PerformClick() ' Refresh DataGridView after deletion.
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
     End Sub
 
     Private Sub LoadTreatmentsData()
@@ -348,6 +388,18 @@ Public Class Form3
                 MessageBox.Show("Error:" & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Btndocview.Click
+        LoadDoctorsData()
+    End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles BtnPtnview.Click
+        LoadPatientsData()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BtnTrtview.Click
+        LoadTreatmentsData()
     End Sub
 End Class
 

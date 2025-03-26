@@ -59,7 +59,7 @@ Public Class Form6
         End Using
     End Sub
 
-    Private Sub dgv_billstab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvBillingData.CellClick
+    Private Sub DgvBillingData_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvBillingData.CellClick
         TxtBxbillid.Text = DgvBillingData.SelectedRows(0).Cells(0).Value
         Combox_bill_ptnid.Text = DgvBillingData.SelectedRows(0).Cells(1).Value
         DtpBillDate.Value = DgvBillingData.SelectedRows(0).Cells(5).Value
@@ -167,7 +167,7 @@ Public Class Form6
                 cmd.Connection = conn
                 'Updating selected row in Billing Table
                 cmd.CommandText = "UPDATE billing SET patient_id = @patient_id, total_amount = @total_amount, payment_mode = @payment_mode, payment_status = @payment_status, bill_date = @bill_date WHERE bill_id = @bill_id"
-                cmd.Parameters.AddWithValue("@bill_id", TxtBxbillid)
+                cmd.Parameters.AddWithValue("@bill_id", TxtBxbillid.Text)
                 cmd.Parameters.AddWithValue("@patient_id", Combox_bill_ptnid.Text)
                 cmd.Parameters.AddWithValue("@total_amount", TxtTotalAmount.Text)
                 cmd.Parameters.AddWithValue("@payment_mode", CmbPaymentMode.Text)
@@ -220,11 +220,14 @@ Public Class Form6
 
     End Sub
 
-    ' Generate Invoice by opening InvoiceForm (with PrintDocument and PrintPreviewDialog tools).
+    ' Generate Invoice by opening InvoiceForm (with PrintDocument and PrintPreviewDialog tools)
     Private Sub BtnGenerateInvoice_Click(sender As Object, e As EventArgs) Handles BtnGenerateInvoice.Click
         Dim invoiceForm As New Invoiceform()
-        invoiceForm.Show() ' Show Invoice Form .
+        invoiceForm.Show() ' Show Invoice Form.
     End Sub
 
-
+    Private Sub BtnBillbck_Click(sender As Object, e As EventArgs) Handles BtnBillbck.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
 End Class

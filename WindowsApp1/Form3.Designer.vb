@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,11 @@ Partial Class Form3
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
+        Me.Btndocview = New System.Windows.Forms.Button()
         Me.Btn_docdel = New System.Windows.Forms.Button()
         Me.Btndocback = New System.Windows.Forms.Button()
         Me.Txtbox_phoneno = New System.Windows.Forms.TextBox()
@@ -40,6 +41,7 @@ Partial Class Form3
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Dgvdoc = New System.Windows.Forms.DataGridView()
         Me.TabPgpatient = New System.Windows.Forms.TabPage()
+        Me.BtnPtnview = New System.Windows.Forms.Button()
         Me.BtnDeletePatient = New System.Windows.Forms.Button()
         Me.TxtBxptncontact = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,6 +60,7 @@ Partial Class Form3
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPgTreatment = New System.Windows.Forms.TabPage()
+        Me.BtnTrtview = New System.Windows.Forms.Button()
         Me.BtnDeleteTreatment = New System.Windows.Forms.Button()
         Me.Btntrtback = New System.Windows.Forms.Button()
         Me.Dgvtreatment = New System.Windows.Forms.DataGridView()
@@ -94,6 +97,7 @@ Partial Class Form3
         '
         'TabPgDoctor
         '
+        Me.TabPgDoctor.Controls.Add(Me.Btndocview)
         Me.TabPgDoctor.Controls.Add(Me.Btn_docdel)
         Me.TabPgDoctor.Controls.Add(Me.Btndocback)
         Me.TabPgDoctor.Controls.Add(Me.Txtbox_phoneno)
@@ -118,9 +122,18 @@ Partial Class Form3
         Me.TabPgDoctor.Text = "Doctor"
         Me.TabPgDoctor.UseVisualStyleBackColor = True
         '
+        'Btndocview
+        '
+        Me.Btndocview.Location = New System.Drawing.Point(477, 257)
+        Me.Btndocview.Name = "Btndocview"
+        Me.Btndocview.Size = New System.Drawing.Size(84, 23)
+        Me.Btndocview.TabIndex = 17
+        Me.Btndocview.Text = "View Details"
+        Me.Btndocview.UseVisualStyleBackColor = True
+        '
         'Btn_docdel
         '
-        Me.Btn_docdel.Location = New System.Drawing.Point(551, 257)
+        Me.Btn_docdel.Location = New System.Drawing.Point(570, 257)
         Me.Btn_docdel.Name = "Btn_docdel"
         Me.Btn_docdel.Size = New System.Drawing.Size(75, 23)
         Me.Btn_docdel.TabIndex = 16
@@ -265,6 +278,7 @@ Partial Class Form3
         '
         'TabPgpatient
         '
+        Me.TabPgpatient.Controls.Add(Me.BtnPtnview)
         Me.TabPgpatient.Controls.Add(Me.BtnDeletePatient)
         Me.TabPgpatient.Controls.Add(Me.TxtBxptncontact)
         Me.TabPgpatient.Controls.Add(Me.Label1)
@@ -290,6 +304,15 @@ Partial Class Form3
         Me.TabPgpatient.TabIndex = 1
         Me.TabPgpatient.Text = "Patients"
         Me.TabPgpatient.UseVisualStyleBackColor = True
+        '
+        'BtnPtnview
+        '
+        Me.BtnPtnview.Location = New System.Drawing.Point(463, 260)
+        Me.BtnPtnview.Name = "BtnPtnview"
+        Me.BtnPtnview.Size = New System.Drawing.Size(84, 23)
+        Me.BtnPtnview.TabIndex = 22
+        Me.BtnPtnview.Text = "View Details"
+        Me.BtnPtnview.UseVisualStyleBackColor = True
         '
         'BtnDeletePatient
         '
@@ -392,12 +415,12 @@ Partial Class Form3
         'Dgvptntab
         '
         Me.Dgvptntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvptntab.Location = New System.Drawing.Point(32, 288)
+        Me.Dgvptntab.Location = New System.Drawing.Point(19, 288)
         Me.Dgvptntab.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvptntab.Name = "Dgvptntab"
         Me.Dgvptntab.RowHeadersWidth = 51
         Me.Dgvptntab.RowTemplate.Height = 24
-        Me.Dgvptntab.Size = New System.Drawing.Size(596, 102)
+        Me.Dgvptntab.Size = New System.Drawing.Size(620, 158)
         Me.Dgvptntab.TabIndex = 6
         '
         'Label12
@@ -452,6 +475,7 @@ Partial Class Form3
         '
         'TabPgTreatment
         '
+        Me.TabPgTreatment.Controls.Add(Me.BtnTrtview)
         Me.TabPgTreatment.Controls.Add(Me.BtnDeleteTreatment)
         Me.TabPgTreatment.Controls.Add(Me.Btntrtback)
         Me.TabPgTreatment.Controls.Add(Me.Dgvtreatment)
@@ -467,9 +491,19 @@ Partial Class Form3
         Me.TabPgTreatment.Text = "Treatments"
         Me.TabPgTreatment.UseVisualStyleBackColor = True
         '
+        'BtnTrtview
+        '
+        Me.BtnTrtview.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTrtview.Location = New System.Drawing.Point(441, 214)
+        Me.BtnTrtview.Name = "BtnTrtview"
+        Me.BtnTrtview.Size = New System.Drawing.Size(84, 23)
+        Me.BtnTrtview.TabIndex = 23
+        Me.BtnTrtview.Text = "View Details"
+        Me.BtnTrtview.UseVisualStyleBackColor = True
+        '
         'BtnDeleteTreatment
         '
-        Me.BtnDeleteTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeleteTreatment.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDeleteTreatment.Location = New System.Drawing.Point(540, 214)
         Me.BtnDeleteTreatment.Name = "BtnDeleteTreatment"
         Me.BtnDeleteTreatment.Size = New System.Drawing.Size(75, 23)
@@ -489,13 +523,14 @@ Partial Class Form3
         '
         'Dgvtreatment
         '
+        Me.Dgvtreatment.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.Dgvtreatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvtreatment.Location = New System.Drawing.Point(15, 252)
         Me.Dgvtreatment.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvtreatment.Name = "Dgvtreatment"
         Me.Dgvtreatment.RowHeadersWidth = 51
         Me.Dgvtreatment.RowTemplate.Height = 24
-        Me.Dgvtreatment.Size = New System.Drawing.Size(616, 189)
+        Me.Dgvtreatment.Size = New System.Drawing.Size(615, 143)
         Me.Dgvtreatment.TabIndex = 7
         '
         'Btntrtclr
@@ -650,4 +685,7 @@ Partial Class Form3
     Friend WithEvents Btn_docdel As Button
     Friend WithEvents BtnDeletePatient As Button
     Friend WithEvents BtnDeleteTreatment As Button
+    Friend WithEvents Btndocview As Button
+    Friend WithEvents BtnPtnview As Button
+    Friend WithEvents BtnTrtview As Button
 End Class
