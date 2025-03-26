@@ -29,6 +29,7 @@ Partial Class Form4
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel_apoint = New System.Windows.Forms.Panel()
+        Me.Btnappntbck = New System.Windows.Forms.Button()
         Me.Cmbxapoitdocid = New System.Windows.Forms.ComboBox()
         Me.BtnIssueTicket = New System.Windows.Forms.Button()
         Me.Cmbxapointptnid = New System.Windows.Forms.ComboBox()
@@ -43,7 +44,6 @@ Partial Class Form4
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.Btnappntbck = New System.Windows.Forms.Button()
         Me.Panel_apoint.SuspendLayout()
         CType(Me.Dgvappoint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -112,14 +112,14 @@ Partial Class Form4
         '
         Me.Panel_apoint.Controls.Add(Me.Btnappntbck)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapoitdocid)
-        Me.Panel_apoint.Controls.Add(Me.BtnIssueTicket)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapointptnid)
-        Me.Panel_apoint.Controls.Add(Me.Btnapointclr)
-        Me.Panel_apoint.Controls.Add(Me.Btnappoint)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapointreason)
+        Me.Panel_apoint.Controls.Add(Me.BtnIssueTicket)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapoitstatus)
+        Me.Panel_apoint.Controls.Add(Me.Btnapointclr)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapointtime)
         Me.Panel_apoint.Controls.Add(Me.Dateapointdate)
+        Me.Panel_apoint.Controls.Add(Me.Btnappoint)
         Me.Panel_apoint.Controls.Add(Me.Label6)
         Me.Panel_apoint.Controls.Add(Me.Label7)
         Me.Panel_apoint.Controls.Add(Me.Label8)
@@ -132,6 +132,16 @@ Partial Class Form4
         Me.Panel_apoint.Size = New System.Drawing.Size(701, 279)
         Me.Panel_apoint.TabIndex = 8
         '
+        'Btnappntbck
+        '
+        Me.Btnappntbck.Location = New System.Drawing.Point(480, 233)
+        Me.Btnappntbck.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btnappntbck.Name = "Btnappntbck"
+        Me.Btnappntbck.Size = New System.Drawing.Size(64, 26)
+        Me.Btnappntbck.TabIndex = 25
+        Me.Btnappntbck.Text = "Back"
+        Me.Btnappntbck.UseVisualStyleBackColor = True
+        '
         'Cmbxapoitdocid
         '
         Me.Cmbxapoitdocid.FormattingEnabled = True
@@ -142,7 +152,7 @@ Partial Class Form4
         '
         'BtnIssueTicket
         '
-        Me.BtnIssueTicket.Location = New System.Drawing.Point(191, 229)
+        Me.BtnIssueTicket.Location = New System.Drawing.Point(194, 233)
         Me.BtnIssueTicket.Name = "BtnIssueTicket"
         Me.BtnIssueTicket.Size = New System.Drawing.Size(75, 26)
         Me.BtnIssueTicket.TabIndex = 23
@@ -159,7 +169,7 @@ Partial Class Form4
         '
         'Btnapointclr
         '
-        Me.Btnapointclr.Location = New System.Drawing.Point(379, 229)
+        Me.Btnapointclr.Location = New System.Drawing.Point(382, 233)
         Me.Btnapointclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnapointclr.Name = "Btnapointclr"
         Me.Btnapointclr.Size = New System.Drawing.Size(84, 26)
@@ -169,7 +179,7 @@ Partial Class Form4
         '
         'Btnappoint
         '
-        Me.Btnappoint.Location = New System.Drawing.Point(286, 229)
+        Me.Btnappoint.Location = New System.Drawing.Point(289, 233)
         Me.Btnappoint.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnappoint.Name = "Btnappoint"
         Me.Btnappoint.Size = New System.Drawing.Size(80, 26)
@@ -220,7 +230,7 @@ Partial Class Form4
         '
         Me.Dgvappoint.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Dgvappoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvappoint.Location = New System.Drawing.Point(9, 322)
+        Me.Dgvappoint.Location = New System.Drawing.Point(7, 322)
         Me.Dgvappoint.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvappoint.Name = "Dgvappoint"
         Me.Dgvappoint.RowHeadersWidth = 51
@@ -250,16 +260,6 @@ Partial Class Form4
         Me.BtnDelete.TabIndex = 24
         Me.BtnDelete.Text = "Delete"
         Me.BtnDelete.UseVisualStyleBackColor = True
-        '
-        'Btnappntbck
-        '
-        Me.Btnappntbck.Location = New System.Drawing.Point(477, 229)
-        Me.Btnappntbck.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btnappntbck.Name = "Btnappntbck"
-        Me.Btnappntbck.Size = New System.Drawing.Size(64, 26)
-        Me.Btnappntbck.TabIndex = 25
-        Me.Btnappntbck.Text = "Back"
-        Me.Btnappntbck.UseVisualStyleBackColor = True
         '
         'Form4
         '

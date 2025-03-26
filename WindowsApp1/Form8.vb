@@ -15,7 +15,7 @@ Public Class Invoiceform
 
         'Function to Load Patient id in combobox
         Loadpatientidcmbbx()
-        'LoadBillIDComboBox()
+
     End Sub
 
     Private Sub Btnbckinvo_Click(sender As Object, e As EventArgs) Handles Btnbckinvo.Click
@@ -105,7 +105,7 @@ Public Class Invoiceform
         End Using
     End Sub
 
-    'Function to Load Patient id in combobox
+    'Function to Load Patient Details when a patient id is selected
     Private Sub CmbWardno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbWardno.SelectedIndexChanged
 
         Using conn As New SqlConnection(ConnectionString)

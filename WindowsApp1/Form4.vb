@@ -182,4 +182,9 @@ Public Class Form4
         Form2.Show()
         Me.Close()
     End Sub
+
+    Private Sub BtnIssueTicket_Click(sender As Object, e As EventArgs) Handles BtnIssueTicket.Click
+        Dim apointinvoiceForm As New Form9()
+        apointinvoiceForm.Show() ' Show Invoice Form.
+    End Sub
 End Class
