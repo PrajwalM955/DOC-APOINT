@@ -21,7 +21,7 @@ Public Class Form9
     End Sub
 
     Private Sub Btnbckinvo_Click(sender As Object, e As EventArgs) Handles Btnbckinvo.Click
-        Form6.Show()
+        Form2.Show()
         Me.Hide()
     End Sub
     Private Sub Form9FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

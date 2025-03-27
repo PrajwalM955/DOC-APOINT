@@ -87,7 +87,7 @@ Public Class Invoiceform
 
                 ' Query to fetch bill IDs based on the selected patient ID
                 cmd.CommandText = "select bill_id from billing where patient_id=@patient_id"
-                cmd.Parameters.AddWithValue("@patient_id", CmbWardno.SelectedItem.ToString())
+                cmd.Parameters.AddWithValue("@patient_id", CmbWardno.Text)
 
                 Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
 
@@ -116,14 +116,10 @@ Public Class Invoiceform
 
                 'Select Patient Details from Patient Table
                 cmd.CommandText = "select name, dob, gender, contact, address from Patient where patient_id=@patient_id"
+                cmd.Parameters.AddWithValue("@patient_id", CmbWardno.Text)
 
-                'Use TryParse to safely convert the selected value to an Integer
-                Dim patientId As Integer
-                If Integer.TryParse(CmbWardno.SelectedItem.ToString(), patientId) Then
-                    cmd.Parameters.AddWithValue("@patient_id", patientId)
-
-                    'Display patient Details in TextBoxes
-                    Using datareader1 As SqlDataReader = cmd.ExecuteReader()
+                'Display patient Details in TextBoxes
+                Using datareader1 As SqlDataReader = cmd.ExecuteReader()
                         If datareader1.HasRows Then
                             While datareader1.Read()
                                 TextBoxptname.Text = datareader1("name")
@@ -140,11 +136,8 @@ Public Class Invoiceform
                     'Load BillIDs in BillID ComboBox
                     LoadBillIDComboBox()
 
-                    'Load Treatment Data in Treatment DataGridView
-                    Load_Treatment_Data()
-                Else
-                    MessageBox.Show("Invalid Patient ID format.")
-                End If
+                'Load Treatment Data in Treatment DataGridView
+                Load_Treatment_Data()
 
             Catch ex As Exception
                 MessageBox.Show("Error:" & ex.Message)
@@ -163,9 +156,7 @@ Public Class Invoiceform
 
                 'Select Bill Details from Billing Table
                 cmd.CommandText = "select bill_date,total_amount,payment_mode,payment_status from billing where bill_id=@bill_id"
-                Dim parameter As New SqlParameter("@bill_id", SqlDbType.Int)
-                parameter.Value = Cmbbillid.SelectedItem
-                cmd.Parameters.Add(parameter)
+                cmd.Parameters.AddWithValue("@bill_id", Cmbbillid.Text)
 
                 Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
                 Do While datareader1.Read()
@@ -192,7 +183,7 @@ Public Class Invoiceform
 
                 'Select Treatment Data from Treatment Assignments Table and Treatment Table
                 cmd.CommandText = "select sa.treatment_id,s.name,sa.treatment_date,sa.status,sa.treatment_cost from treatmentassign sa,treatment s  where sa.treatment_id=s.treatment_id and patient_id=@patient_id"
-                cmd.Parameters.AddWithValue("@patient_id", CmbWardno.SelectedItem)
+                cmd.Parameters.AddWithValue("@patient_id", CmbWardno.Text)
                 Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
 
                 'Displaying details in DataGridView
@@ -219,8 +210,8 @@ Public Class Invoiceform
         TextBoxstatus.Clear()
 
         ' Reset comboboxes
-        CmbWardno.SelectedIndex = -1
-        Cmbbillid.SelectedIndex = -1
+        CmbWardno.Text = ""
+        Cmbbillid.Text = ""
 
         ' Reset date picker to current date
         Dtpbillinvo.Value = DateTime.Now
