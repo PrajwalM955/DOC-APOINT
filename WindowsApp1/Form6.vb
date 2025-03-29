@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 
 Public Class Form6
     ' Connection string to your SQL Server database
-    Private Const ConnectionString As String = "Data Source=LAPTOP-JRNIQUNP\SQLEXPRESS;Initial Catalog=Clinic;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
+    Private Const ConnectionString As String = "Data Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=TrueData Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
 
     ' Clear all fields in the form
     Private Sub Btn_bills_clear_Click(sender As Object, e As EventArgs) Handles Btn_bills_clear.Click

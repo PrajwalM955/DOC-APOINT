@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form3
-    Dim connectionString As String = "Data Source=LAPTOP-JRNIQUNP\SQLEXPRESS;Initial Catalog=Clinic;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
+    Dim connectionString As String = "Data Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
 
     Private Sub Load_RegTab_Data()
         ' This method is empty; consider removing it if not needed

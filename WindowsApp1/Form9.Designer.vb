@@ -91,6 +91,7 @@ Partial Class Form9
         '
         'Panelapinvo
         '
+        Me.Panelapinvo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panelapinvo.Controls.Add(Me.Label3)
         Me.Panelapinvo.Controls.Add(Me.GroupBox1)
         Me.Panelapinvo.Location = New System.Drawing.Point(12, 58)
@@ -122,6 +123,7 @@ Partial Class Form9
         Me.GroupBox1.Controls.Add(Me.Cmbxapointinvostatus)
         Me.GroupBox1.Controls.Add(Me.Cmbxapointinvotime)
         Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(11, 45)
         Me.GroupBox1.Name = "GroupBox1"
@@ -205,12 +207,12 @@ Partial Class Form9
         '
         'Dateapointinvodate
         '
-        Me.Dateapointinvodate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dateapointinvodate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Dateapointinvodate.Location = New System.Drawing.Point(140, 160)
         Me.Dateapointinvodate.Margin = New System.Windows.Forms.Padding(2)
         Me.Dateapointinvodate.MinDate = New Date(2025, 2, 23, 0, 0, 0, 0)
         Me.Dateapointinvodate.Name = "Dateapointinvodate"
-        Me.Dateapointinvodate.Size = New System.Drawing.Size(169, 22)
+        Me.Dateapointinvodate.Size = New System.Drawing.Size(196, 20)
         Me.Dateapointinvodate.TabIndex = 35
         '
         'Label12
@@ -274,6 +276,7 @@ Partial Class Form9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(695, 374)
         Me.Controls.Add(Me.Panelapinvo)
         Me.Controls.Add(Me.Panel3)

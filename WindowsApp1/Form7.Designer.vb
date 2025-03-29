@@ -22,12 +22,12 @@ Partial Class Form7
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.ChartRevenue = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.BtnRevLoad = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,18 +58,18 @@ Partial Class Form7
         '
         'ChartRevenue
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartRevenue.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartRevenue.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.ChartRevenue.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.ChartRevenue.Legends.Add(Legend3)
         Me.ChartRevenue.Location = New System.Drawing.Point(4, 28)
         Me.ChartRevenue.Margin = New System.Windows.Forms.Padding(2)
         Me.ChartRevenue.Name = "ChartRevenue"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series1.Legend = "Legend1"
-        Series1.Name = "Revenue"
-        Me.ChartRevenue.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series3.Legend = "Legend1"
+        Series3.Name = "Revenue"
+        Me.ChartRevenue.Series.Add(Series3)
         Me.ChartRevenue.Size = New System.Drawing.Size(548, 238)
         Me.ChartRevenue.TabIndex = 0
         Me.ChartRevenue.Text = "Chart1"
@@ -306,18 +306,18 @@ Partial Class Form7
         '
         'ChartAge
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.ChartAge.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.ChartAge.Legends.Add(Legend2)
+        ChartArea4.Name = "ChartArea1"
+        Me.ChartAge.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.ChartAge.Legends.Add(Legend4)
         Me.ChartAge.Location = New System.Drawing.Point(4, 28)
         Me.ChartAge.Margin = New System.Windows.Forms.Padding(2)
         Me.ChartAge.Name = "ChartAge"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series2.Legend = "Legend1"
-        Series2.Name = "Revenue"
-        Me.ChartAge.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series4.Legend = "Legend1"
+        Series4.Name = "Revenue"
+        Me.ChartAge.Series.Add(Series4)
         Me.ChartAge.Size = New System.Drawing.Size(546, 257)
         Me.ChartAge.TabIndex = 1
         Me.ChartAge.Text = "Chart2"
@@ -364,6 +364,5 @@ Partial Class Form7
     Friend WithEvents Label6 As Label
     Friend WithEvents BtnRevClear As Button
     Friend WithEvents BtnAgeClear As Button
-
 
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form4
-    Dim connectionString As String = "Data Source=LAPTOP-JRNIQUNP\SQLEXPRESS;Initial Catalog=Clinic;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
+    Dim connectionString As String = "Data Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
 
     ' Method to handle form load
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load

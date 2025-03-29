@@ -29,4 +29,8 @@
     Private Sub Form2_FormClosing(sender As Object, e As EventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
