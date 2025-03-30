@@ -3,7 +3,7 @@ Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class Form7
     ' Your connection string is implemented here.
-    Private connectionString As String = "Data Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
+    Private connectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Initialize charts when the form loads.

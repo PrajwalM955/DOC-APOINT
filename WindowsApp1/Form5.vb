@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Treatment_Assign_Form
-    Private ReadOnly ConnectionString As String = "Data Source=desktop-b9grhrb\sqlexpress;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
+    Private ReadOnly ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
 
     ' Form Load: Load ComboBoxes
     Private Sub Treatment_Assign_Form_Load(Sender As Object, E As EventArgs) Handles Me.Load
