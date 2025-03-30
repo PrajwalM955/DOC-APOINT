@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 
 Public Class Form6
     ' Connection string to your SQL Server database
-    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
+    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
     ' Clear all fields in the form
     Private Sub Btn_bills_clear_Click(sender As Object, e As EventArgs) Handles Btn_bills_clear.Click
@@ -229,5 +229,9 @@ Public Class Form6
     Private Sub BtnBillbck_Click(sender As Object, e As EventArgs) Handles BtnBillbck.Click
         Form2.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub panel_billstab_Paint(sender As Object, e As PaintEventArgs) Handles panel_billstab.Paint
+
     End Sub
 End Class

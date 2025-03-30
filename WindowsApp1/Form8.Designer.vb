@@ -372,7 +372,7 @@ Partial Class Invoiceform
         'grpbox_servdetails
         '
         Me.grpbox_servdetails.Controls.Add(Me.Dgvinvo)
-        Me.grpbox_servdetails.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpbox_servdetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpbox_servdetails.Location = New System.Drawing.Point(10, 496)
         Me.grpbox_servdetails.Margin = New System.Windows.Forms.Padding(2)
         Me.grpbox_servdetails.Name = "grpbox_servdetails"
@@ -431,6 +431,7 @@ Partial Class Invoiceform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(621, 749)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)

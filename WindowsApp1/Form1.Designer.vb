@@ -35,13 +35,15 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Btnclr)
         Me.Panel1.Controls.Add(Me.Btnlog)
         Me.Panel1.Controls.Add(Me.Txtpword)
         Me.Panel1.Controls.Add(Me.Txtuname)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(56, 57)
+        Me.Panel1.Location = New System.Drawing.Point(292, 66)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(182, 239)
@@ -49,16 +51,19 @@ Partial Class Form1
         '
         'Btnclr
         '
+        Me.Btnclr.BackColor = System.Drawing.Color.Transparent
+        Me.Btnclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnclr.Location = New System.Drawing.Point(106, 185)
         Me.Btnclr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnclr.Name = "Btnclr"
         Me.Btnclr.Size = New System.Drawing.Size(56, 26)
         Me.Btnclr.TabIndex = 7
         Me.Btnclr.Text = "Clear"
-        Me.Btnclr.UseVisualStyleBackColor = True
+        Me.Btnclr.UseVisualStyleBackColor = False
         '
         'Btnlog
         '
+        Me.Btnlog.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnlog.Location = New System.Drawing.Point(20, 185)
         Me.Btnlog.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnlog.Name = "Btnlog"
@@ -109,10 +114,12 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(100, 23)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(309, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 13)
+        Me.Label1.Size = New System.Drawing.Size(143, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Admin Login Page"
         '
@@ -120,9 +127,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(318, 358)
+        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(496, 321)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.Text = "login_Page"

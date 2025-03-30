@@ -22,12 +22,12 @@ Partial Class Form7
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.ChartRevenue = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.BtnRevLoad = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,32 +58,34 @@ Partial Class Form7
         '
         'ChartRevenue
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.ChartRevenue.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.ChartRevenue.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartRevenue.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartRevenue.Legends.Add(Legend1)
         Me.ChartRevenue.Location = New System.Drawing.Point(4, 28)
         Me.ChartRevenue.Margin = New System.Windows.Forms.Padding(2)
         Me.ChartRevenue.Name = "ChartRevenue"
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series3.Legend = "Legend1"
-        Series3.Name = "Revenue"
-        Me.ChartRevenue.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series1.Legend = "Legend1"
+        Series1.Name = "Revenue"
+        Me.ChartRevenue.Series.Add(Series1)
         Me.ChartRevenue.Size = New System.Drawing.Size(548, 238)
         Me.ChartRevenue.TabIndex = 0
         Me.ChartRevenue.Text = "Chart1"
         '
         'BtnRevLoad
         '
-        Me.BtnRevLoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRevLoad.Location = New System.Drawing.Point(678, 223)
+        Me.BtnRevLoad.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnRevLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnRevLoad.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRevLoad.Location = New System.Drawing.Point(615, 215)
         Me.BtnRevLoad.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnRevLoad.Name = "BtnRevLoad"
-        Me.BtnRevLoad.Size = New System.Drawing.Size(67, 22)
+        Me.BtnRevLoad.Size = New System.Drawing.Size(79, 27)
         Me.BtnRevLoad.TabIndex = 1
         Me.BtnRevLoad.Text = "Load "
-        Me.BtnRevLoad.UseVisualStyleBackColor = True
+        Me.BtnRevLoad.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -98,26 +100,29 @@ Partial Class Form7
         '
         'BtnRevClose
         '
-        Me.BtnRevClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRevClose.Location = New System.Drawing.Point(837, 223)
+        Me.BtnRevClose.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnRevClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnRevClose.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRevClose.Location = New System.Drawing.Point(837, 215)
         Me.BtnRevClose.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnRevClose.Name = "BtnRevClose"
-        Me.BtnRevClose.Size = New System.Drawing.Size(67, 22)
+        Me.BtnRevClose.Size = New System.Drawing.Size(79, 27)
         Me.BtnRevClose.TabIndex = 4
         Me.BtnRevClose.Text = "Close"
-        Me.BtnRevClose.UseVisualStyleBackColor = True
+        Me.BtnRevClose.UseVisualStyleBackColor = False
         '
         'DtpRevFrom
         '
-        Me.DtpRevFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpRevFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpRevFrom.Location = New System.Drawing.Point(728, 28)
         Me.DtpRevFrom.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpRevFrom.Name = "DtpRevFrom"
-        Me.DtpRevFrom.Size = New System.Drawing.Size(157, 22)
+        Me.DtpRevFrom.Size = New System.Drawing.Size(207, 20)
         Me.DtpRevFrom.TabIndex = 5
         '
         'GrpRevenue
         '
+        Me.GrpRevenue.BackColor = System.Drawing.Color.Transparent
         Me.GrpRevenue.Controls.Add(Me.BtnRevClear)
         Me.GrpRevenue.Controls.Add(Me.TxtTotalRevenue)
         Me.GrpRevenue.Controls.Add(Me.Label5)
@@ -128,26 +133,28 @@ Partial Class Form7
         Me.GrpRevenue.Controls.Add(Me.DtpRevFrom)
         Me.GrpRevenue.Controls.Add(Me.BtnRevLoad)
         Me.GrpRevenue.Controls.Add(Me.Label1)
-        Me.GrpRevenue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrpRevenue.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpRevenue.Location = New System.Drawing.Point(9, 3)
         Me.GrpRevenue.Margin = New System.Windows.Forms.Padding(2)
         Me.GrpRevenue.Name = "GrpRevenue"
         Me.GrpRevenue.Padding = New System.Windows.Forms.Padding(2)
-        Me.GrpRevenue.Size = New System.Drawing.Size(932, 279)
+        Me.GrpRevenue.Size = New System.Drawing.Size(953, 268)
         Me.GrpRevenue.TabIndex = 6
         Me.GrpRevenue.TabStop = False
         Me.GrpRevenue.Text = "Revenue Distribution"
         '
         'BtnRevClear
         '
-        Me.BtnRevClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRevClear.Location = New System.Drawing.Point(755, 223)
+        Me.BtnRevClear.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnRevClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnRevClear.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRevClear.Location = New System.Drawing.Point(728, 215)
         Me.BtnRevClear.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnRevClear.Name = "BtnRevClear"
-        Me.BtnRevClear.Size = New System.Drawing.Size(67, 22)
+        Me.BtnRevClear.Size = New System.Drawing.Size(79, 27)
         Me.BtnRevClear.TabIndex = 10
         Me.BtnRevClear.Text = "Clear"
-        Me.BtnRevClear.UseVisualStyleBackColor = True
+        Me.BtnRevClear.UseVisualStyleBackColor = False
         '
         'TxtTotalRevenue
         '
@@ -171,11 +178,11 @@ Partial Class Form7
         '
         'DtpRevTo
         '
-        Me.DtpRevTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpRevTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpRevTo.Location = New System.Drawing.Point(728, 78)
         Me.DtpRevTo.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpRevTo.Name = "DtpRevTo"
-        Me.DtpRevTo.Size = New System.Drawing.Size(157, 22)
+        Me.DtpRevTo.Size = New System.Drawing.Size(207, 20)
         Me.DtpRevTo.TabIndex = 7
         '
         'Label3
@@ -191,6 +198,7 @@ Partial Class Form7
         '
         'GrpAge
         '
+        Me.GrpAge.BackColor = System.Drawing.Color.Transparent
         Me.GrpAge.Controls.Add(Me.BtnAgeClear)
         Me.GrpAge.Controls.Add(Me.TxtTotalPatients)
         Me.GrpAge.Controls.Add(Me.Label6)
@@ -201,26 +209,29 @@ Partial Class Form7
         Me.GrpAge.Controls.Add(Me.DtpAgeFrom)
         Me.GrpAge.Controls.Add(Me.Label2)
         Me.GrpAge.Controls.Add(Me.ChartAge)
-        Me.GrpAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GrpAge.Location = New System.Drawing.Point(11, 286)
+        Me.GrpAge.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.GrpAge.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrpAge.Location = New System.Drawing.Point(11, 278)
         Me.GrpAge.Margin = New System.Windows.Forms.Padding(2)
         Me.GrpAge.Name = "GrpAge"
         Me.GrpAge.Padding = New System.Windows.Forms.Padding(2)
-        Me.GrpAge.Size = New System.Drawing.Size(930, 306)
+        Me.GrpAge.Size = New System.Drawing.Size(951, 303)
         Me.GrpAge.TabIndex = 7
         Me.GrpAge.TabStop = False
         Me.GrpAge.Text = "Age Distribution"
         '
         'BtnAgeClear
         '
-        Me.BtnAgeClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgeClear.Location = New System.Drawing.Point(753, 253)
+        Me.BtnAgeClear.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgeClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnAgeClear.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgeClear.Location = New System.Drawing.Point(726, 246)
         Me.BtnAgeClear.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgeClear.Name = "BtnAgeClear"
-        Me.BtnAgeClear.Size = New System.Drawing.Size(67, 23)
+        Me.BtnAgeClear.Size = New System.Drawing.Size(79, 28)
         Me.BtnAgeClear.TabIndex = 13
         Me.BtnAgeClear.Text = "Clear"
-        Me.BtnAgeClear.UseVisualStyleBackColor = True
+        Me.BtnAgeClear.UseVisualStyleBackColor = False
         '
         'TxtTotalPatients
         '
@@ -244,11 +255,11 @@ Partial Class Form7
         '
         'DtpAgeTo
         '
-        Me.DtpAgeTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpAgeTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpAgeTo.Location = New System.Drawing.Point(726, 83)
         Me.DtpAgeTo.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpAgeTo.Name = "DtpAgeTo"
-        Me.DtpAgeTo.Size = New System.Drawing.Size(157, 22)
+        Me.DtpAgeTo.Size = New System.Drawing.Size(207, 20)
         Me.DtpAgeTo.TabIndex = 10
         '
         'Label4
@@ -264,33 +275,37 @@ Partial Class Form7
         '
         'BtnAgeClose
         '
-        Me.BtnAgeClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgeClose.Location = New System.Drawing.Point(835, 253)
+        Me.BtnAgeClose.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgeClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnAgeClose.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgeClose.Location = New System.Drawing.Point(835, 245)
         Me.BtnAgeClose.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgeClose.Name = "BtnAgeClose"
-        Me.BtnAgeClose.Size = New System.Drawing.Size(67, 23)
+        Me.BtnAgeClose.Size = New System.Drawing.Size(79, 28)
         Me.BtnAgeClose.TabIndex = 8
         Me.BtnAgeClose.Text = "Close"
-        Me.BtnAgeClose.UseVisualStyleBackColor = True
+        Me.BtnAgeClose.UseVisualStyleBackColor = False
         '
         'BtnAgeLoad
         '
-        Me.BtnAgeLoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgeLoad.Location = New System.Drawing.Point(676, 253)
+        Me.BtnAgeLoad.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgeLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnAgeLoad.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgeLoad.Location = New System.Drawing.Point(613, 246)
         Me.BtnAgeLoad.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAgeLoad.Name = "BtnAgeLoad"
-        Me.BtnAgeLoad.Size = New System.Drawing.Size(67, 23)
+        Me.BtnAgeLoad.Size = New System.Drawing.Size(79, 28)
         Me.BtnAgeLoad.TabIndex = 7
         Me.BtnAgeLoad.Text = "Load "
-        Me.BtnAgeLoad.UseVisualStyleBackColor = True
+        Me.BtnAgeLoad.UseVisualStyleBackColor = False
         '
         'DtpAgeFrom
         '
-        Me.DtpAgeFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpAgeFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpAgeFrom.Location = New System.Drawing.Point(726, 32)
         Me.DtpAgeFrom.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpAgeFrom.Name = "DtpAgeFrom"
-        Me.DtpAgeFrom.Size = New System.Drawing.Size(157, 22)
+        Me.DtpAgeFrom.Size = New System.Drawing.Size(207, 20)
         Me.DtpAgeFrom.TabIndex = 6
         '
         'Label2
@@ -306,18 +321,18 @@ Partial Class Form7
         '
         'ChartAge
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.ChartAge.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.ChartAge.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartAge.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.ChartAge.Legends.Add(Legend2)
         Me.ChartAge.Location = New System.Drawing.Point(4, 28)
         Me.ChartAge.Margin = New System.Windows.Forms.Padding(2)
         Me.ChartAge.Name = "ChartAge"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series4.Legend = "Legend1"
-        Series4.Name = "Revenue"
-        Me.ChartAge.Series.Add(Series4)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series2.Legend = "Legend1"
+        Series2.Name = "Revenue"
+        Me.ChartAge.Series.Add(Series2)
         Me.ChartAge.Size = New System.Drawing.Size(546, 257)
         Me.ChartAge.TabIndex = 1
         Me.ChartAge.Text = "Chart2"
@@ -326,7 +341,10 @@ Partial Class Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(952, 603)
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.images__6_
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(973, 611)
         Me.Controls.Add(Me.GrpAge)
         Me.Controls.Add(Me.GrpRevenue)
         Me.Margin = New System.Windows.Forms.Padding(2)

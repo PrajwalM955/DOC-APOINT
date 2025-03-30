@@ -11,7 +11,7 @@ Public Class Form9
     Private PrintPreviewDlg As New PrintPreviewDialog()
 
     'Database Connection String
-    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=True"
+    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
     Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

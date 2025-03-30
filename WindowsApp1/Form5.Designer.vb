@@ -25,7 +25,6 @@ Partial Class Treatment_Assign_Form
         Me.DgvAssignments = New System.Windows.Forms.DataGridView()
         Me.BtnView = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.lbl_assign_serviceid = New System.Windows.Forms.Label()
         Me.lbl_servdate = New System.Windows.Forms.Label()
@@ -81,14 +80,6 @@ Partial Class Treatment_Assign_Form
         Me.BtnEdit.Text = "Edit Row"
         Me.BtnEdit.UseVisualStyleBackColor = True
         '
-        'VScrollBar1
-        '
-        Me.VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.VScrollBar1.Location = New System.Drawing.Point(919, 0)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(21, 569)
-        Me.VScrollBar1.TabIndex = 6
-        '
         'BtnDelete
         '
         Me.BtnDelete.Location = New System.Drawing.Point(835, 297)
@@ -102,27 +93,31 @@ Partial Class Treatment_Assign_Form
         'lbl_assign_serviceid
         '
         Me.lbl_assign_serviceid.AutoSize = True
+        Me.lbl_assign_serviceid.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_assign_serviceid.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_assign_serviceid.Location = New System.Drawing.Point(480, 77)
         Me.lbl_assign_serviceid.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_assign_serviceid.Name = "lbl_assign_serviceid"
-        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(75, 13)
+        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(109, 19)
         Me.lbl_assign_serviceid.TabIndex = 2
         Me.lbl_assign_serviceid.Text = "Treatment ID :"
         '
         'lbl_servdate
         '
         Me.lbl_servdate.AutoSize = True
-        Me.lbl_servdate.Location = New System.Drawing.Point(16, 149)
+        Me.lbl_servdate.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_servdate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_servdate.Location = New System.Drawing.Point(36, 139)
         Me.lbl_servdate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_servdate.Name = "lbl_servdate"
-        Me.lbl_servdate.Size = New System.Drawing.Size(84, 13)
+        Me.lbl_servdate.Size = New System.Drawing.Size(120, 19)
         Me.lbl_servdate.TabIndex = 4
         Me.lbl_servdate.Text = "Treatment Date:"
         '
         'CmbPatientID
         '
         Me.CmbPatientID.FormattingEnabled = True
-        Me.CmbPatientID.Location = New System.Drawing.Point(146, 72)
+        Me.CmbPatientID.Location = New System.Drawing.Point(223, 60)
         Me.CmbPatientID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbPatientID.Name = "CmbPatientID"
         Me.CmbPatientID.Size = New System.Drawing.Size(168, 21)
@@ -131,7 +126,7 @@ Partial Class Treatment_Assign_Form
         'CmbDoctorID
         '
         Me.CmbDoctorID.FormattingEnabled = True
-        Me.CmbDoctorID.Location = New System.Drawing.Point(147, 107)
+        Me.CmbDoctorID.Location = New System.Drawing.Point(224, 98)
         Me.CmbDoctorID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbDoctorID.Name = "CmbDoctorID"
         Me.CmbDoctorID.Size = New System.Drawing.Size(168, 21)
@@ -139,30 +134,34 @@ Partial Class Treatment_Assign_Form
         '
         'BtnSubmit
         '
-        Me.BtnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSubmit.Location = New System.Drawing.Point(283, 222)
+        Me.BtnSubmit.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnSubmit.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSubmit.Location = New System.Drawing.Point(306, 222)
         Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnSubmit.Name = "BtnSubmit"
         Me.BtnSubmit.Size = New System.Drawing.Size(85, 32)
         Me.BtnSubmit.TabIndex = 14
         Me.BtnSubmit.Text = "Submit"
-        Me.BtnSubmit.UseVisualStyleBackColor = True
+        Me.BtnSubmit.UseVisualStyleBackColor = False
         '
         'BtnClear
         '
-        Me.BtnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClear.Location = New System.Drawing.Point(388, 222)
+        Me.BtnClear.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnClear.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.Location = New System.Drawing.Point(423, 222)
         Me.BtnClear.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(89, 32)
         Me.BtnClear.TabIndex = 15
         Me.BtnClear.Text = "Clear"
-        Me.BtnClear.UseVisualStyleBackColor = True
+        Me.BtnClear.UseVisualStyleBackColor = False
         '
         'DtpTreatmentDate
         '
         Me.DtpTreatmentDate.Checked = False
-        Me.DtpTreatmentDate.Location = New System.Drawing.Point(147, 149)
+        Me.DtpTreatmentDate.Location = New System.Drawing.Point(224, 139)
         Me.DtpTreatmentDate.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpTreatmentDate.MinDate = New Date(2025, 3, 20, 0, 0, 0, 0)
         Me.DtpTreatmentDate.Name = "DtpTreatmentDate"
@@ -173,27 +172,33 @@ Partial Class Treatment_Assign_Form
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 72)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(36, 62)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.Size = New System.Drawing.Size(79, 19)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Patiet ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 110)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(37, 100)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(86, 19)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Doctor ID :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(480, 30)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 13)
+        Me.Label3.Size = New System.Drawing.Size(60, 19)
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Status :"
         '
@@ -223,15 +228,19 @@ Partial Class Treatment_Assign_Form
         '
         'BtnCalculatetrtcost
         '
-        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(483, 130)
+        Me.BtnCalculatetrtcost.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCalculatetrtcost.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnCalculatetrtcost.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(455, 133)
         Me.BtnCalculatetrtcost.Name = "BtnCalculatetrtcost"
-        Me.BtnCalculatetrtcost.Size = New System.Drawing.Size(168, 23)
+        Me.BtnCalculatetrtcost.Size = New System.Drawing.Size(209, 23)
         Me.BtnCalculatetrtcost.TabIndex = 28
         Me.BtnCalculatetrtcost.Text = """ Click here for Treatment cost """
-        Me.BtnCalculatetrtcost.UseVisualStyleBackColor = True
+        Me.BtnCalculatetrtcost.UseVisualStyleBackColor = False
         '
         'panel_assigtab
         '
+        Me.panel_assigtab.BackColor = System.Drawing.Color.Transparent
         Me.panel_assigtab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panel_assigtab.Controls.Add(Me.TxtBxtrtagnid)
         Me.panel_assigtab.Controls.Add(Me.Label4)
@@ -258,7 +267,7 @@ Partial Class Treatment_Assign_Form
         '
         'TxtBxtrtagnid
         '
-        Me.TxtBxtrtagnid.Location = New System.Drawing.Point(147, 24)
+        Me.TxtBxtrtagnid.Location = New System.Drawing.Point(224, 23)
         Me.TxtBxtrtagnid.Name = "TxtBxtrtagnid"
         Me.TxtBxtrtagnid.ReadOnly = True
         Me.TxtBxtrtagnid.Size = New System.Drawing.Size(127, 20)
@@ -267,29 +276,34 @@ Partial Class Treatment_Assign_Form
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 33)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(36, 23)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 13)
+        Me.Label4.Size = New System.Drawing.Size(159, 19)
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "Treatment_assign ID :"
         '
         'BtntrtassignBck
         '
-        Me.BtntrtassignBck.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtntrtassignBck.Location = New System.Drawing.Point(495, 222)
+        Me.BtntrtassignBck.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtntrtassignBck.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtntrtassignBck.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtntrtassignBck.Location = New System.Drawing.Point(539, 222)
         Me.BtntrtassignBck.Margin = New System.Windows.Forms.Padding(2)
         Me.BtntrtassignBck.Name = "BtntrtassignBck"
         Me.BtntrtassignBck.Size = New System.Drawing.Size(89, 32)
         Me.BtntrtassignBck.TabIndex = 29
         Me.BtntrtassignBck.Text = "Back"
-        Me.BtntrtassignBck.UseVisualStyleBackColor = True
+        Me.BtntrtassignBck.UseVisualStyleBackColor = False
         '
         'Treatment_Assign_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(940, 569)
-        Me.Controls.Add(Me.VScrollBar1)
+        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.images__6_1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(968, 507)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnView)
@@ -307,7 +321,6 @@ Partial Class Treatment_Assign_Form
     Friend WithEvents DgvAssignments As DataGridView
     Friend WithEvents BtnView As Button
     Friend WithEvents BtnEdit As Button
-    Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents BtnDelete As Button
     Friend WithEvents lbl_assign_serviceid As Label
     Friend WithEvents lbl_servdate As Label

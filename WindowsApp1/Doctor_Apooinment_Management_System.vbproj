@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{42FBF0E1-6574-48AC-B342-9ADDA5AF9213}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApp1.My.MyApplication</StartupObject>
+    <StartupObject>WindowsApp1.Form1</StartupObject>
     <RootNamespace>WindowsApp1</RootNamespace>
     <AssemblyName>WindowsApp1</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -186,6 +186,126 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_15459449.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-simple-medical-doctor-doing-molecular-report-picture-image_955928.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-health-medical-science-healthcare-icon-digital-technology-doctor-concept-modern-innovation-treatment-medicine-on-hi-tech-future-blue-background-for-wallpaper-template-web-design-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_154594491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_154594492.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_639506337_9LQK7W4jkmCixMk1TQ6rgYOW0jsHiH0N.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_639506337_9LQK7W4jkmCixMk1TQ6rgYOW0jsHiH0N1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%293.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_99905255_nSm85vHjPzL7Pg4dWKiXUDmtHZIUBQyo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41473182.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-infographic-banner-background-clinic-pharmacy-laboratory-test-and-research-healthcare-concept-backdrop-illustration-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\414731821.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2099370050-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2099370050-612x6121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%294.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %285%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2812%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2811%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %289%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %287%291.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
