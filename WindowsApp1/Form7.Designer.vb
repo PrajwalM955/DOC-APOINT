@@ -28,6 +28,7 @@ Partial Class Form7
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form7))
         Me.ChartRevenue = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.BtnRevLoad = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -108,7 +109,7 @@ Partial Class Form7
         Me.BtnRevClose.Name = "BtnRevClose"
         Me.BtnRevClose.Size = New System.Drawing.Size(79, 27)
         Me.BtnRevClose.TabIndex = 4
-        Me.BtnRevClose.Text = "Close"
+        Me.BtnRevClose.Text = "Back"
         Me.BtnRevClose.UseVisualStyleBackColor = False
         '
         'DtpRevFrom
@@ -134,7 +135,7 @@ Partial Class Form7
         Me.GrpRevenue.Controls.Add(Me.BtnRevLoad)
         Me.GrpRevenue.Controls.Add(Me.Label1)
         Me.GrpRevenue.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GrpRevenue.Location = New System.Drawing.Point(9, 3)
+        Me.GrpRevenue.Location = New System.Drawing.Point(16, 99)
         Me.GrpRevenue.Margin = New System.Windows.Forms.Padding(2)
         Me.GrpRevenue.Name = "GrpRevenue"
         Me.GrpRevenue.Padding = New System.Windows.Forms.Padding(2)
@@ -211,7 +212,7 @@ Partial Class Form7
         Me.GrpAge.Controls.Add(Me.ChartAge)
         Me.GrpAge.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GrpAge.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GrpAge.Location = New System.Drawing.Point(11, 278)
+        Me.GrpAge.Location = New System.Drawing.Point(20, 385)
         Me.GrpAge.Margin = New System.Windows.Forms.Padding(2)
         Me.GrpAge.Name = "GrpAge"
         Me.GrpAge.Padding = New System.Windows.Forms.Padding(2)
@@ -283,7 +284,7 @@ Partial Class Form7
         Me.BtnAgeClose.Name = "BtnAgeClose"
         Me.BtnAgeClose.Size = New System.Drawing.Size(79, 28)
         Me.BtnAgeClose.TabIndex = 8
-        Me.BtnAgeClose.Text = "Close"
+        Me.BtnAgeClose.Text = "Back"
         Me.BtnAgeClose.UseVisualStyleBackColor = False
         '
         'BtnAgeLoad
@@ -342,9 +343,9 @@ Partial Class Form7
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.images__6_
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(973, 611)
+        Me.ClientSize = New System.Drawing.Size(980, 727)
         Me.Controls.Add(Me.GrpAge)
         Me.Controls.Add(Me.GrpRevenue)
         Me.Margin = New System.Windows.Forms.Padding(2)

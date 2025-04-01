@@ -42,7 +42,7 @@ Public Class Form3
            Clstbox.CheckedItems.Count = 0 OrElse
            Cboboxhour.SelectedIndex = -1 Then
 
-            MessageBox.Show("Please fill all the fields and select Week and Hour Availability")
+            MessageBox.Show("Please fill all the fields")
             Return
         Else
             Using con As New SqlConnection(connectionString)
@@ -257,7 +257,7 @@ Public Class Form3
                 Dim cmd As New SqlCommand()
                 cmd.Connection = conn
 
-                'Deleting selected row from Billing Table
+                'Deleting selected row from Doctor Table
                 cmd.CommandText = "DELETE FROM doctor WHERE doctor_id = @doctor_id"
                 cmd.Parameters.AddWithValue("@doctor_id", Dgvdoc.SelectedRows(0).Cells(0).Value)
 
@@ -401,7 +401,148 @@ Public Class Form3
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BtnTrtview.Click
         LoadTreatmentsData()
     End Sub
+    Private Sub Dgvtreatment_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgvtreatment.CellClick
+        TxtBxtrtid.Text = Dgvtreatment.SelectedRows(0).Cells(0).Value
+        Txtbxtrtname.Text = Dgvtreatment.SelectedRows(0).Cells(1).Value
+        Txtbxtrtcost.Text = Dgvtreatment.SelectedRows(0).Cells(2).Value
+    End Sub
+    Private Sub Btntrtedit_Click(sender As Object, e As EventArgs) Handles Btntrtedit.Click
+
+        'Check if any row is selected
+        If Dgvtreatment.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if all Assignment details are entered
+        If Txtbxtrtname.Text = "" Or Txtbxtrtcost.Text = "" Or TxtBxtrtid.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        End If
 
 
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "UPDATE treatment SET name = @name, cost = @cost WHERE treatment_id = @treatment_id"
+                cmd.Parameters.AddWithValue("@treatment_id", TxtBxtrtid.Text)
+                cmd.Parameters.AddWithValue("@name", Txtbxtrtname.Text)
+                cmd.Parameters.AddWithValue("@cost", Txtbxtrtcost.Text)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+                LoadTreatmentsData() ' Refresh DataGridView
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+    Private Sub Dgvptntab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgvptntab.CellClick
+        TxtBxptnid.Text = Dgvptntab.SelectedRows(0).Cells(0).Value
+        Txtbxptnname.Text = Dgvptntab.SelectedRows(0).Cells(1).Value
+        Datepatientdob.Value = Dgvptntab.SelectedRows(0).Cells(2).Value
+        Cmbbxptngnder.Text = Dgvptntab.SelectedRows(0).Cells(3).Value
+        TxtBxptncontact.Text = Dgvptntab.SelectedRows(0).Cells(4).Value
+        Txtbxptnadrs.Text = Dgvptntab.SelectedRows(0).Cells(5).Value
+        Txtbxptnmedhstry.Text = Dgvptntab.SelectedRows(0).Cells(6).Value
+    End Sub
+    Private Sub Btnptnedit_Click(sender As Object, e As EventArgs) Handles Btnptnedit.Click
+        'Check if any row is selected
+        If Dgvptntab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if all Assignment details are entered
+        If Txtbxptnname.Text = "" Or TxtBxptnid.Text = "" Or TxtBxptncontact.Text = "" Or Txtbxptnadrs.Text = "" Or Txtbxptnmedhstry.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        End If
+
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "UPDATE patient SET name = @name, gender = @gender, dob = @dob, contact = @contact, address = @address, medical_history = @medical_history WHERE patient_id = @patient_id"
+                cmd.Parameters.AddWithValue("@patient_id", TxtBxptnid.Text)
+                cmd.Parameters.AddWithValue("@name", Txtbxptnname.Text)
+                cmd.Parameters.AddWithValue("@gender", Cmbbxptngnder.Text)
+                cmd.Parameters.AddWithValue("@dob", Datepatientdob.Value)
+                cmd.Parameters.AddWithValue("@contact", TxtBxptncontact.Text)
+                cmd.Parameters.AddWithValue("@address", Txtbxptnadrs.Text)
+                cmd.Parameters.AddWithValue("@medical_history", Txtbxptnmedhstry.Text)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+                LoadPatientsData() ' Refresh DataGridView
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+    Private Sub Dgvdoc_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgvdoc.CellClick
+        TxtBxdocid.Text = Dgvdoc.SelectedRows(0).Cells(0).Value
+        Txtboxdocname.Text = Dgvdoc.SelectedRows(0).Cells(1).Value
+        Txtboxdocspeci.Text = Dgvdoc.SelectedRows(0).Cells(2).Value
+        Txtbox_phoneno.Text = Dgvdoc.SelectedRows(0).Cells(3).Value
+        Clstbox.SelectedValue = Dgvdoc.SelectedRows(0).Cells(4).Value
+        Cboboxhour.Text = Dgvdoc.SelectedRows(0).Cells(5).Value
+    End Sub
+    Private Sub Btndocedit_Click(sender As Object, e As EventArgs) Handles Btndocedit.Click
+
+        ' Check if any row is selected
+        If Dgvdoc.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        ' Check if all Assignment details are entered
+        If Txtboxdocname.Text = "" Or TxtBxdocid.Text = "" Or Txtboxdocspeci.Text = "" Or Txtbox_phoneno.Text = "" Or Clstbox.CheckedItems.Count < 0 Or Cboboxhour.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "UPDATE doctor SET name = @name, specialization = @specialization, contact = @contact, week_availability = @week_availability, hour_availability = @hour_availability WHERE doctor_id = @doctor_id"
+                cmd.Parameters.AddWithValue("@doctor_id", TxtBxdocid.Text)
+                cmd.Parameters.AddWithValue("@name", Txtboxdocname.Text)
+                cmd.Parameters.AddWithValue("@specialization", Txtboxdocspeci.Text)
+                cmd.Parameters.AddWithValue("@contact", Txtbox_phoneno.Text)
+
+                ' Convert CheckedListBox CheckedItems to a comma-separated string for database storage
+                Dim weekAvailability As String = String.Join(",", Clstbox.CheckedItems.Cast(Of String)())
+                cmd.Parameters.AddWithValue("@week_availability", weekAvailability)
+
+                cmd.Parameters.AddWithValue("@hour_availability", Cboboxhour.Text)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+                LoadDoctorsData() ' Refresh DataGridView
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
 End Class
 

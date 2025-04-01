@@ -66,10 +66,10 @@ Public Class Form4
     Private Sub Btnappoint_Click(sender As Object, e As EventArgs) Handles Btnappoint.Click
         ' Validate input fields before inserting data into database table.
         If Cmbxapointptnid.SelectedIndex = -1 OrElse
-           Cmbxapoitdocid.SelectedIndex = -1 OrElse
-           Cmbxapointtime.SelectedIndex = -1 OrElse
-           Cmbxapoitstatus.SelectedIndex = -1 OrElse
-           Cmbxapointreason.SelectedIndex = -1 Then
+       Cmbxapoitdocid.SelectedIndex = -1 OrElse
+       Cmbxapointtime.SelectedIndex = -1 OrElse
+       Cmbxapoitstatus.SelectedIndex = -1 OrElse
+       Cmbxapointreason.SelectedIndex = -1 Then
 
             MessageBox.Show("Please fill all fields before proceeding!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -79,8 +79,22 @@ Public Class Form4
             Try
                 con.Open()
 
+                ' Check if an appointment already exists for the selected date and time
+                Dim checkCmd As New SqlCommand("SELECT COUNT(*) FROM appointment WHERE doctor_id = @doctor_id AND appointment_date = @appointment_date AND [time] = @time", con)
+                checkCmd.Parameters.AddWithValue("@doctor_id", Convert.ToInt32(Cmbxapoitdocid.SelectedValue))
+                checkCmd.Parameters.AddWithValue("@appointment_date", Dateapointdate.Value.Date)
+                checkCmd.Parameters.AddWithValue("@time", Cmbxapointtime.SelectedItem.ToString())
+
+                Dim existingAppointments As Integer = Convert.ToInt32(checkCmd.ExecuteScalar())
+
+                If existingAppointments > 0 Then
+                    MessageBox.Show("This slot is already booked. Please try another slot.", "Booking Conflict", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Return
+                End If
+
+                ' If no conflict, proceed with inserting the new appointment
                 Dim cmd As New SqlCommand("INSERT INTO appointment(patient_id, doctor_id, appointment_date, status, reason, [time]) " &
-                                         "VALUES (@patient_id, @doctor_id, @appointment_date, @status, @reason, @time)", con)
+                                     "VALUES (@patient_id, @doctor_id, @appointment_date, @status, @reason, @time)", con)
 
                 cmd.Parameters.AddWithValue("@patient_id", Convert.ToInt32(Cmbxapointptnid.SelectedValue))
                 cmd.Parameters.AddWithValue("@doctor_id", Convert.ToInt32(Cmbxapoitdocid.SelectedValue))
@@ -91,7 +105,7 @@ Public Class Form4
 
                 Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
                 If rowsAffected > 0 Then
-                    MessageBox.Show("Appointment added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Appointment scheduled successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     LoadAppointmentData() ' Reload DataGridView after insertion
                 Else
                     MessageBox.Show("Failed to add appointment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -186,5 +200,55 @@ Public Class Form4
     Private Sub BtnIssueTicket_Click(sender As Object, e As EventArgs) Handles BtnIssueTicket.Click
         Dim apointinvoiceForm As New Form9()
         apointinvoiceForm.Show() ' Show Invoice Form.
+    End Sub
+    Private Sub DgvAssignments_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgvappoint.CellClick
+        TxtBxapointid.Text = Dgvappoint.SelectedRows(0).Cells(0).Value
+        Cmbxapointptnid.Text = Dgvappoint.SelectedRows(0).Cells(1).Value
+        Cmbxapoitdocid.Text = Dgvappoint.SelectedRows(0).Cells(2).Value
+        Dateapointdate.Value = Dgvappoint.SelectedRows(0).Cells(3).Value
+        Cmbxapointtime.Text = Dgvappoint.SelectedRows(0).Cells(4).Value
+        Cmbxapoitstatus.Text = Dgvappoint.SelectedRows(0).Cells(5).Value
+        Cmbxapointreason.Text = Dgvappoint.SelectedRows(0).Cells(6).Value
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnapntedit.Click
+
+        'Check if any row is selected
+        If Dgvappoint.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if all Assignment details are entered
+        If Cmbxapointptnid.Text = "" Or TxtBxapointid.Text = "" Or Cmbxapoitdocid.Text = "" Or Cmbxapoitstatus.Text = "" Or Cmbxapointreason.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        End If
+
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "UPDATE apointment SET patient_id = @patient_id, doctor_id = @doctor_id, apointment_date = @appointment_date, time = @time, status = @status, reason = @reason WHERE appointment_id = @appointment_id"
+                cmd.Parameters.AddWithValue("@appointment_id", TxtBxapointid.Text)
+                cmd.Parameters.AddWithValue("@patient_id", Cmbxapointptnid.Text)
+                cmd.Parameters.AddWithValue("@doctor_id", Cmbxapoitdocid.Text)
+                cmd.Parameters.AddWithValue("@appointment_date", Dateapointdate.Value)
+                cmd.Parameters.AddWithValue("@time", Cmbxapointtime.Text)
+                cmd.Parameters.AddWithValue("@status", Cmbxapoitstatus.Text)
+                cmd.Parameters.AddWithValue("@reason", Cmbxapointreason.Text)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+                LoadAppointmentData() ' Refresh DataGridView
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
     End Sub
 End Class

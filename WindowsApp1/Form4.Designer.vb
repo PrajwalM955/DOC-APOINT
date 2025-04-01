@@ -44,6 +44,9 @@ Partial Class Form4
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.Btnapntedit = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtBxapointid = New System.Windows.Forms.TextBox()
         Me.Panel_apoint.SuspendLayout()
         CType(Me.Dgvappoint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,7 +55,7 @@ Partial Class Form4
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(52, 32)
+        Me.Label2.Location = New System.Drawing.Point(54, 50)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(105, 20)
@@ -63,7 +66,7 @@ Partial Class Form4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(52, 87)
+        Me.Label4.Location = New System.Drawing.Point(54, 105)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(103, 20)
@@ -74,7 +77,7 @@ Partial Class Form4
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(52, 149)
+        Me.Label5.Location = New System.Drawing.Point(54, 167)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(139, 20)
@@ -118,6 +121,9 @@ Partial Class Form4
         '
         Me.Panel_apoint.BackColor = System.Drawing.Color.Transparent
         Me.Panel_apoint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel_apoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel_apoint.Controls.Add(Me.TxtBxapointid)
+        Me.Panel_apoint.Controls.Add(Me.Label1)
         Me.Panel_apoint.Controls.Add(Me.Btnappntbck)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapoitdocid)
         Me.Panel_apoint.Controls.Add(Me.Cmbxapointptnid)
@@ -134,7 +140,7 @@ Partial Class Form4
         Me.Panel_apoint.Controls.Add(Me.Label2)
         Me.Panel_apoint.Controls.Add(Me.Label4)
         Me.Panel_apoint.Controls.Add(Me.Label5)
-        Me.Panel_apoint.Location = New System.Drawing.Point(9, 10)
+        Me.Panel_apoint.Location = New System.Drawing.Point(13, 109)
         Me.Panel_apoint.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel_apoint.Name = "Panel_apoint"
         Me.Panel_apoint.Size = New System.Drawing.Size(873, 279)
@@ -156,7 +162,7 @@ Partial Class Form4
         'Cmbxapoitdocid
         '
         Me.Cmbxapoitdocid.FormattingEnabled = True
-        Me.Cmbxapoitdocid.Location = New System.Drawing.Point(207, 87)
+        Me.Cmbxapoitdocid.Location = New System.Drawing.Point(209, 105)
         Me.Cmbxapoitdocid.Name = "Cmbxapoitdocid"
         Me.Cmbxapoitdocid.Size = New System.Drawing.Size(139, 21)
         Me.Cmbxapoitdocid.TabIndex = 20
@@ -164,7 +170,7 @@ Partial Class Form4
         'Cmbxapointptnid
         '
         Me.Cmbxapointptnid.FormattingEnabled = True
-        Me.Cmbxapointptnid.Location = New System.Drawing.Point(207, 35)
+        Me.Cmbxapointptnid.Location = New System.Drawing.Point(209, 53)
         Me.Cmbxapointptnid.Name = "Cmbxapointptnid"
         Me.Cmbxapointptnid.Size = New System.Drawing.Size(139, 21)
         Me.Cmbxapointptnid.TabIndex = 19
@@ -226,7 +232,7 @@ Partial Class Form4
         '
         'Dateapointdate
         '
-        Me.Dateapointdate.Location = New System.Drawing.Point(207, 146)
+        Me.Dateapointdate.Location = New System.Drawing.Point(209, 164)
         Me.Dateapointdate.Margin = New System.Windows.Forms.Padding(2)
         Me.Dateapointdate.MinDate = New Date(2025, 2, 23, 0, 0, 0, 0)
         Me.Dateapointdate.Name = "Dateapointdate"
@@ -250,7 +256,7 @@ Partial Class Form4
         '
         Me.Dgvappoint.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.Dgvappoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgvappoint.Location = New System.Drawing.Point(7, 322)
+        Me.Dgvappoint.Location = New System.Drawing.Point(11, 431)
         Me.Dgvappoint.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvappoint.Name = "Dgvappoint"
         Me.Dgvappoint.RowHeadersWidth = 51
@@ -261,7 +267,7 @@ Partial Class Form4
         'Btnapointview
         '
         Me.Btnapointview.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnapointview.Location = New System.Drawing.Point(700, 293)
+        Me.Btnapointview.Location = New System.Drawing.Point(617, 393)
         Me.Btnapointview.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnapointview.Name = "Btnapointview"
         Me.Btnapointview.Size = New System.Drawing.Size(84, 24)
@@ -276,20 +282,51 @@ Partial Class Form4
         'BtnDelete
         '
         Me.BtnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(789, 293)
+        Me.BtnDelete.Location = New System.Drawing.Point(793, 392)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(73, 24)
         Me.BtnDelete.TabIndex = 24
         Me.BtnDelete.Text = "Delete"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
+        'Btnapntedit
+        '
+        Me.Btnapntedit.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btnapntedit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnapntedit.Location = New System.Drawing.Point(706, 393)
+        Me.Btnapntedit.Name = "Btnapntedit"
+        Me.Btnapntedit.Size = New System.Drawing.Size(84, 23)
+        Me.Btnapntedit.TabIndex = 25
+        Me.Btnapntedit.Text = "Edit"
+        Me.Btnapntedit.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(52, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(121, 20)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Appointment ID"
+        '
+        'TxtBxapointid
+        '
+        Me.TxtBxapointid.Location = New System.Drawing.Point(209, 13)
+        Me.TxtBxapointid.Name = "TxtBxapointid"
+        Me.TxtBxapointid.ReadOnly = True
+        Me.TxtBxapointid.Size = New System.Drawing.Size(137, 20)
+        Me.TxtBxapointid.TabIndex = 27
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.images__4_1
+        Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.gg1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(896, 489)
+        Me.ClientSize = New System.Drawing.Size(896, 598)
+        Me.Controls.Add(Me.Btnapntedit)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.Btnapointview)
         Me.Controls.Add(Me.Dgvappoint)
@@ -325,4 +362,7 @@ Partial Class Form4
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents BtnDelete As Button
     Friend WithEvents Btnappntbck As Button
+    Friend WithEvents Btnapntedit As Button
+    Friend WithEvents TxtBxapointid As TextBox
+    Friend WithEvents Label1 As Label
 End Class

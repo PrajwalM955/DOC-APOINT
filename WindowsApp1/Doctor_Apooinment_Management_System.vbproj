@@ -171,9 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -186,126 +186,77 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Resources\abstract-soft-blue-and-white-geometric-triangles-vector-44170764.avif" />
+    <None Include="Resources\aesthetic-light-blue-medical-background-phonendoscope-healthcare-copy-space-generative-ai-341254558.webp" />
+    <None Include="Resources\blurred-hospital-background-with-soft-blue-color-ideal-medical-healthcare-related-themes_1350623-1388.avif" />
+    <None Include="Resources\doctor-stethoscope-hand-hospital-background-gown-94227568.webp" />
+    <None Include="Resources\health-care-abstract-background-with-lines-dots-vector-55080354.avif" />
+    <None Include="Resources\iris-purple-color-background.webp" />
+    <None Include="Resources\modern-health-care-or-medical-background-design-vector-51283080.avif" />
+    <None Include="Resources\real-madrid-logo-in-solid-black-9ouwjpgeg9tc4eew.webp" />
+    <None Include="Resources\stethoscope-copy-space_23-2147652347.avif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_15459449.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo.jpg" />
+    <None Include="Resources\gg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pngtree-simple-medical-doctor-doing-molecular-report-picture-image_955928.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\images.jpg" />
+    <None Include="Resources\gg1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\abstract-health-medical-science-healthcare-icon-digital-technology-doctor-concept-modern-innovation-treatment-medicine-on-hi-tech-future-blue-background-for-wallpaper-template-web-design-vector.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_154594491.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_154594492.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\360_F_639506337_9LQK7W4jkmCixMk1TQ6rgYOW0jsHiH0N.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\360_F_639506337_9LQK7W4jkmCixMk1TQ6rgYOW0jsHiH0N1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %282%291.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %282%292.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %282%293.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\360_F_99905255_nSm85vHjPzL7Pg4dWKiXUDmtHZIUBQyo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\41473182.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medical-infographic-banner-background-clinic-pharmacy-laboratory-test-and-research-healthcare-concept-backdrop-illustration-vector.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\414731821.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-2099370050-612x612.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-2099370050-612x6121.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %283%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %282%294.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %2811%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %287%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %286%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %285%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %284%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download %283%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %285%291.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %2812%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %2811%291.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %289%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %284%291.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %286%291.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images %287%291.jpg" />
+    <Content Include="Resources\844837f390c486525c0331d079e9176d.jpg" />
+    <Content Include="Resources\abstract-health-medical-science-healthcare-icon-digital-technology-doctor-concept-modern-innovation-treatment-medicine-on-hi-tech-future-blue-background-for-wallpaper-template-web-design-vector.jpg" />
+    <Content Include="Resources\download %281%29.jpg" />
+    <Content Include="Resources\download %282%29.jpg" />
+    <Content Include="Resources\download %283%29.jpg" />
+    <Content Include="Resources\download %284%29.jpg" />
+    <Content Include="Resources\download %285%29.jpg" />
+    <Content Include="Resources\download %286%29.jpg" />
+    <Content Include="Resources\download %287%29.jpg" />
+    <Content Include="Resources\download.jpg" />
+    <None Include="Resources\download1.jpg" />
+    <None Include="Resources\WhatsApp Image 2025-03-31 at 18.46.21_8f9ff0e51.jpg" />
+    <None Include="Resources\gg3.jpg" />
+    <None Include="Resources\gg2.jpg" />
+    <Content Include="Resources\images %281%29.jpg" />
+    <Content Include="Resources\images %2810%29.jpg" />
+    <Content Include="Resources\images %2811%29.jpg" />
+    <Content Include="Resources\images %2812%29.jpg" />
+    <Content Include="Resources\images %2813%29.jpg" />
+    <Content Include="Resources\images %2814%29.jpg" />
+    <Content Include="Resources\images %2815%29.jpg" />
+    <Content Include="Resources\images %2816%29.jpg" />
+    <Content Include="Resources\images %2817%29.jpg" />
+    <Content Include="Resources\images %2818%29.jpg" />
+    <Content Include="Resources\images %2819%29.jpg" />
+    <Content Include="Resources\images %282%29.jpg" />
+    <Content Include="Resources\images %2820%29.jpg" />
+    <Content Include="Resources\images %2821%29.jpg" />
+    <Content Include="Resources\images %2822%29.jpg" />
+    <Content Include="Resources\images %2823%29.jpg" />
+    <Content Include="Resources\images %283%29.jpg" />
+    <Content Include="Resources\images %284%29.jpg" />
+    <Content Include="Resources\images %285%29.jpg" />
+    <Content Include="Resources\images %286%29.jpg" />
+    <Content Include="Resources\images %287%29.jpg" />
+    <Content Include="Resources\images %288%29.jpg" />
+    <Content Include="Resources\images %289%29.jpg" />
+    <Content Include="Resources\images.jpg" />
+    <Content Include="Resources\istockphoto-1496083826-612x612.jpg" />
+    <Content Include="Resources\istockphoto-2099370050-612x612.jpg" />
+    <Content Include="Resources\lovepik-gray-business-background-image_401947158.jpg" />
+    <Content Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo.jpg" />
+    <Content Include="Resources\medical-infographic-banner-background-clinic-pharmacy-laboratory-test-and-research-healthcare-concept-backdrop-illustration-vector.jpg" />
+    <Content Include="Resources\pngtree-black-fine-matte-background-image_960477.jpg" />
+    <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_15459449.jpg" />
+    <Content Include="Resources\pngtree-white-polygonal-mosaic-triangular-background-abstract-light-gray-background-low-poly-image_418752.jpg" />
+    <Content Include="Resources\WhatsApp Image 2025-03-31 at 18.46.21_8f9ff0e5.jpg" />
+    <Content Include="Resources\WhatsApp Image 2025-03-31 at 19.19.25_55519414.jpg" />
+    <Content Include="Resources\WhatsApp Image 2025-03-31 at 19.19.25_d1deb16c.jpg" />
+    <Content Include="Resources\WhatsApp Image 2025-03-31 at 20.37.16_b3d997d9 - Copy.jpg" />
+    <Content Include="Resources\WhatsApp Image 2025-03-31 at 20.37.16_b3d997d9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

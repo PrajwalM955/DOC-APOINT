@@ -10,7 +10,7 @@ Public Class Invoiceform
     Private PrintPreviewDlg As New PrintPreviewDialog()
 
     'Database Connection String
-    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;Trust Server Certificate=TrueData Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
+    Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
     Private Sub Invoiceform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Function to Load Patient id in combobox

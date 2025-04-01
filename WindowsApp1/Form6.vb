@@ -62,10 +62,10 @@ Public Class Form6
     Private Sub DgvBillingData_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvBillingData.CellClick
         TxtBxbillid.Text = DgvBillingData.SelectedRows(0).Cells(0).Value
         Combox_bill_ptnid.Text = DgvBillingData.SelectedRows(0).Cells(1).Value
-        DtpBillDate.Value = DgvBillingData.SelectedRows(0).Cells(5).Value
-        TxtTotalAmount.Text = DgvBillingData.SelectedRows(0).Cells(2).Value
-        CmbPaymentMode.Text = DgvBillingData.SelectedRows(0).Cells(3).Value
-        Cmb_bills_status.Text = DgvBillingData.SelectedRows(0).Cells(4).Value
+        DtpBillDate.Value = DgvBillingData.SelectedRows(0).Cells(2).Value
+        TxtTotalAmount.Text = DgvBillingData.SelectedRows(0).Cells(3).Value
+        CmbPaymentMode.Text = DgvBillingData.SelectedRows(0).Cells(4).Value
+        Cmb_bills_status.Text = DgvBillingData.SelectedRows(0).Cells(5).Value
     End Sub
 
     ' Close the application

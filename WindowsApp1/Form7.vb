@@ -2,7 +2,7 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class Form7
-    ' Your connection string is implemented here.
+    ' connection string 
     Private connectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -37,6 +37,7 @@ Public Class Form7
                         End While
                         ChartRevenue.Series.Add(series)
                         TxtTotalRevenue.Text = totalRevenue.ToString("C2")
+                        MessageBox.Show("Report generated successfully")
                     End Using
                 End Using
             End Using
@@ -82,6 +83,7 @@ Public Class Form7
                         End While
                         ChartAge.Series.Add(series)
                         TxtTotalPatients.Text = totalPatients.ToString()
+                        MessageBox.Show("Report generated successfully")
                     End Using
                 End Using
             End Using
@@ -104,6 +106,7 @@ Public Class Form7
 
     Private Sub BtnRevClose_Click(sender As Object, e As EventArgs) Handles BtnRevClose.Click
         Me.Close()
+        Form2.Show()
     End Sub
 
     ' Age Section: Load, Clear, Close
@@ -118,10 +121,6 @@ Public Class Form7
 
     Private Sub BtnAgeClose_Click(sender As Object, e As EventArgs) Handles BtnAgeClose.Click
         Me.Close()
-    End Sub
-
-
-    Private Sub GrpRevenue_Enter(sender As Object, e As EventArgs) Handles GrpRevenue.Enter
-
+        Form2.Show()
     End Sub
 End Class
