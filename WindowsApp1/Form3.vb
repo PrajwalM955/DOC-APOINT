@@ -101,6 +101,7 @@ Public Class Form3
 
     ' Code for clear function in doctor tab page
     Private Sub Btnclrdoc_Click(sender As Object, e As EventArgs) Handles Btnclrdoc.Click
+        TxtBxdocid.Clear()
         Txtboxdocname.Clear()
         Txtboxdocspeci.Clear()
         Txtbox_phoneno.Clear()
@@ -116,6 +117,7 @@ Public Class Form3
 
     ' Code for clear function in patient tab page
     Private Sub Btnptnclr_Click(sender As Object, e As EventArgs) Handles Btnptnclr.Click
+        TxtBxptnid.Clear()
         Txtbxptnname.Clear()
         Cmbbxptngnder.SelectedIndex = -1
         Txtbxptnadrs.Clear()
@@ -182,6 +184,7 @@ Public Class Form3
 
     ' Code for clear function in treatment tab page
     Private Sub Btntrtclr_Click(sender As Object, e As EventArgs) Handles Btntrtclr.Click
+        TxtBxtrtid.Clear()
         Txtbxtrtname.Clear()
         Txtbxtrtcost.Clear()
     End Sub

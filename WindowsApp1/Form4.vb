@@ -80,7 +80,7 @@ Public Class Form4
                 con.Open()
 
                 ' Check if an appointment already exists for the selected date and time
-                Dim checkCmd As New SqlCommand("SELECT COUNT(*) FROM appointment WHERE doctor_id = @doctor_id AND appointment_date = @appointment_date AND [time] = @time", con)
+                Dim checkCmd As New SqlCommand("SELECT COUNT(*) FROM appointment WHERE doctor_id = @doctor_id AND appointment_date = @appointment_date AND time = @time", con)
                 checkCmd.Parameters.AddWithValue("@doctor_id", Convert.ToInt32(Cmbxapoitdocid.SelectedValue))
                 checkCmd.Parameters.AddWithValue("@appointment_date", Dateapointdate.Value.Date)
                 checkCmd.Parameters.AddWithValue("@time", Cmbxapointtime.SelectedItem.ToString())
@@ -93,7 +93,7 @@ Public Class Form4
                 End If
 
                 ' If no conflict, proceed with inserting the new appointment
-                Dim cmd As New SqlCommand("INSERT INTO appointment(patient_id, doctor_id, appointment_date, status, reason, [time]) " &
+                Dim cmd As New SqlCommand("INSERT INTO appointment(patient_id, doctor_id, appointment_date, status, reason, time) " &
                                      "VALUES (@patient_id, @doctor_id, @appointment_date, @status, @reason, @time)", con)
 
                 cmd.Parameters.AddWithValue("@patient_id", Convert.ToInt32(Cmbxapointptnid.SelectedValue))
@@ -121,7 +121,7 @@ Public Class Form4
         Using con As New SqlConnection(connectionString)
             Try
                 con.Open()
-                Dim cmd As New SqlCommand("SELECT *, [time] FROM appointment", con)
+                Dim cmd As New SqlCommand("SELECT * FROM appointment", con)
                 Dim dr As SqlDataReader = cmd.ExecuteReader()
 
                 Dim dt As New DataTable()
