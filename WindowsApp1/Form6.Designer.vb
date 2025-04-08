@@ -44,8 +44,10 @@ Partial Class Form6
         Me.BtnBillview = New System.Windows.Forms.Button()
         Me.BtnEditRow = New System.Windows.Forms.Button()
         Me.BtnDeleteRow = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.panel_billstab.SuspendLayout()
         CType(Me.DgvBillingData, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel_billstab
@@ -70,7 +72,7 @@ Partial Class Form6
         Me.panel_billstab.Controls.Add(Me.lbl_billdate)
         Me.panel_billstab.Controls.Add(Me.lbl_bills_regno)
         Me.panel_billstab.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panel_billstab.Location = New System.Drawing.Point(8, 88)
+        Me.panel_billstab.Location = New System.Drawing.Point(37, 139)
         Me.panel_billstab.Margin = New System.Windows.Forms.Padding(2)
         Me.panel_billstab.Name = "panel_billstab"
         Me.panel_billstab.Size = New System.Drawing.Size(862, 297)
@@ -262,7 +264,7 @@ Partial Class Form6
         '
         Me.DgvBillingData.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvBillingData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvBillingData.Location = New System.Drawing.Point(10, 422)
+        Me.DgvBillingData.Location = New System.Drawing.Point(35, 473)
         Me.DgvBillingData.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvBillingData.Name = "DgvBillingData"
         Me.DgvBillingData.RowHeadersWidth = 51
@@ -274,7 +276,7 @@ Partial Class Form6
         '
         Me.BtnBillview.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnBillview.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBillview.Location = New System.Drawing.Point(628, 389)
+        Me.BtnBillview.Location = New System.Drawing.Point(657, 440)
         Me.BtnBillview.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnBillview.Name = "BtnBillview"
         Me.BtnBillview.Size = New System.Drawing.Size(77, 29)
@@ -286,7 +288,7 @@ Partial Class Form6
         '
         Me.BtnEditRow.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnEditRow.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditRow.Location = New System.Drawing.Point(710, 389)
+        Me.BtnEditRow.Location = New System.Drawing.Point(739, 440)
         Me.BtnEditRow.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEditRow.Name = "BtnEditRow"
         Me.BtnEditRow.Size = New System.Drawing.Size(68, 29)
@@ -298,7 +300,7 @@ Partial Class Form6
         '
         Me.BtnDeleteRow.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnDeleteRow.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDeleteRow.Location = New System.Drawing.Point(782, 389)
+        Me.BtnDeleteRow.Location = New System.Drawing.Point(811, 440)
         Me.BtnDeleteRow.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDeleteRow.Name = "BtnDeleteRow"
         Me.BtnDeleteRow.Size = New System.Drawing.Size(85, 29)
@@ -306,13 +308,25 @@ Partial Class Form6
         Me.BtnDeleteRow.Text = "Delete_row"
         Me.BtnDeleteRow.UseVisualStyleBackColor = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.nnnn
+        Me.PictureBox2.Location = New System.Drawing.Point(702, 28)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(197, 86)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 28
+        Me.PictureBox2.TabStop = False
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.gg1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(882, 593)
+        Me.ClientSize = New System.Drawing.Size(939, 642)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.BtnDeleteRow)
         Me.Controls.Add(Me.BtnEditRow)
         Me.Controls.Add(Me.BtnBillview)
@@ -325,6 +339,7 @@ Partial Class Form6
         Me.panel_billstab.ResumeLayout(False)
         Me.panel_billstab.PerformLayout()
         CType(Me.DgvBillingData, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -351,4 +366,5 @@ Partial Class Form6
     Friend WithEvents TxtBxbillid As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnBillbck As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

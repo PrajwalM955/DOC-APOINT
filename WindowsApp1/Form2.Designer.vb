@@ -35,7 +35,7 @@ Partial Class Form2
         Me.Button1.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(109, 244)
+        Me.Button1.Location = New System.Drawing.Point(98, 268)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 34)
@@ -48,7 +48,7 @@ Partial Class Form2
         Me.Button2.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(109, 409)
+        Me.Button2.Location = New System.Drawing.Point(98, 433)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(234, 36)
@@ -61,7 +61,7 @@ Partial Class Form2
         Me.Button3.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button3.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(395, 332)
+        Me.Button3.Location = New System.Drawing.Point(384, 356)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(234, 34)
@@ -74,7 +74,7 @@ Partial Class Form2
         Me.Button4.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(665, 242)
+        Me.Button4.Location = New System.Drawing.Point(654, 266)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(234, 36)
@@ -87,7 +87,7 @@ Partial Class Form2
         Me.Button5.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button5.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(665, 409)
+        Me.Button5.Location = New System.Drawing.Point(654, 433)
         Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(234, 34)
@@ -99,7 +99,7 @@ Partial Class Form2
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 48.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(227, 84)
+        Me.Label1.Location = New System.Drawing.Point(229, 87)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(604, 89)
@@ -113,7 +113,7 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.gg1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(967, 511)
+        Me.ClientSize = New System.Drawing.Size(985, 581)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)

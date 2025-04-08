@@ -3,6 +3,10 @@
 Public Class Treatment_Assign_Form
     Private ReadOnly ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
+    'close application code
+    Private Sub Treatment_Assign_Form_Closing(sender As Object, e As EventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
     ' Form Load: Load ComboBoxes
     Private Sub Treatment_Assign_Form_Load(Sender As Object, E As EventArgs) Handles Me.Load
         LoadDoctorID()
@@ -11,7 +15,7 @@ Public Class Treatment_Assign_Form
     End Sub
 
     ' Close the application
-    Private Sub Treatment_Assign_Form_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Treatment_Assign_Form_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing, MyBase.Closing
         Application.Exit()
     End Sub
 

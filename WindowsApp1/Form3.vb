@@ -3,6 +3,10 @@
 Public Class Form3
     Dim connectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
+    'close application code
+    Private Sub Form3_Closing(sender As Object, e As EventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
     Private Sub Load_RegTab_Data()
         ' This method is empty; consider removing it if not needed
     End Sub

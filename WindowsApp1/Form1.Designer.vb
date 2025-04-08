@@ -52,7 +52,7 @@ Partial Class Form1
         '
         'Btnclr
         '
-        Me.Btnclr.BackColor = System.Drawing.Color.Transparent
+        Me.Btnclr.BackColor = System.Drawing.Color.White
         Me.Btnclr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnclr.Location = New System.Drawing.Point(106, 185)
         Me.Btnclr.Margin = New System.Windows.Forms.Padding(2)
@@ -64,6 +64,7 @@ Partial Class Form1
         '
         'Btnlog
         '
+        Me.Btnlog.BackColor = System.Drawing.Color.White
         Me.Btnlog.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnlog.Location = New System.Drawing.Point(20, 185)
         Me.Btnlog.Margin = New System.Windows.Forms.Padding(2)
@@ -71,7 +72,7 @@ Partial Class Form1
         Me.Btnlog.Size = New System.Drawing.Size(56, 26)
         Me.Btnlog.TabIndex = 6
         Me.Btnlog.Text = "Login"
-        Me.Btnlog.UseVisualStyleBackColor = True
+        Me.Btnlog.UseVisualStyleBackColor = False
         '
         'Txtpword
         '
@@ -93,22 +94,20 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label2.Location = New System.Drawing.Point(22, 41)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 15)
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Username"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label3.Location = New System.Drawing.Point(20, 104)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 15)
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Password"
         '

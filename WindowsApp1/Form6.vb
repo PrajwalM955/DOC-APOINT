@@ -5,6 +5,11 @@ Public Class Form6
     ' Connection string to your SQL Server database
     Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
+    'close application code
+    Private Sub Form6_Closing(sender As Object, e As EventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
+
     ' Clear all fields in the form
     Private Sub Btn_bills_clear_Click(sender As Object, e As EventArgs) Handles Btn_bills_clear.Click
         TxtBxbillid.Clear()
@@ -69,7 +74,7 @@ Public Class Form6
     End Sub
 
     ' Close the application
-    Private Sub Form6_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Form6_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing, MyBase.Closing
         Application.Exit()
     End Sub
 

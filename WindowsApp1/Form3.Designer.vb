@@ -83,6 +83,7 @@ Partial Class Form3
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Btntrtclr = New System.Windows.Forms.Button()
         Me.Btntrtreg = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPgDoctor.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -93,6 +94,7 @@ Partial Class Form3
         Me.TabPgTreatment.SuspendLayout()
         CType(Me.Dgvtreatment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -101,7 +103,7 @@ Partial Class Form3
         Me.TabControl1.Controls.Add(Me.TabPgpatient)
         Me.TabControl1.Controls.Add(Me.TabPgTreatment)
         Me.TabControl1.ItemSize = New System.Drawing.Size(90, 60)
-        Me.TabControl1.Location = New System.Drawing.Point(22, 26)
+        Me.TabControl1.Location = New System.Drawing.Point(27, 113)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -210,7 +212,7 @@ Partial Class Form3
         Me.Btndocback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btndocback.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btndocback.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btndocback.Location = New System.Drawing.Point(440, 204)
+        Me.Btndocback.Location = New System.Drawing.Point(416, 204)
         Me.Btndocback.Name = "Btndocback"
         Me.Btndocback.Size = New System.Drawing.Size(75, 27)
         Me.Btndocback.TabIndex = 3
@@ -254,7 +256,7 @@ Partial Class Form3
         Me.Btnclrdoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btnclrdoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btnclrdoc.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnclrdoc.Location = New System.Drawing.Point(343, 204)
+        Me.Btnclrdoc.Location = New System.Drawing.Point(330, 204)
         Me.Btnclrdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnclrdoc.Name = "Btnclrdoc"
         Me.Btnclrdoc.Size = New System.Drawing.Size(73, 27)
@@ -279,7 +281,7 @@ Partial Class Form3
         Me.Btnregdoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btnregdoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btnregdoc.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnregdoc.Location = New System.Drawing.Point(247, 204)
+        Me.Btnregdoc.Location = New System.Drawing.Point(235, 204)
         Me.Btnregdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnregdoc.Name = "Btnregdoc"
         Me.Btnregdoc.Size = New System.Drawing.Size(76, 27)
@@ -310,14 +312,14 @@ Partial Class Form3
         '
         'Clstbox
         '
-        Me.Clstbox.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Clstbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Clstbox.BackColor = System.Drawing.Color.White
+        Me.Clstbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Clstbox.FormattingEnabled = True
         Me.Clstbox.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"})
         Me.Clstbox.Location = New System.Drawing.Point(537, 7)
         Me.Clstbox.Margin = New System.Windows.Forms.Padding(2)
         Me.Clstbox.Name = "Clstbox"
-        Me.Clstbox.Size = New System.Drawing.Size(94, 109)
+        Me.Clstbox.Size = New System.Drawing.Size(94, 100)
         Me.Clstbox.TabIndex = 7
         '
         'Cboboxhour
@@ -355,8 +357,8 @@ Partial Class Form3
         '
         'Dgvdoc
         '
+        Me.Dgvdoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Dgvdoc.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.Dgvdoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgvdoc.Location = New System.Drawing.Point(7, 282)
         Me.Dgvdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvdoc.Name = "Dgvdoc"
@@ -365,6 +367,7 @@ Partial Class Form3
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Dgvdoc.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgvdoc.RowTemplate.Height = 24
+        Me.Dgvdoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.Dgvdoc.Size = New System.Drawing.Size(694, 134)
         Me.Dgvdoc.TabIndex = 0
         '
@@ -813,13 +816,25 @@ Partial Class Form3
         Me.Btntrtreg.Text = "Register"
         Me.Btntrtreg.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.WindowsApp1.My.Resources.Resources.nnnn
+        Me.PictureBox1.Location = New System.Drawing.Point(541, 25)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(205, 83)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.gg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(768, 535)
+        Me.ClientSize = New System.Drawing.Size(775, 633)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -838,6 +853,7 @@ Partial Class Form3
         CType(Me.Dgvtreatment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -902,4 +918,5 @@ Partial Class Form3
     Friend WithEvents Label13 As Label
     Friend WithEvents TxtBxtrtid As TextBox
     Friend WithEvents Label16 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

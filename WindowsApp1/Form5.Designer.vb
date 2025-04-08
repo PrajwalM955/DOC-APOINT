@@ -44,15 +44,17 @@ Partial Class Treatment_Assign_Form
         Me.TxtBxtrtagnid = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BtntrtassignBck = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.DgvAssignments, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_assigtab.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DgvAssignments
         '
         Me.DgvAssignments.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvAssignments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAssignments.Location = New System.Drawing.Point(33, 410)
+        Me.DgvAssignments.Location = New System.Drawing.Point(40, 479)
         Me.DgvAssignments.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvAssignments.Name = "DgvAssignments"
         Me.DgvAssignments.RowHeadersWidth = 51
@@ -62,7 +64,7 @@ Partial Class Treatment_Assign_Form
         '
         'BtnView
         '
-        Me.BtnView.Location = New System.Drawing.Point(651, 373)
+        Me.BtnView.Location = New System.Drawing.Point(658, 442)
         Me.BtnView.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnView.Name = "BtnView"
         Me.BtnView.Size = New System.Drawing.Size(75, 24)
@@ -72,7 +74,7 @@ Partial Class Treatment_Assign_Form
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(745, 373)
+        Me.BtnEdit.Location = New System.Drawing.Point(752, 442)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(70, 24)
@@ -82,7 +84,7 @@ Partial Class Treatment_Assign_Form
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(842, 373)
+        Me.BtnDelete.Location = New System.Drawing.Point(849, 442)
         Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(78, 24)
@@ -259,10 +261,10 @@ Partial Class Treatment_Assign_Form
         Me.panel_assigtab.Controls.Add(Me.CmbPatientID)
         Me.panel_assigtab.Controls.Add(Me.lbl_servdate)
         Me.panel_assigtab.Controls.Add(Me.lbl_assign_serviceid)
-        Me.panel_assigtab.Location = New System.Drawing.Point(33, 93)
+        Me.panel_assigtab.Location = New System.Drawing.Point(40, 147)
         Me.panel_assigtab.Margin = New System.Windows.Forms.Padding(2)
         Me.panel_assigtab.Name = "panel_assigtab"
-        Me.panel_assigtab.Size = New System.Drawing.Size(887, 267)
+        Me.panel_assigtab.Size = New System.Drawing.Size(895, 267)
         Me.panel_assigtab.TabIndex = 1
         '
         'TxtBxtrtagnid
@@ -297,13 +299,25 @@ Partial Class Treatment_Assign_Form
         Me.BtntrtassignBck.Text = "Back"
         Me.BtntrtassignBck.UseVisualStyleBackColor = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.nnnn
+        Me.PictureBox2.Location = New System.Drawing.Point(726, 27)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(209, 86)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 27
+        Me.PictureBox2.TabStop = False
+        '
         'Treatment_Assign_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.gg1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(968, 607)
+        Me.ClientSize = New System.Drawing.Size(968, 664)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnView)
@@ -315,6 +329,7 @@ Partial Class Treatment_Assign_Form
         CType(Me.DgvAssignments, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel_assigtab.ResumeLayout(False)
         Me.panel_assigtab.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -340,4 +355,5 @@ Partial Class Treatment_Assign_Form
     Friend WithEvents BtntrtassignBck As Button
     Friend WithEvents TxtBxtrtagnid As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

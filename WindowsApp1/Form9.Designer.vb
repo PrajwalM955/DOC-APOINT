@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form9
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form9
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form9))
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -96,14 +96,14 @@ Partial Class Form9
         Me.Panelapinvo.Controls.Add(Me.GroupBox1)
         Me.Panelapinvo.Location = New System.Drawing.Point(12, 58)
         Me.Panelapinvo.Name = "Panelapinvo"
-        Me.Panelapinvo.Size = New System.Drawing.Size(671, 292)
+        Me.Panelapinvo.Size = New System.Drawing.Size(671, 336)
         Me.Panelapinvo.TabIndex = 28
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(196, 9)
+        Me.Label3.Location = New System.Drawing.Point(225, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(229, 20)
         Me.Label3.TabIndex = 27
@@ -125,7 +125,7 @@ Partial Class Form9
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 45)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 68)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(639, 222)
         Me.GroupBox1.TabIndex = 3
@@ -277,7 +277,7 @@ Partial Class Form9
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(695, 374)
+        Me.ClientSize = New System.Drawing.Size(695, 406)
         Me.Controls.Add(Me.Panelapinvo)
         Me.Controls.Add(Me.Panel3)
         Me.Name = "Form9"

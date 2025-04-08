@@ -114,9 +114,7 @@
     <Compile Include="Form7.Designer.vb">
       <DependentUpon>Form7.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form7.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form7.vb" />
     <Compile Include="Form8.Designer.vb">
       <DependentUpon>Form8.vb</DependentUpon>
     </Compile>
@@ -246,12 +244,17 @@
     <Content Include="Resources\images.jpg" />
     <Content Include="Resources\istockphoto-1496083826-612x612.jpg" />
     <Content Include="Resources\istockphoto-2099370050-612x612.jpg" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\logo blu.jpg" />
+    <None Include="Resources\log b.jpg" />
     <Content Include="Resources\lovepik-gray-business-background-image_401947158.jpg" />
     <Content Include="Resources\medical-icon-network-connection-with-modern-virtual-screen-interface-on-hospital-background-medicine-technology-network-concept-photo.jpg" />
     <Content Include="Resources\medical-infographic-banner-background-clinic-pharmacy-laboratory-test-and-research-healthcare-concept-backdrop-illustration-vector.jpg" />
+    <None Include="Resources\nnnn.jpg" />
     <Content Include="Resources\pngtree-black-fine-matte-background-image_960477.jpg" />
     <None Include="Resources\pngtree-empty-white-desk-with-blur-hospital-background-picture-image_15459449.jpg" />
     <Content Include="Resources\pngtree-white-polygonal-mosaic-triangular-background-abstract-light-gray-background-low-poly-image_418752.jpg" />
+    <None Include="Resources\sym.jpg" />
     <Content Include="Resources\WhatsApp Image 2025-03-31 at 18.46.21_8f9ff0e5.jpg" />
     <Content Include="Resources\WhatsApp Image 2025-03-31 at 19.19.25_55519414.jpg" />
     <Content Include="Resources\WhatsApp Image 2025-03-31 at 19.19.25_d1deb16c.jpg" />

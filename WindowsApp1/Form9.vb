@@ -13,6 +13,10 @@ Public Class Form9
     'Database Connection String
     Private Const ConnectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
+    'close application code
+    Private Sub Form9_Closing(sender As Object, e As EventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
     Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Function to Load Patient name in combobox
@@ -100,4 +104,7 @@ Public Class Form9
 
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

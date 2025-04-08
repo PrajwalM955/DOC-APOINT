@@ -4,7 +4,10 @@ Imports System.Windows.Forms.DataVisualization.Charting
 Public Class Form7
     ' connection string 
     Private connectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
-
+    'close application code
+    Private Sub Form7_Closing(sender As Object, e As EventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Initialize charts when the form loads.
         ChartRevenue.Series.Clear()

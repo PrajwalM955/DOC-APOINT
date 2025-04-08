@@ -3,6 +3,11 @@
 Public Class Form4
     Dim connectionString As String = "Data Source=DESKTOP-B9GRHRB\SQLEXPRESS;Initial Catalog=clinic;Integrated Security=True;TrustServerCertificate=True"
 
+    'close application code
+    Private Sub Form4_FormClosing(sender As Object, e As EventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     ' Method to handle form load
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDoctorNames()
@@ -250,5 +255,9 @@ Public Class Form4
                 MessageBox.Show("Error:" & ex.Message)
             End Try
         End Using
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class
