@@ -7,10 +7,6 @@ Public Class Form3
     Private Sub Form3_Closing(sender As Object, e As EventArgs) Handles Me.Closing
         Application.Exit()
     End Sub
-    Private Sub Load_RegTab_Data()
-        ' This method is empty; consider removing it if not needed
-    End Sub
-
     Private Sub Form3_FormClosing(sender As Object, e As EventArgs) Handles Me.FormClosing
         Form2.Show()
     End Sub
