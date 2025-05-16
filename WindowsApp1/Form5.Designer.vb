@@ -64,33 +64,36 @@ Partial Class Treatment_Assign_Form
         '
         'BtnView
         '
+        Me.BtnView.BackColor = System.Drawing.Color.White
         Me.BtnView.Location = New System.Drawing.Point(658, 442)
         Me.BtnView.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnView.Name = "BtnView"
         Me.BtnView.Size = New System.Drawing.Size(75, 24)
         Me.BtnView.TabIndex = 3
         Me.BtnView.Text = "View"
-        Me.BtnView.UseVisualStyleBackColor = True
+        Me.BtnView.UseVisualStyleBackColor = False
         '
         'BtnEdit
         '
+        Me.BtnEdit.BackColor = System.Drawing.Color.White
         Me.BtnEdit.Location = New System.Drawing.Point(752, 442)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(70, 24)
         Me.BtnEdit.TabIndex = 4
         Me.BtnEdit.Text = "Edit Row"
-        Me.BtnEdit.UseVisualStyleBackColor = True
+        Me.BtnEdit.UseVisualStyleBackColor = False
         '
         'BtnDelete
         '
+        Me.BtnDelete.BackColor = System.Drawing.Color.White
         Me.BtnDelete.Location = New System.Drawing.Point(849, 442)
         Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(78, 24)
         Me.BtnDelete.TabIndex = 5
         Me.BtnDelete.Text = "Delete Row"
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'lbl_assign_serviceid
         '
@@ -119,7 +122,7 @@ Partial Class Treatment_Assign_Form
         'CmbPatientID
         '
         Me.CmbPatientID.FormattingEnabled = True
-        Me.CmbPatientID.Location = New System.Drawing.Point(223, 60)
+        Me.CmbPatientID.Location = New System.Drawing.Point(202, 60)
         Me.CmbPatientID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbPatientID.Name = "CmbPatientID"
         Me.CmbPatientID.Size = New System.Drawing.Size(168, 21)
@@ -128,7 +131,7 @@ Partial Class Treatment_Assign_Form
         'CmbDoctorID
         '
         Me.CmbDoctorID.FormattingEnabled = True
-        Me.CmbDoctorID.Location = New System.Drawing.Point(224, 98)
+        Me.CmbDoctorID.Location = New System.Drawing.Point(203, 98)
         Me.CmbDoctorID.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbDoctorID.Name = "CmbDoctorID"
         Me.CmbDoctorID.Size = New System.Drawing.Size(168, 21)
@@ -163,11 +166,11 @@ Partial Class Treatment_Assign_Form
         'DtpTreatmentDate
         '
         Me.DtpTreatmentDate.Checked = False
-        Me.DtpTreatmentDate.Location = New System.Drawing.Point(224, 139)
+        Me.DtpTreatmentDate.Location = New System.Drawing.Point(202, 139)
         Me.DtpTreatmentDate.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpTreatmentDate.MinDate = New Date(2025, 3, 20, 0, 0, 0, 0)
         Me.DtpTreatmentDate.Name = "DtpTreatmentDate"
-        Me.DtpTreatmentDate.Size = New System.Drawing.Size(168, 20)
+        Me.DtpTreatmentDate.Size = New System.Drawing.Size(204, 20)
         Me.DtpTreatmentDate.TabIndex = 1
         Me.DtpTreatmentDate.Value = New Date(2025, 3, 20, 0, 0, 0, 0)
         '
@@ -223,9 +226,9 @@ Partial Class Treatment_Assign_Form
         '
         'TxtTreatmentCost
         '
-        Me.TxtTreatmentCost.Location = New System.Drawing.Point(685, 133)
+        Me.TxtTreatmentCost.Location = New System.Drawing.Point(632, 120)
         Me.TxtTreatmentCost.Name = "TxtTreatmentCost"
-        Me.TxtTreatmentCost.Size = New System.Drawing.Size(175, 20)
+        Me.TxtTreatmentCost.Size = New System.Drawing.Size(131, 20)
         Me.TxtTreatmentCost.TabIndex = 27
         '
         'BtnCalculatetrtcost
@@ -233,7 +236,7 @@ Partial Class Treatment_Assign_Form
         Me.BtnCalculatetrtcost.BackColor = System.Drawing.Color.Transparent
         Me.BtnCalculatetrtcost.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCalculatetrtcost.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(455, 133)
+        Me.BtnCalculatetrtcost.Location = New System.Drawing.Point(589, 146)
         Me.BtnCalculatetrtcost.Name = "BtnCalculatetrtcost"
         Me.BtnCalculatetrtcost.Size = New System.Drawing.Size(209, 23)
         Me.BtnCalculatetrtcost.TabIndex = 28
@@ -269,7 +272,7 @@ Partial Class Treatment_Assign_Form
         '
         'TxtBxtrtagnid
         '
-        Me.TxtBxtrtagnid.Location = New System.Drawing.Point(224, 23)
+        Me.TxtBxtrtagnid.Location = New System.Drawing.Point(203, 23)
         Me.TxtBxtrtagnid.Name = "TxtBxtrtagnid"
         Me.TxtBxtrtagnid.ReadOnly = True
         Me.TxtBxtrtagnid.Size = New System.Drawing.Size(127, 20)

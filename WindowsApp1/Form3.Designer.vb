@@ -22,7 +22,9 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPgDoctor = New System.Windows.Forms.TabPage()
         Me.Btndocedit = New System.Windows.Forms.Button()
@@ -145,6 +147,7 @@ Partial Class Form3
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.TxtBxdocid)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Txtboxdocname)
@@ -359,13 +362,29 @@ Partial Class Form3
         '
         Me.Dgvdoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Dgvdoc.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgvdoc.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Dgvdoc.DefaultCellStyle = DataGridViewCellStyle5
         Me.Dgvdoc.Location = New System.Drawing.Point(7, 282)
         Me.Dgvdoc.Margin = New System.Windows.Forms.Padding(2)
         Me.Dgvdoc.Name = "Dgvdoc"
         Me.Dgvdoc.RowHeadersWidth = 51
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Dgvdoc.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dgvdoc.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.Dgvdoc.RowTemplate.Height = 24
         Me.Dgvdoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.Dgvdoc.Size = New System.Drawing.Size(694, 134)
@@ -390,7 +409,7 @@ Partial Class Form3
         '
         'Btnptnedit
         '
-        Me.Btnptnedit.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btnptnedit.BackColor = System.Drawing.Color.White
         Me.Btnptnedit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnptnedit.Location = New System.Drawing.Point(525, 254)
         Me.Btnptnedit.Name = "Btnptnedit"
@@ -428,7 +447,7 @@ Partial Class Form3
         'TxtBxptnid
         '
         Me.TxtBxptnid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBxptnid.Location = New System.Drawing.Point(149, 15)
+        Me.TxtBxptnid.Location = New System.Drawing.Point(123, 16)
         Me.TxtBxptnid.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtBxptnid.Name = "TxtBxptnid"
         Me.TxtBxptnid.ReadOnly = True
@@ -449,7 +468,7 @@ Partial Class Form3
         'Txtbxptnname
         '
         Me.Txtbxptnname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtbxptnname.Location = New System.Drawing.Point(149, 51)
+        Me.Txtbxptnname.Location = New System.Drawing.Point(123, 52)
         Me.Txtbxptnname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txtbxptnname.Name = "Txtbxptnname"
         Me.Txtbxptnname.Size = New System.Drawing.Size(137, 20)
@@ -558,10 +577,10 @@ Partial Class Form3
         'Datepatientdob
         '
         Me.Datepatientdob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datepatientdob.Location = New System.Drawing.Point(149, 89)
+        Me.Datepatientdob.Location = New System.Drawing.Point(123, 90)
         Me.Datepatientdob.Margin = New System.Windows.Forms.Padding(2)
         Me.Datepatientdob.Name = "Datepatientdob"
-        Me.Datepatientdob.Size = New System.Drawing.Size(151, 20)
+        Me.Datepatientdob.Size = New System.Drawing.Size(200, 20)
         Me.Datepatientdob.TabIndex = 9
         '
         'Btnptnregister
@@ -583,7 +602,7 @@ Partial Class Form3
         Me.Cmbbxptngnder.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmbbxptngnder.FormattingEnabled = True
         Me.Cmbbxptngnder.Items.AddRange(New Object() {"Male", "Female", "Other"})
-        Me.Cmbbxptngnder.Location = New System.Drawing.Point(149, 134)
+        Me.Cmbbxptngnder.Location = New System.Drawing.Point(123, 135)
         Me.Cmbbxptngnder.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmbbxptngnder.Name = "Cmbbxptngnder"
         Me.Cmbbxptngnder.Size = New System.Drawing.Size(108, 21)
@@ -623,23 +642,25 @@ Partial Class Form3
         '
         'BtnPtnview
         '
+        Me.BtnPtnview.BackColor = System.Drawing.Color.White
         Me.BtnPtnview.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPtnview.Location = New System.Drawing.Point(435, 254)
         Me.BtnPtnview.Name = "BtnPtnview"
         Me.BtnPtnview.Size = New System.Drawing.Size(84, 23)
         Me.BtnPtnview.TabIndex = 22
         Me.BtnPtnview.Text = "View Details"
-        Me.BtnPtnview.UseVisualStyleBackColor = True
+        Me.BtnPtnview.UseVisualStyleBackColor = False
         '
         'BtnDeletePatient
         '
+        Me.BtnDeletePatient.BackColor = System.Drawing.Color.White
         Me.BtnDeletePatient.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDeletePatient.Location = New System.Drawing.Point(615, 254)
         Me.BtnDeletePatient.Name = "BtnDeletePatient"
         Me.BtnDeletePatient.Size = New System.Drawing.Size(75, 23)
         Me.BtnDeletePatient.TabIndex = 21
         Me.BtnDeletePatient.Text = "Delete"
-        Me.BtnDeletePatient.UseVisualStyleBackColor = True
+        Me.BtnDeletePatient.UseVisualStyleBackColor = False
         '
         'TabPgTreatment
         '
@@ -705,6 +726,7 @@ Partial Class Form3
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.TxtBxtrtid)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Txtbxtrtname)

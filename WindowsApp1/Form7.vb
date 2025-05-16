@@ -108,8 +108,10 @@ Public Class Form7
     End Sub
 
     Private Sub BtnRevClose_Click(sender As Object, e As EventArgs) Handles BtnRevClose.Click
-        Me.Close()
+
         Form2.Show()
+        Me.Hide()
+
     End Sub
 
     ' Age Section: Load, Clear, Close
@@ -123,7 +125,8 @@ Public Class Form7
     End Sub
 
     Private Sub BtnAgeClose_Click(sender As Object, e As EventArgs) Handles BtnAgeClose.Click
-        Me.Close()
+
         Form2.Show()
+        Me.Hide()
     End Sub
 End Class

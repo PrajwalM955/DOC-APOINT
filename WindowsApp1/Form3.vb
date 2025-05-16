@@ -14,17 +14,17 @@ Public Class Form3
     ' Code for back Buttons in tabcontrol
     Private Sub Btnptnback_Click(sender As Object, e As EventArgs) Handles Btnptnback.Click
         Form2.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Btntrtback_Click(sender As Object, e As EventArgs) Handles Btntrtback.Click
         Form2.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Btndocback.Click
         Form2.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Form3_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

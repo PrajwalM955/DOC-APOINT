@@ -199,7 +199,7 @@ Public Class Form4
 
     Private Sub Btnappntbck_Click(sender As Object, e As EventArgs) Handles Btnappntbck.Click
         Form2.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub BtnIssueTicket_Click(sender As Object, e As EventArgs) Handles BtnIssueTicket.Click
