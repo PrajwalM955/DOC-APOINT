@@ -10,19 +10,14 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 
 ⚡ Designed to make clinic operations smooth, secure, and efficient.
 
-✨ Key Features
+⚙️ Features
 
-🔒 Offline Operation → Safe & secure access without internet dependency.
-
-📅 Smart Appointment Scheduling → Manage & assign doctors efficiently.
-
-💰 Revenue Tracking → Monitor income by Cash / Card / Online payments.
-
-📊 Analytics & Reports → Patient demographics with age group insights.
-
-🏥 Complete Patient Records → Centralized treatment & billing management.
-
-🖨️ Invoice Generation → Generate, store, and print patient invoices.
+| ![Offline](https://img.shields.io/badge/🔒-Offline%20Secure-blue) | ![Scheduling](https://img.shields.io/badge/📅-Smart%20Scheduling-brightgreen) | ![Revenue](https://img.shields.io/badge/💰-Revenue%20Tracking-yellow) |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Access anytime without internet, ensuring safe & secure data.     | Manage and assign doctors with real-time appointment updates.                 | Monitor income seamlessly across Cash, Card, and Online payments.     |
+| ![Reports](https://img.shields.io/badge/📊-Reports%20%26%20Insights-purple) | ![Records](https://img.shields.io/badge/🏥-Centralized%20Records-red) | ![Invoice](https://img.shields.io/badge/🖨️-Instant%20Invoicing-orange) |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Gain actionable insights with patient demographics & age analysis.          | Keep treatments, patients, and billing in one organized system.       | Generate, store, and print professional invoices in seconds.            |
 
 🖼️ Screenshot 
   
