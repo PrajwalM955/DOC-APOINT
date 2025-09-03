@@ -27,7 +27,7 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 🖼️ Screenshot 
   
 <figure>
-  <img src="Screenshots/Login.png" alt="Login Screenshot" width="350"/>
+  <img src="Screenshots/Login.png" alt="Login Screenshot" width="350" />
   <figcaption>Login Screen</figcaption>
 </figure>
 
@@ -35,6 +35,12 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
   <img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="450" />
   <figcaption>Dashboard Screen</figcaption>
 </figure>
+
+<figure>
+  <img src="Screenshots/Registration.PNG" alt="Registration Screen" width="450" />
+  <figcaption>Registration Screen</figcaption>
+</figure>
+
 <figure>
   <img src="Screenshots/Appointment .PNG" alt="Appointment Screen" width="450" />
   <figcaption>Appointment Screen</figcaption>
@@ -43,6 +49,11 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 <figure>
   <img src="Screenshots/Appointment_Invoice.PNG" alt="Appointment Invoice" width="450" />
   <figcaption>Appointment Invoice</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Treatment_Assignment.PNG" alt="Treatment Assignment" width="450" />
+  <figcaption>Treatment Assignment</figcaption>
 </figure>
 
 <figure>
@@ -60,8 +71,10 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
   <figcaption>Invoice Appearance</figcaption>
 </figure>
 
-
-(Tip: You can add more screenshots or GIFs here — e.g., Dashboard, Appointment Booking, Reports — to impress recruiters.)
+<figure>
+  <img src="Screenshots/Report_Analysis.PNG" alt="Report Analysis" width="450" />
+  <figcaption>Report Analysis</figcaption>
+</figure>
 
 🚀 Usage
 
