@@ -19,48 +19,48 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 
 🖼️ Screenshots
 
-<div align="center">
 
+<div align="center">
 
 Login Screen
 
-<img src="Screenshots/Login.png" alt="Login Screenshot" width="350" /><br><br>
+<img src="Screenshots/Login.png" alt="Login Screenshot" width="600" /><br><br>
 
 Dashboard Screen
 
-<img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="450" /><br><br>
+<img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="600" /><br><br>
 
 Registration Screen
 
-<img src="Screenshots/Registration.PNG" alt="Registration Screen" width="450" /><br><br>
+<img src="Screenshots/Registration.PNG" alt="Registration Screen" width="600" /><br><br>
 
 Appointment Screen
 
-<img src="Screenshots/Appointment .PNG" alt="Appointment Screen" width="450" /><br><br>
+<img src="Screenshots/Appointment .PNG" alt="Appointment Screen" width="600" /><br><br>
 
 Appointment Invoice
 
-<img src="Screenshots/Appointment_Invoice.PNG" alt="Appointment Invoice" width="450" /><br><br>
+<img src="Screenshots/Appointment_Invoice.PNG" alt="Appointment Invoice" width="600" /><br><br>
 
 Treatment Assignment
 
-<img src="Screenshots/Treatment_Assignment.PNG" alt="Treatment Assignment" width="450" /><br><br>
+<img src="Screenshots/Treatment_Assignment.PNG" alt="Treatment Assignment" width="600" /><br><br>
 
 Billing Screen
 
-<img src="Screenshots/Billing.PNG" alt="Billing Screen" width="450" /><br><br>
+<img src="Screenshots/Billing.PNG" alt="Billing Screen" width="600" /><br><br>
 
 Billing Invoice
 
-<img src="Screenshots/Billing_Invoice.PNG" alt="Billing Invoice" width="450" /><br><br>
+<img src="Screenshots/Billing_Invoice.PNG" alt="Billing Invoice" width="600" /><br><br>
 
 Invoice Appearance
 
-<img src="Screenshots/Invoice_Appearance.PNG" alt="Invoice Appearance" width="450" /><br><br>
+<img src="Screenshots/Invoice_Appearance.PNG" alt="Invoice Appearance" width="600" /><br><br>
 
 Report Analysis
 
-<img src="Screenshots/Report_Analysis.PNG" alt="Report Analysis" width="450" /><br><br>
+<img src="Screenshots/Report_Analysis.PNG" alt="Report Analysis" width="600" /><br><br>
 
 </div>
 
