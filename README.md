@@ -71,7 +71,3 @@ This project is licensed under the MIT License.
 📬 Contact
 
 📧 Email: prajwalmhere@gmail.com
-
-👤 Maintainer: Prajwal Murthy
-
-⚡ DOC-APOINT makes healthcare administration simpler, faster, and smarter — empowering clinics with offline-ready management.
