@@ -27,6 +27,38 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 🖼️ Screenshot
 
   <img src="Screenshots/Login.png" alt="Login Screenshot" width="350"/>
+  ## Project Screenshots
+
+<figure>
+  <img src="Screenshots/Appointment .PNG" alt="Appointment Screen" width="450" />
+  <figcaption>Appointment Screen</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Appointment_Invoice.PNG" alt="Appointment Invoice" width="450" />
+  <figcaption>Appointment Invoice</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Billing.PNG" alt="Billing Screen" width="450" />
+  <figcaption>Billing Screen</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Billing_Invoice.PNG" alt="Billing Invoice" width="450" />
+  <figcaption>Billing Invoice</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="450" />
+  <figcaption>Dashboard</figcaption>
+</figure>
+
+<figure>
+  <img src="Screenshots/Invoice_Appearance.PNG" alt="Invoice Appearance" width="450" />
+  <figcaption>Invoice Appearance</figcaption>
+</figure>
+
 
 (Tip: You can add more screenshots or GIFs here — e.g., Dashboard, Appointment Booking, Reports — to impress recruiters.)
 
