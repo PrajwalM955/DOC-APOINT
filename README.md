@@ -24,11 +24,17 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 
 🖨️ Invoice Generation → Generate, store, and print patient invoices.
 
-🖼️ Screenshot
-
+🖼️ Screenshot 
+  
+<figure>
   <img src="Screenshots/Login.png" alt="Login Screenshot" width="350"/>
-  ## Project Screenshots
+  <figcaption>Login Screen</figcaption>
+</figure>
 
+<figure>
+  <img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="450" />
+  <figcaption>Dashboard Screen</figcaption>
+</figure>
 <figure>
   <img src="Screenshots/Appointment .PNG" alt="Appointment Screen" width="450" />
   <figcaption>Appointment Screen</figcaption>
@@ -47,11 +53,6 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 <figure>
   <img src="Screenshots/Billing_Invoice.PNG" alt="Billing Invoice" width="450" />
   <figcaption>Billing Invoice</figcaption>
-</figure>
-
-<figure>
-  <img src="Screenshots/Dashboard.PNG" alt="Dashboard" width="450" />
-  <figcaption>Dashboard</figcaption>
 </figure>
 
 <figure>
