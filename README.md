@@ -26,6 +26,8 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 
 🖼️ Screenshot
 
+  <img src="Screenshots/Login.png" alt="Login Screenshot" width="350"/>
+
 (Tip: You can add more screenshots or GIFs here — e.g., Dashboard, Appointment Booking, Reports — to impress recruiters.)
 
 🚀 Usage
