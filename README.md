@@ -8,9 +8,7 @@
 DOC-APOINT is a comprehensive offline healthcare management system tailored for small to mid-scale clinics.
 It simplifies doctor scheduling, patient management, billing, and reporting — all without requiring internet connectivity.
 
-⚡ Designed to make clinic operations smooth, secure, and efficient.
-
-⚙️ Features
+⚙️ Designed to make clinic operations smooth, secure, and efficient.
 
 |      ![Offline](https://img.shields.io/badge/🔒-Offline%20Secure-blue)      | ![Scheduling](https://img.shields.io/badge/📅-Smart%20Scheduling-brightgreen) |  ![Revenue](https://img.shields.io/badge/💰-Revenue%20Tracking-yellow)  |
 | :-------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
@@ -18,9 +16,11 @@ It simplifies doctor scheduling, patient management, billing, and reporting — 
 | ![Reports](https://img.shields.io/badge/📊-Reports%20%26%20Insights-purple) |     ![Records](https://img.shields.io/badge/🏥-Centralized%20Records-red)     | ![Invoice](https://img.shields.io/badge/🖨️-Instant%20Invoicing-orange) |
 |      Gain actionable insights with patient demographics & age analysis.     |        Keep treatments, patients, and billing in one organized system.        |       Generate, store, and print professional invoices in seconds.      |
 
+
 🖼️ Screenshots
 
 <div align="center">
+
 
 Login Screen
 
